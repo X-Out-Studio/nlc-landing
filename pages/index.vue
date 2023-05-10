@@ -1,3 +1,3 @@
 <template>
-  <h1>asdadsad</h1>
+  <IndexMainCar />
 </template>
