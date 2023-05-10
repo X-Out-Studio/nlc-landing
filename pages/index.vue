@@ -1,3 +1,4 @@
 <template>
   <IndexMainCar />
+  <IndexStagesWork />
 </template>
