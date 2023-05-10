@@ -43,6 +43,7 @@
         line-height: 128.61%;
         color: #ffffff;
         text-transform: uppercase;
+        font-family: 'Druk Text Wide Cyr';
     }
 
     &__text {
@@ -60,6 +61,10 @@
         }
     }
 
+    &__arrow {
+        display: grid;
+    }
+
     &__weeks {
         display: flex;
         flex-direction: column;
@@ -74,6 +79,7 @@
             color: rgba(255, 255, 255, 0.1);
             letter-spacing: 0.015em;
             text-transform: uppercase;
+            font-family: 'Druk Text Wide Cyr';
         }
 
         &--car {
