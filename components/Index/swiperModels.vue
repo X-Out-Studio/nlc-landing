@@ -92,7 +92,7 @@ const navigateParams = {
   padding: 57px 150px 61px 150px;
 }
 .title-container {
-  max-width: 480px;
+  max-width: 700px;
 }
 .swiper-container {
   margin: 91px 0 0 0;
