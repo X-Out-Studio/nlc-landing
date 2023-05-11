@@ -37,17 +37,27 @@ const navigateParams = {
         </SwiperSlide>
         <SwiperSlide>
           <div class="slide-content">
-            <img src="../../assets/img/swiperModels/tesla.png" alt="" />
+            <img src="../../assets/img/swiperModels/pors.png" alt="" />
           </div>
         </SwiperSlide>
         <SwiperSlide>
           <div class="slide-content">
-            <img src="../../assets/img/swiperModels/tesla.png" alt="" />
+            <img src="../../assets/img/swiperModels/audi.png" alt="" />
           </div>
         </SwiperSlide>
         <SwiperSlide>
           <div class="slide-content">
-            <img src="../../assets/img/swiperModels/tesla.png" alt="" />
+            <img src="../../assets/img/swiperModels/vw.png" alt="" />
+          </div>
+        </SwiperSlide>
+        <SwiperSlide>
+          <div class="slide-content">
+            <img src="../../assets/img/swiperModels/toyota.png" alt="" />
+          </div>
+        </SwiperSlide>
+        <SwiperSlide>
+          <div class="slide-content">
+            <img src="../../assets/img/swiperModels/lex.png" alt="" />
           </div>
         </SwiperSlide>
       </Swiper>
@@ -98,9 +108,11 @@ const navigateParams = {
   margin: 91px 0 0 0;
 }
 .slide-content {
-  width: 143px;
-  height: 143px;
-  margin: 20px 92.5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 328px;
+  height: 183px;
   img {
     width: fit-content;
     height: fit-content;

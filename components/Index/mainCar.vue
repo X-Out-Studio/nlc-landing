@@ -35,6 +35,8 @@
   width: 100%;
   height: 967px;
   background-image: url("../../assets/img/index/mainCar/img.png");
+  background-repeat: no-repeat;
+  background-size: cover;
   padding: 118px 150px 64px 150px;
   .content-container {
     display: flex;
