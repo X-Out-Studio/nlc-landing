@@ -4,4 +4,5 @@
   <IndexStagesWork />
   <IndexAbout />
   <IndexDeliveredСars />
+  <IndexWhy />
 </template>
