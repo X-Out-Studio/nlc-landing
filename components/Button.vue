@@ -1,5 +1,11 @@
+<script setup lang="ts">
+defineProps<{
+  text?: string
+}>()
+</script>
+
 <template>
-    <button class="button">Подобрать машину</button>
+    <button class="button">{{ text }}</button>
 </template>
 
 <style lang="scss">
@@ -14,5 +20,15 @@
     font-size: 21px;
     color: #ffffff;
     cursor: pointer;
+
+    &--black {
+        font-size: 15px;
+        line-height: 128.61%;
+        color: #000000;
+        padding: 21px 100px 22px 100px;
+        border: 1px solid #000000;
+        background: transparent;
+        box-shadow: none;
+    }
 }
 </style>

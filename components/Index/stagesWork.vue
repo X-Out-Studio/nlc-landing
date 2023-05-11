@@ -84,7 +84,7 @@
         </p>
         <div class="stagesWork__weeks">
             <p class="stagesWork__weeks-text">2 недели</p>
-            <Button />
+            <Button text="Подобрать машину" />
         </div>
         <div class="stagesWork__car">
             <img src="../../assets/img/stagesWork/car.png" alt="">
@@ -128,6 +128,7 @@
 
     &__steps {
         margin-top: 25px;
+        margin-bottom: 40px;
         display: flex;
         flex-direction: row;
         justify-content: center;
