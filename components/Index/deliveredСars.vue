@@ -1,7 +1,7 @@
 <template>
     <section class="deliveredCars">
         <div class="container">
-            <p class="deliveredCars__title">доставленные<br>автомобили</p>
+            <div class="global-title">доставленные<br>автомобили</div>
             <div class="deliveredCars__cards">
                 <div class="deliveredCars__item">
                     <div class="deliveredCars__img">
@@ -147,18 +147,6 @@
 
     .container {
         text-align: center;
-    }
-
-    &__title {
-        text-align: center;
-        font-family: 'Druk Text Wide Cyr';
-        font-style: normal;
-        font-weight: 900;
-        font-size: 45px;
-        line-height: 128.61%;
-        text-align: center;
-        text-transform: uppercase;
-        color: #000000;
     }
 
     &__cards {

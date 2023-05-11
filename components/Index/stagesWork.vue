@@ -3,7 +3,7 @@
 
 <template>
     <section class="stagesWork">
-        <p class="stagesWork__title">этапы работы</p>
+        <div class="global-title white">этапы работы</div>
         <div class="stagesWork__steps">
             <div class="stagesWork__arrow">
                 <div class="stagesWork__step stagesWork__step--left">
@@ -101,15 +101,6 @@
     flex-direction: column;
     align-items: center;
     position: relative;
-
-    &__title {
-        font-weight: 900;
-        font-size: 38px;
-        line-height: 128.61%;
-        color: #ffffff;
-        text-transform: uppercase;
-        font-family: 'Druk Text Wide Cyr';
-    }
 
     &__text {
         margin-top: 41px;
