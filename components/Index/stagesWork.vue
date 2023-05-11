@@ -7,19 +7,20 @@
         <div class="stagesWork__steps">
             <div class="stagesWork__arrow">
                 <div class="stagesWork__step stagesWork__step--left">
-                    <div class="stagesWork__step--content">
+                    <div class="stagesWork__step--content stagesWork__step--content--1">
                         <p class="stagesWork__step--name">1. подбор автомобиля</p>
                         <p class="stagesWork__step--text">Специалисты NLC подбирают вам авто по необходимым параметрам на
                             площадках Европы.</p>
                     </div>
-                    <div class="stagesWork__step--done">
+                    <div class="stagesWork__step--done stagesWork__step--done--1">
                         <img src="../../assets/img/stagesWork/done.svg" alt="">
                     </div>
                 </div>
                 <div class="stagesWork__step stagesWork__step--right">
-                    <div class="stagesWork__step--content">
+                    <div class="stagesWork__step--content stagesWork__step--content--2">
                         <p class="stagesWork__step--name">2. заключение договора</p>
-                        <p class="stagesWork__step--text">Компания NLC заключает договоры с&nbsp;клиентами&nbsp;на&nbsp;поставку автомобиля
+                        <p class="stagesWork__step--text">Компания NLC заключает договоры
+                            с&nbsp;клиентами&nbsp;на&nbsp;поставку автомобиля
                             как по полной, так и по частичной оплате (мин. аванс - 25%).</p>
                     </div>
                     <div class="stagesWork__step--done">
@@ -27,7 +28,7 @@
                     </div>
                 </div>
                 <div class="stagesWork__step stagesWork__step--left">
-                    <div class="stagesWork__step--content">
+                    <div class="stagesWork__step--content stagesWork__step--content--3">
                         <p class="stagesWork__step--name">3. проверка автомобиля</p>
                         <p class="stagesWork__step--text">Мы проводим полную проверку автомобиля перед его приобретением!
                         </p>
@@ -42,7 +43,7 @@
                     </div>
                 </div>
                 <div class="stagesWork__step stagesWork__step--right">
-                    <div class="stagesWork__step--content">
+                    <div class="stagesWork__step--content stagesWork__step--content--4">
                         <p class="stagesWork__step--name">4. оплата автомобиля в Европе</p>
                         <p class="stagesWork__step--text">У компании NLC открыты представительства в Польше, Германии и
                             Италии. Мы быстро и беспрепятственно оплачиваем автомобиль и забираем его у дилера.</p>
@@ -52,7 +53,7 @@
                     </div>
                 </div>
                 <div class="stagesWork__step stagesWork__step--left">
-                    <div class="stagesWork__step--content">
+                    <div class="stagesWork__step--content stagesWork__step--content--5">
                         <p class="stagesWork__step--name">5. доставка автомобилей из Европы</p>
                         <p class="stagesWork__step--text">Мы доставляем автомобиль автовозом от дилера до клиента.</p>
                     </div>
@@ -61,7 +62,7 @@
                     </div>
                 </div>
                 <div class="stagesWork__step stagesWork__step--right">
-                    <div class="stagesWork__step--content">
+                    <div class="stagesWork__step--content stagesWork__step--content--6">
                         <p class="stagesWork__step--name">6. растаможка автомобиля</p>
                         <p class="stagesWork__step--text">Клиент получает полностью растаможенный, юридически и технически
                             чистый автомобиль, готовый к постановке на РФ учет. Также NLC делает ЭПТС и СБКТС.</p>
@@ -83,7 +84,7 @@
         </p>
         <div class="stagesWork__weeks">
             <p class="stagesWork__weeks-text">2 недели</p>
-            <Button />
+            <Button text="Подобрать машину" />
         </div>
         <div class="stagesWork__car">
             <img src="../../assets/img/stagesWork/car.png" alt="">
@@ -127,6 +128,7 @@
 
     &__steps {
         margin-top: 25px;
+        margin-bottom: 40px;
         display: flex;
         flex-direction: row;
         justify-content: center;
@@ -143,11 +145,34 @@
         z-index: 10;
 
         &--content {
-            background-color: #1E1E1E;
-            border: 1px dashed #C6F3B6;
-            border-radius: 7px;
             position: absolute;
             width: 383px;
+            background-repeat: no-repeat;
+            background-size: 100% 100%;
+
+            &--1 {
+                background-image: url('../../assets/img/stagesWork/step1.png');
+            }
+
+            &--2 {
+                background-image: url('../../assets/img/stagesWork/step2.png');
+            }
+
+            &--3 {
+                background-image: url('../../assets/img/stagesWork/step3.png');
+            }
+
+            &--4 {
+                background-image: url('../../assets/img/stagesWork/step4.png');
+            }
+
+            &--5 {
+                background-image: url('../../assets/img/stagesWork/step5.png');
+            }
+
+            &--6 {
+                background-image: url('../../assets/img/stagesWork/step6.png');
+            }
         }
 
         &--name {
@@ -179,21 +204,26 @@
 
                 &::before {
                     content: '✅';
-
                 }
             }
         }
 
         &--done {
             background-color: #C6F3B6;
-            border: 8px solid #D9FFCC;
+            border: 7px solid #D9FFCC;
             border-radius: 50%;
             display: flex;
             flex-direction: row;
             align-items: center;
             justify-content: center;
-            width: 33px;
-            height: 33px;
+            width: 26px;
+            height: 26px;
+
+            &--1 {
+                border: 8px solid #D9FFCC;
+                width: 33px;
+                height: 33px;
+            }
         }
 
         &--right {
@@ -205,7 +235,6 @@
                 left: 40px;
                 padding: 20px 38px 20px 41px;
                 width: 521px;
-                clip-path: polygon(3% 0, 100% 0%, 100% 100%, 3% 100%, 0% 50%);
             }
         }
 
@@ -214,7 +243,6 @@
                 right: 40px;
                 padding: 25px 63px 34px 34px;
                 width: 544px;
-                clip-path: polygon(97% 0, 100% 50%, 97% 100%, 0% 100%, 0% 0%);
             }
         }
     }
@@ -255,8 +283,8 @@
         top: 203px;
         left: 0;
         position: absolute;
-        width: 1558px;
-        height: 947px;
+        width: 82%;
+        height: 71%;
 
         img {
             object-fit: cover;
@@ -269,4 +297,5 @@
         position: absolute;
         top: 45px;
     }
-}</style>
+}
+</style>
