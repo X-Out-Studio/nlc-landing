@@ -5,4 +5,5 @@
   <IndexAbout />
   <IndexDeliveredСars />
   <IndexWhy />
+  <IndexPrice />
 </template>
