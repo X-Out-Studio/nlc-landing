@@ -18,3 +18,15 @@ input,
 textarea {
   border: none;
 }
+
+.global-title {
+  font-weight: 900;
+  font-size: 38px;
+  line-height: 141.11%;
+  text-transform: uppercase;
+  color: #000000;
+
+  &.white {
+    color: white;
+  }
+}
