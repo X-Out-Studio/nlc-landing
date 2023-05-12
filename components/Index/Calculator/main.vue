@@ -7,24 +7,29 @@ const openForm = () => {
 </script>
 
 <template>
-  <Transition>
-    <div class="section-calculator" v-if="!flag">
-      <div class="description-container">
-        <div class="description">закажите просчет прямо сейчас</div>
-        <Button :text="'Рассчитать'" @click="openForm" />
+  <div class="calculator-container">
+    <Transition>
+      <div class="section-calculator" v-if="!flag">
+        <div class="description-container">
+          <div class="description">закажите просчет прямо сейчас</div>
+          <Button :text="'Рассчитать'" @click="openForm" />
+        </div>
+        <div class="img-container">
+          <img src="../../../assets/img/calculator/car.png" alt="" />
+        </div>
       </div>
-      <div class="img-container">
-        <img src="../../../assets/img/calculator/car.png" alt="" />
+    </Transition>
+    <Transition>
+      <div v-if="flag">
+        <IndexCalculatorFirstStep />
       </div>
-    </div>
-  </Transition>
-  <Transition>
-    <div v-if="flag">
-      <IndexCalculatorFirstStep />
-    </div>
-  </Transition>
+    </Transition>
+  </div>
 </template>
 <style scoped lang='scss'>
+.calculator-container {
+  margin: 0 0 140px 0;
+}
 .section-calculator {
   height: 615px;
   width: 100%;
