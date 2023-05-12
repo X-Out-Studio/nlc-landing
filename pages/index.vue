@@ -6,5 +6,6 @@
   <IndexDeliveredСars />
   <IndexWhy />
   <IndexPrice />
+  <IndexReviews />
   <IndexCalculatorMain />
 </template>

@@ -30,5 +30,13 @@ defineProps<{
         background: transparent;
         box-shadow: none;
     }
+
+    &--white {
+        color: #FFFFFF;
+        border: 1px solid #ffffff;
+        background: transparent;
+        box-shadow: none;
+        padding: 21px 178px 22px 178px;
+    }
 }
 </style>
