@@ -48,7 +48,7 @@
         </form>
         <div class="footer__info">
             <div class="container">
-                <a class="footer__phone" href="tel: +71234567890">Телефон +7 123 456 78 90</a>
+                <a class="footer__phone" href="tel:+71234567890">Телефон +7 123 456 78 90</a>
                 <a href="mailto:ask@htmlbook.ru?subject=Вопрос по HTML">Почта pochta@gmail.com</a>
                 <ul class="footer__menu">
                     <li class="footer__item">
