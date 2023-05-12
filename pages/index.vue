@@ -4,7 +4,7 @@
   <IndexStagesWork />
   <IndexAbout />
   <IndexDeliveredСars />
-  <IndexCalculatorMain />
   <IndexWhy />
   <IndexPrice />
+  <IndexCalculatorMain />
 </template>
