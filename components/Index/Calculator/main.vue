@@ -1,15 +1,15 @@
 <script setup>
-let flag = ref(false);
+import { useCalcFormStore } from "@/store/calcForm";
+const store = useCalcFormStore();
 const openForm = () => {
-  flag.value ? (flag.value = false) : (flag.value = true);
-  console.log(flag.value);
+  store.openModal ? (store.openModal = false) : (store.openModal = true);
 };
 </script>
 
 <template>
   <div class="calculator-container">
     <Transition>
-      <div class="section-calculator" v-if="!flag">
+      <div class="section-calculator" v-if="!store.openModal">
         <div class="description-container">
           <div class="description">закажите просчет прямо сейчас</div>
           <Button :text="'Рассчитать'" @click="openForm" />
@@ -20,7 +20,7 @@ const openForm = () => {
       </div>
     </Transition>
     <Transition>
-      <div v-if="flag">
+      <div v-if="store.openModal">
         <IndexCalculatorFirstStep />
       </div>
     </Transition>
