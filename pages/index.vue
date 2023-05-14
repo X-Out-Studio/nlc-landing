@@ -3,8 +3,8 @@
   <IndexSwiperModels />
   <IndexStagesWork />
   <IndexAbout />
-  <IndexDeliveredСars />
-  <IndexWhy />-->
+  <IndexDeliveredСars />-->
+  <IndexWhy />
   <IndexPrice />
   <!--<IndexCalculatorMain />-->
   <IndexReviews />

@@ -130,6 +130,124 @@
         font-size: 16px;
         line-height: 147.11%;
     }
+}
 
+@media(max-width: 1500px) {
+
+    .why {
+        padding: 37px 0 71px 0;
+
+        &__cards {
+            row-gap: 29px;
+        }
+
+        &__item {
+            padding: 19px 17px 20px 24px;
+
+            &--2 {
+                width: 34%;
+            }
+
+            &--4 {
+                width: 35%;
+            }
+        }
+
+        &__name {
+            font-size: 16px;
+            line-height: 128.61%;
+        }
+
+        &__text {
+            font-size: 14px;
+            line-height: 147.11%;
+        }
+    }
+}
+
+@media(max-width: 1445px) {
+
+    .why {
+
+        &__item {
+
+            &--1 {
+                width: 21%;
+            }
+
+            &--6 {
+                background-size: 220px 160px;
+                width: 25%;
+            }
+
+            &--5 {
+                width: 27%;
+            }
+        }
+    }
+}
+
+@media(max-width: 1250px) {
+
+    .why {
+
+        &__item {
+
+            &--1 {
+                width: 38%;
+            }
+
+            &--2 {
+                width: 54%;
+            }
+
+            &--4 {
+                width: 46%;
+            }
+
+            &--3 {
+                width: 46%;
+            }
+
+            &--5 {
+                width: 50%;
+            }
+
+            &--6 {
+                width: 42%;
+            }
+        }
+    }
+}
+
+@media(max-width: 900px) {
+    .why {
+        &__cards {
+            gap: 31px;
+        }
+    }
+}
+
+@media(max-width: 600px) {
+    .why {
+        padding: 29px 0 49px 0;
+
+        &__cards {
+            gap: 15px;
+            margin-top: 31px;
+        }
+
+        &__item {
+            width: 100%;
+            column-gap: 0;
+            gap: 14px;
+
+            &--6 {
+                padding: 55px 45px 65px 45px;
+                gap: 25px;
+                background-size: 249px 166px;
+            }
+        }
+    }
 }
 </style>
