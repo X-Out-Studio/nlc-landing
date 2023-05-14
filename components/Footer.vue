@@ -37,44 +37,52 @@
                 </div>
                 <input class="footer__form-input footer__form-input--question" placeholder="Ваш вопрос" />
                 <div class="footer__block">
-                    <button class="footer__submit" type="submit">Отправить</button>
+                    <div>
+                        <button class="footer__submit" type="submit">Отправить</button>
+                        <p class="footer__send">Нажимая на кнопку «Отправить», вы соглашаетесь
+                            с&nbsp;условиями <a href="#">Политики обработки персональных данных</a></p>
+                    </div>
                     <div class="footer__logo">
                         <img src="../assets/img/footer/logo.png" alt="">
                     </div>
                 </div>
-                <p class="footer__send">Нажимая на кнопку «Отправить», вы соглашаетесь
-                    с&nbsp;условиями <a href="#">Политики обработки персональных данных</a></p>
             </div>
         </form>
         <div class="footer__info">
             <div class="container">
-                <a class="footer__phone" href="tel:+71234567890">Телефон +7 123 456 78 90</a>
-                <a href="mailto:ask@htmlbook.ru?subject=Вопрос по HTML">Почта pochta@gmail.com</a>
+                <div class="footer__contact">
+                    <a class="footer__phone" href="tel:+71234567890">Телефон +7&nbsp;123&nbsp;456&nbsp;78&nbsp;90</a>
+                    <a class="footer__email" href="mailto:ask@htmlbook.ru?subject=Вопрос по HTML">Почта pochta@gmail.com</a>
+                </div>
                 <ul class="footer__menu">
                     <li class="footer__item">
-                        <a href="#" class="footer__link">Пункт меню</a>
+                        <a href="#" class="footer__link">Пункт&nbsp;меню</a>
                     </li>
                     <li class="footer__item">
-                        <a href="#" class="footer__link">Пункт меню</a>
+                        <a href="#" class="footer__link">Пункт&nbsp;меню</a>
                     </li>
                     <li class="footer__item">
-                        <a href="#" class="footer__link">Пункт меню</a>
+                        <a href="#" class="footer__link">Пункт&nbsp;меню</a>
                     </li>
                     <li class="footer__item">
-                        <a href="#" class="footer__link">Пункт меню</a>
+                        <a href="#" class="footer__link">Пункт&nbsp;меню</a>
                     </li>
                     <li class="footer__item">
-                        <a href="#" class="footer__link">Пункт меню</a>
+                        <a href="#" class="footer__link">Пункт&nbsp;меню</a>
                     </li>
                 </ul>
             </div>
         </div>
         <div class="footer__bottom">
             <div class="container">
-                <p class="footer__regulation">Любое использование или копирование материалов или сборки материалов сайта,
-                    элементов дизайна и оформления допускается только с разрешения правообладателя и только со ссылкой на
-                    источник: <a href="#">https://8stories.team</a></p>
-                <a class="footer__policy" href="#">Политика конфиденциальности</a>
+                <div class="footer__rule">
+                    <p class="footer__regulation">Любое использование или копирование материалов или сборки материалов
+                        сайта,
+                        элементов дизайна и оформления допускается только с разрешения правообладателя и только со ссылкой
+                        на
+                        источник: <a href="#">https://8stories.team</a></p>
+                    <a class="footer__policy" href="#">Политика конфиденциальности</a>
+                </div>
                 <p class="footer__year">2023</p>
             </div>
         </div>
@@ -160,6 +168,11 @@
             height: 50px;
             background-repeat: no-repeat;
             background-size: contain;
+
+            svg {
+                width: unset;
+                height: unset;
+            }
         }
     }
 
@@ -224,14 +237,26 @@
         }
     }
 
+    &__logo {
+        width: 241px; 
+        height: 51px;
+
+        img {
+            object-fit: cover;
+            width: 100%;
+            height: 100%;
+        }
+    }
+
     &__data {
         display: flex;
         flex-direction: row;
         margin-bottom: 74px;
-        gap: 127px;
+        gap: 448px;
     }
 
     &__send {
+        margin-top: 16px;
         font-style: normal;
         font-weight: 400;
         font-size: 11px;
@@ -249,7 +274,299 @@
         display: flex;
         flex-direction: row;
         justify-content: space-between;
-        margin-bottom: 16px;
+    }
+
+    &__rule {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 193px;
+    }
+
+    &__contact {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 220px;
+
+        @media(max-width: 1600px) {
+            gap: 120px;
+        }
+    }
+
+    &__policy,
+    &__year {
+        font-style: normal;
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 125%;
+    }
+}
+
+@media(max-width: 1450px) {
+    .footer {
+        padding-bottom: 74px;
+
+        &__top {
+
+            .global-title {
+                max-width: 390px;
+            }
+        }
+
+        &__social {
+            gap: 100px;
+
+            &-text {
+                font-size: 20px;
+                line-height: 128.61%;
+                max-width: 212px;
+            }
+
+            &-items {
+                gap: 77px;
+            }
+
+            &-link {
+                width: 34px;
+                height: 34px;
+            }
+        }
+
+        &__form {
+            margin-top: 88px;
+            margin-bottom: 123px;
+        }
+
+        &__data {
+            gap: 127px;
+        }
+
+        &__submit {
+            padding: 21px 154px 22px 154px;
+        }
+
+        &__menu {
+            gap: 27px;
+        }
+
+        &__contact {
+            gap: 54px;
+        }
+
+        &__regulation[data-v-3506faf6] {
+            max-width: 447px;
+        }
+
+        &__rule {
+            gap: 110px;
+        }
+    }
+}
+
+@media(max-width: 1350px) {
+    .footer {
+
+        &__info {
+
+            .container {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+        }
+
+        &__menu {
+            margin-top: 30px;
+            width: 100%;
+            justify-content: space-between;
+        }
+
+        &__social {
+            gap: 70px;
+
+            &-link {
+                width: 27px;
+                height: 27px;
+            }
+        }
+    }
+}
+
+@media(max-width: 1150px) {
+    .footer {
+
+        &__top {
+            .container {
+                flex-direction: column;
+                gap: 23px;
+            }
+        }
+    }
+}
+
+@media(max-width: 1024px) {
+    .footer {
+
+        &__bottom {
+            .container {
+                flex-direction: column;
+                gap: 19px;
+            }
+        }
+
+        &__rule {
+            flex-direction: column;
+            gap: 19px;
+        }
+
+        &__data {
+            flex-direction: column;
+            gap: 36px;
+            margin-bottom: 41px;
+        }
+
+        &__form {
+
+            margin-top: 38px;
+
+            input {
+                &::placeholder {
+                    color: rgba(255, 255, 255, 0.43);
+                }
+            }
+        }
+
+        &__block {
+            flex-direction: column;
+            gap: 50px;
+        }
+    }
+}
+
+@media (max-width: 600px) {
+    .footer {
+
+        padding-bottom: 44px;
+        padding-top: 41px;
+
+        &__top {
+
+            .global-title {
+                max-width: 264px;
+            }
+        }
+
+        &__social {
+
+            gap: 0;
+            justify-content: space-between;
+
+            &-text {
+                font-weight: 400;
+                font-size: 14px;
+                line-height: 128.61%;
+                max-width: 150px;
+            }
+
+            &-items {
+                gap: 58px;
+            }
+        }
+
+        &__form {
+
+            input {
+                font-weight: 400;
+                font-size: 14px;
+                line-height: 128.61%;
+                padding-bottom: 10px;
+
+                &::placeholder {
+                    font-size: 14px;
+                    line-height: 128.61%;
+                }
+            }
+
+            &-input {
+                &--question {
+                    margin-bottom: 43px;
+                }
+            }
+        }
+
+        &__bottom {
+            padding-top: 28px;
+
+            .container {
+                align-items: flex-start;
+            }
+        }
+
+        &__block {
+            text-align: center;
+            position: relative;
+        }
+
+        &__rule {
+            align-items: flex-start;
+        }
+
+        &__submit {
+            width: 100%;
+            padding: 21px 0;
+            text-align: center;
+        }
+
+        &__send {
+            margin: 16px auto 0 auto;
+        }
+
+        &__logo {
+            width: 153px;
+            height: 33px;
+            position: absolute;
+            right: 0;
+            bottom: -90px;
+        }
+
+        &__contact {
+            flex-direction: column;
+            gap: 15px;
+
+            a {
+                max-width: 136px;
+            }
+        }
+
+        &__form {
+            margin-bottom: 43px;
+        }
+
+        &__info {
+            padding-bottom: 0;
+
+            .container {
+                border-bottom: 1px solid #FFFFFF;
+                padding-bottom: 15px;
+            }
+        }
+
+        &__bottom {
+            border: 0;
+        }
+
+        &__menu {
+            gap: 40px;
+            overflow: hidden;
+            overflow-x: scroll;
+
+            &::-webkit-scrollbar {
+                width: 0;
+                height: 0;
+                opacity: 0;
+            }
+
+        }
     }
 }
 </style>

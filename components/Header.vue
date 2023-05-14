@@ -3,6 +3,7 @@ import { ref } from 'vue';
 
 const activeHeader = ref(false);
 
+///Смена цвета при scroll страницы
 onMounted(() => {
     window.addEventListener('scroll', () => {
         if (window.scrollY > 0) {
@@ -13,6 +14,37 @@ onMounted(() => {
         }
     });
 })
+
+///Навигация
+const headerLinks = reactive([
+    {
+        name: "Этапы работы",
+        active: true,
+        href: "#"
+    },
+    {
+        name: "О нас",
+        active: false,
+        href: "#"
+    },
+    {
+        name: "Отзывы",
+        active: false,
+        href: "#"
+    },
+    {
+        name: "Контакты",
+        active: false,
+        href: "#"
+    }
+])
+
+const onChangeActiveLink = (indexLink) => {
+    console.log(111);
+    headerLinks.forEach((item, index) => {
+        item.active = index === indexLink ? true : false;
+    });
+}
 
 </script>
 
@@ -25,17 +57,9 @@ onMounted(() => {
             </a>
             <div class="header__menu">
                 <ul class="header__nav">
-                    <li class="header__nav-item header__nav-item--active">
-                        <a href="#" class="header__link">Этапы работы</a>
-                    </li>
-                    <li class="header__nav-item">
-                        <a href="#" class="header__link">О нас</a>
-                    </li>
-                    <li class="header__nav-item">
-                        <a href="#" class="header__link">Отзывы</a>
-                    </li>
-                    <li class="header__nav-item">
-                        <a href="#" class="header__link">Контакты</a>
+                    <li v-for="(item, index) in headerLinks" :key="index"
+                        :class="item.active ? 'header__nav-item header__nav-item--active' : 'header__nav-item'">
+                        <a :href="item.href" class="header__link" @click="onChangeActiveLink(index)">{{ item.name }}</a>
                     </li>
                 </ul>
                 <a class="header__call" href="tel:+71234567890">позвонить</a>
@@ -95,6 +119,17 @@ onMounted(() => {
         &-item {
             list-style-type: none;
 
+            &::after {
+                position: absolute;
+                content: "";
+                width: 0;
+                height: 1px;
+                background-color: currentColor;
+                left: 0;
+                bottom: -4px;
+                /* transition: width 0.3s; */
+            }
+
             &--active {
                 position: relative;
 
@@ -103,13 +138,7 @@ onMounted(() => {
                 }
 
                 &::after {
-                    position: absolute;
-                    content: "";
                     width: 100%;
-                    height: 1px;
-                    background-color: currentColor;
-                    left: 0;
-                    bottom: -4px;
                 }
             }
         }
@@ -119,6 +148,7 @@ onMounted(() => {
         font-weight: 400;
         font-size: 16px;
         line-height: 128.61%;
+        transition: font-weight .4s ease-in-out;
     }
 
     &__call {

@@ -32,6 +32,16 @@ button:focus {
   &.white {
     color: white;
   }
+
+  @media(max-width: 1450px) {
+    font-size: 38px;
+    line-height: 128.61%;
+  }
+
+  @media (max-width: 600px) {
+    font-size: 20px;
+    line-height: 128.61%;
+  }
 }
 
 body {
@@ -40,4 +50,8 @@ body {
 
 .container {
   margin: 0 150px;
+
+  @media(max-width: 768px) {
+    margin: 0 19px;
+  }
 }
