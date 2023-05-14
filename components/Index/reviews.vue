@@ -366,8 +366,6 @@ const navigateParams = {
         .swiper-navigate {
             margin-top: 0;
         }
-
-        &__text {}
     }
 }
 </style>
