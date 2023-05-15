@@ -25,9 +25,14 @@
 </template>
 <style scoped lang='scss'>
 .section-about {
+  margin-top: 103px;
   margin-bottom: 140px;
   display: flex;
   flex-direction: column;
+
+  .global-title {
+    padding-left: 150px;
+  }
 }
 
 .about-card {
@@ -104,6 +109,14 @@
   }
 }
 
+@media(max-width: 1170px) {
+  .section-about {
+    .global-title {
+      padding-left: 0;
+    }
+  }
+}
+
 @media(max-width: 900px) {
 
   .section-about {
@@ -139,7 +152,6 @@
         height: 350px;
       }
     }
-
   }
 }
 

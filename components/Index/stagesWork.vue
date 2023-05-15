@@ -4,74 +4,79 @@
 <template>
     <section class="stagesWork">
         <div class="global-title white">этапы работы</div>
-        <div class="stagesWork__steps">
-            <div class="stagesWork__arrow">
-                <div class="stagesWork__step stagesWork__step--left">
-                    <div class="stagesWork__step--content stagesWork__step--content--1">
-                        <p class="stagesWork__step--name">1. подбор автомобиля</p>
-                        <p class="stagesWork__step--text">Специалисты NLC подбирают вам авто по необходимым параметрам на
-                            площадках Европы.</p>
+        <div class="stagesWork__wrapper">
+            <div class="stagesWork__steps">
+                <div class="stagesWork__arrow">
+                    <div class="stagesWork__step stagesWork__step--left">
+                        <div class="stagesWork__step--content stagesWork__step--content--1">
+                            <p class="stagesWork__step--name">1. подбор автомобиля</p>
+                            <p class="stagesWork__step--text">Специалисты NLC подбирают вам авто по необходимым параметрам
+                                на
+                                площадках Европы.</p>
+                        </div>
+                        <div class="stagesWork__step--done stagesWork__step--done--1">
+                            <img src="@/assets/img/stagesWork/done.svg" alt="">
+                        </div>
                     </div>
-                    <div class="stagesWork__step--done stagesWork__step--done--1">
-                        <img src="../../assets/img/stagesWork/done.svg" alt="">
+                    <div class="stagesWork__step stagesWork__step--right">
+                        <div class="stagesWork__step--content stagesWork__step--content--2">
+                            <p class="stagesWork__step--name">2. заключение договора</p>
+                            <p class="stagesWork__step--text">Компания NLC заключает договоры
+                                с&nbsp;клиентами&nbsp;на&nbsp;поставку автомобиля
+                                как по полной, так и по частичной оплате (мин. аванс - 25%).</p>
+                        </div>
+                        <div class="stagesWork__step--done">
+                            <img src="@/assets/img/stagesWork/done.svg" alt="">
+                        </div>
                     </div>
+                    <div class="stagesWork__step stagesWork__step--left">
+                        <div class="stagesWork__step--content stagesWork__step--content--3">
+                            <p class="stagesWork__step--name">3. проверка автомобиля</p>
+                            <p class="stagesWork__step--text">Мы проводим полную проверку автомобиля перед его
+                                приобретением!
+                            </p>
+                            <ul class="stagesWork__step--list">
+                                <li class="stagesWork__step--item">Видообзор машины;</li>
+                                <li class="stagesWork__step--item">Назначаем встречи с продавцами;</li>
+                                <li class="stagesWork__step--item">Проводим техническую и юридическую проверки авто.</li>
+                            </ul>
+                        </div>
+                        <div class="stagesWork__step--done">
+                            <img src="@/assets/img/stagesWork/done.svg" alt="">
+                        </div>
+                    </div>
+                    <div class="stagesWork__step stagesWork__step--right">
+                        <div class="stagesWork__step--content stagesWork__step--content--4">
+                            <p class="stagesWork__step--name">4. оплата автомобиля в Европе</p>
+                            <p class="stagesWork__step--text">У компании NLC открыты представительства в Польше, Германии и
+                                Италии. Мы быстро и беспрепятственно оплачиваем автомобиль и забираем его у дилера.</p>
+                        </div>
+                        <div class="stagesWork__step--done">
+                            <img src="@/assets/img/stagesWork/done.svg" alt="">
+                        </div>
+                    </div>
+                    <div class="stagesWork__step stagesWork__step--left">
+                        <div class="stagesWork__step--content stagesWork__step--content--5">
+                            <p class="stagesWork__step--name">5. доставка автомобилей из Европы</p>
+                            <p class="stagesWork__step--text">Мы доставляем автомобиль автовозом от дилера до клиента.</p>
+                        </div>
+                        <div class="stagesWork__step--done">
+                            <img src="@/assets/img/stagesWork/done.svg" alt="">
+                        </div>
+                    </div>
+                    <div class="stagesWork__step stagesWork__step--right">
+                        <div class="stagesWork__step--content stagesWork__step--content--6">
+                            <p class="stagesWork__step--name">6. растаможка автомобиля</p>
+                            <p class="stagesWork__step--text">Клиент получает полностью растаможенный, юридически и
+                                технически
+                                чистый автомобиль, готовый к постановке на РФ учет. Также NLC делает ЭПТС и СБКТС.</p>
+                        </div>
+                        <div class="stagesWork__step--done">
+                            <img src="@/assets/img/stagesWork/done.svg" alt="">
+                        </div>
+                    </div>
+                    <img class="stagesWork__arrow-img" src="@/assets/img/stagesWork/arrow.png" alt="">
                 </div>
-                <div class="stagesWork__step stagesWork__step--right">
-                    <div class="stagesWork__step--content stagesWork__step--content--2">
-                        <p class="stagesWork__step--name">2. заключение договора</p>
-                        <p class="stagesWork__step--text">Компания NLC заключает договоры
-                            с&nbsp;клиентами&nbsp;на&nbsp;поставку автомобиля
-                            как по полной, так и по частичной оплате (мин. аванс - 25%).</p>
-                    </div>
-                    <div class="stagesWork__step--done">
-                        <img src="../../assets/img/stagesWork/done.svg" alt="">
-                    </div>
-                </div>
-                <div class="stagesWork__step stagesWork__step--left">
-                    <div class="stagesWork__step--content stagesWork__step--content--3">
-                        <p class="stagesWork__step--name">3. проверка автомобиля</p>
-                        <p class="stagesWork__step--text">Мы проводим полную проверку автомобиля перед его приобретением!
-                        </p>
-                        <ul class="stagesWork__step--list">
-                            <li class="stagesWork__step--item">Видообзор машины;</li>
-                            <li class="stagesWork__step--item">Назначаем встречи с продавцами;</li>
-                            <li class="stagesWork__step--item">Проводим техническую и юридическую проверки авто.</li>
-                        </ul>
-                    </div>
-                    <div class="stagesWork__step--done">
-                        <img src="../../assets/img/stagesWork/done.svg" alt="">
-                    </div>
-                </div>
-                <div class="stagesWork__step stagesWork__step--right">
-                    <div class="stagesWork__step--content stagesWork__step--content--4">
-                        <p class="stagesWork__step--name">4. оплата автомобиля в Европе</p>
-                        <p class="stagesWork__step--text">У компании NLC открыты представительства в Польше, Германии и
-                            Италии. Мы быстро и беспрепятственно оплачиваем автомобиль и забираем его у дилера.</p>
-                    </div>
-                    <div class="stagesWork__step--done">
-                        <img src="../../assets/img/stagesWork/done.svg" alt="">
-                    </div>
-                </div>
-                <div class="stagesWork__step stagesWork__step--left">
-                    <div class="stagesWork__step--content stagesWork__step--content--5">
-                        <p class="stagesWork__step--name">5. доставка автомобилей из Европы</p>
-                        <p class="stagesWork__step--text">Мы доставляем автомобиль автовозом от дилера до клиента.</p>
-                    </div>
-                    <div class="stagesWork__step--done">
-                        <img src="../../assets/img/stagesWork/done.svg" alt="">
-                    </div>
-                </div>
-                <div class="stagesWork__step stagesWork__step--right">
-                    <div class="stagesWork__step--content stagesWork__step--content--6">
-                        <p class="stagesWork__step--name">6. растаможка автомобиля</p>
-                        <p class="stagesWork__step--text">Клиент получает полностью растаможенный, юридически и технически
-                            чистый автомобиль, готовый к постановке на РФ учет. Также NLC делает ЭПТС и СБКТС.</p>
-                    </div>
-                    <div class="stagesWork__step--done">
-                        <img src="../../assets/img/stagesWork/done.svg" alt="">
-                    </div>
-                </div>
-                <img class="stagesWork__arrow-img" src="../../assets/img/stagesWork/arrow.png" alt="">
             </div>
         </div>
         <p class="stagesWork__text">
@@ -87,7 +92,7 @@
             <Button text="Подобрать машину" />
         </div>
         <div class="stagesWork__car">
-            <img src="../../assets/img/stagesWork/car.png" alt="">
+            <img src="@/assets/img/stagesWork/car.png" alt="">
         </div>
     </section>
 </template>
@@ -101,6 +106,13 @@
     flex-direction: column;
     align-items: center;
     position: relative;
+
+    &__wrapper {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
 
     &__text {
         margin-top: 41px;
@@ -223,7 +235,7 @@
             }
 
             .stagesWork__step--content {
-                left: 40px;
+                right: -530px;
                 padding: 20px 38px 20px 41px;
                 width: 521px;
             }
@@ -278,7 +290,7 @@
         height: 71%;
 
         img {
-            object-fit: cover;
+            object-fit: contain;
             width: 100%;
             height: 100%;
         }
@@ -287,6 +299,135 @@
     .button {
         position: absolute;
         top: 45px;
+    }
+}
+
+@media(max-width: 1450px) {
+    .stagesWork {
+
+        &__car {
+            top: 217px;
+        }
+
+        &__text {
+            width: 709px;
+        }
+
+        &__step {
+
+            &--list {
+                font-size: 14px;
+                line-height: 147.11%;
+            }
+
+            &--left {
+                .stagesWork__step--content {
+                    padding: 18px 35px 30px 34px;
+                    width: 383px;
+                }
+            }
+
+            &--right {
+                .stagesWork__step--content {
+                    width: 388px;
+                    right: -400px;
+                }
+            }
+
+            &--text {
+                font-size: 14px;
+                line-height: 147.11%;
+            }
+        }
+    }
+}
+
+@media(max-width: 980px) {
+    .stagesWork {
+
+        &__weeks {
+
+            &-text {
+                text-align: center;
+                word-break: break-all;
+            }
+        }
+
+        .button {
+            top: 43%;
+        }
+    }
+}
+
+@media(max-width: 852px) {
+    .stagesWork {
+
+        &__step {
+
+            &--left {
+                .stagesWork__step--content {
+                    width: 300px;
+                }
+            }
+
+            &--right {
+                .stagesWork__step--content {
+                    width: 300px;
+                    right: -310px;
+                }
+            }
+
+        }
+    }
+}
+
+@media(max-width: 730px) {
+    .stagesWork {
+
+        &__wrapper {
+            padding: 0 15px;
+            align-items: flex-end;
+        }
+
+        &__arrow {
+            gap: 120px;
+        }
+
+
+        &__step {
+
+            &--content {
+
+                &--2 {
+                    background-image: url('@/assets/img/stagesWork/step2Mobile.png');
+                }
+
+                &--4 {
+                    background-image: url('@/assets/img/stagesWork/step4Mobile.png');
+                }
+
+                &--6 {
+                    background-image: url('@/assets/img/stagesWork/step6Mobile.png');
+                }
+            }
+
+            &--left {
+                .stagesWork__step--content {
+                    width: 600px;
+                    padding: 18px 35px 30px 34px;
+                }
+            }
+
+            &--right {
+                .stagesWork__step--content {
+                    width: 600px;
+                    right: 40px;
+                    padding: 18px 35px 30px 34px;
+                }
+            }
+
+        }
+
     }
 }
 </style>
