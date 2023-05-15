@@ -1,8 +1,8 @@
 <template>
   <!-- <IndexMainCar />
   <IndexSwiperModels />
-  <IndexStagesWork />
-  <IndexAbout /> -->
+  <IndexStagesWork />-->
+  <IndexAbout /> 
   <IndexDeliveredСars />
   <IndexWhy />
   <IndexPrice />
