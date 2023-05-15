@@ -1,0 +1,33 @@
+.vfm {
+  &__container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__content {
+    position: relative;
+    border-radius: 4px;
+  }
+
+  &--overlay {
+    background-color: rgb(1 4 14 / 88%) !important;
+  }
+
+  &__close {
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 32px;
+    height: 32px;
+    margin: 8px 8px 0 0;
+    cursor: pointer;
+
+    &:hover {
+      color: gray;
+    }
+  }
+}
