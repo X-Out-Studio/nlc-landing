@@ -1,7 +1,7 @@
 <template>
   <div class="main-content">
     <div class="content-container">
-      <div class="title">Автомобили из Европы под&nbsp;заказ</div>
+      <div class="title">Автомобили из Европы <span>под&nbsp;заказ</span></div>
       <div class="telegram-box">
         <div class="text">
           БЕСПЛАТНЫЙ ПОДБОР АВТО
@@ -34,10 +34,10 @@
   display: flex;
   width: 100%;
   height: 967px;
-  background-image: url("../../assets/img/index/mainCar/img.png");
+  background-image: url("@/assets/img/mainCar/img2.png");
   background-repeat: no-repeat;
   background-size: cover;
-  padding: 118px 150px 64px 150px;
+  padding: 118px 150px 49px 150px;
   .content-container {
     display: flex;
     width: 100%;
@@ -53,6 +53,10 @@
       color: #ffffff;
       font-family: "Druk Text Wide Cyr";
       font-style: normal;
+      span {
+        font-family: "Druk Text Wide Cyr";
+        font-size: 65px;
+      }
     }
     .telegram-box {
       align-self: flex-end;
@@ -78,6 +82,59 @@
         padding: 10px 44px;
         border: 1px solid #ffffff;
         border-radius: 108px;
+      }
+    }
+  }
+  @media (max-width: 1550px) {
+    height: 802px;
+    .content-container {
+      .title {
+        font-size: 61px;
+        span {
+          font-size: 47px;
+        }
+      }
+      .telegram-box {
+        padding: 38px 74px 38px 48px;
+        gap: 17px;
+        .text {
+          font-size: 24px;
+          line-height: 143.11%;
+          max-width: 272px;
+        }
+        .telegram-button {
+          padding: 4px 30px;
+        }
+      }
+    }
+  }
+  @media (max-width: 1020px) {
+    padding: 97px 16px 36px 10px;
+    height: 689px;
+
+    background-position: center;
+    .content-container {
+      .title {
+        font-size: 31px;
+        span {
+          font-size: 31px;
+        }
+      }
+      .telegram-box {
+        align-self: center;
+        flex-direction: column;
+        padding: 23px 16px;
+        .text {
+          font-size: 23px;
+          text-align: center;
+        }
+        .telegram-button {
+          width: 100%;
+          display: flex;
+          align-items: center;
+          height: 56px;
+          justify-content: center;
+        }
       }
     }
   }
