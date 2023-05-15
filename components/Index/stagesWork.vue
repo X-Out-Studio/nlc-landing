@@ -90,7 +90,7 @@ const store = useModalStepsStore();
             Свяжитесь с нами, и мы поможем вам подобрать автомобиль вашей мечты!
         </p>
         <div class="stagesWork__weeks">
-            <p class="stagesWork__weeks-text">2 недели</p>
+            <p class="stagesWork__weeks-text">2 <span>недели</span></p>
             <Button @click="store.openModal = true" text="Подобрать машину" />
         </div>
         <div class="stagesWork__car">
@@ -137,6 +137,7 @@ const store = useModalStepsStore();
         display: flex;
         flex-direction: row;
         justify-content: center;
+        align-items: center;
         height: 100%;
     }
 
@@ -232,6 +233,8 @@ const store = useModalStepsStore();
         }
 
         &--right {
+            margin: 0 auto;
+
             .stagesWork__step--done {
                 order: -1;
             }
@@ -240,10 +243,16 @@ const store = useModalStepsStore();
                 right: -530px;
                 padding: 20px 38px 20px 41px;
                 width: 521px;
+
+                &--1 {
+                    right: 36px;
+                }
             }
         }
 
         &--left {
+            margin: 0 auto;
+
             .stagesWork__step--content {
                 right: 40px;
                 padding: 25px 63px 34px 34px;
@@ -281,6 +290,17 @@ const store = useModalStepsStore();
             letter-spacing: 0.015em;
             text-transform: uppercase;
             font-family: 'Druk Text Wide Cyr';
+
+            span {
+                font-style: normal;
+                font-weight: 900;
+                font-size: 151px;
+                line-height: 97.11%;
+                color: rgba(255, 255, 255, 0.1);
+                letter-spacing: 0.015em;
+                text-transform: uppercase;
+                font-family: 'Druk Text Wide Cyr';
+            }
         }
     }
 
@@ -351,7 +371,10 @@ const store = useModalStepsStore();
 
             &-text {
                 text-align: center;
-                word-break: break-all;
+
+                span {
+                    word-break: break-all;
+                }
             }
         }
 
@@ -365,6 +388,7 @@ const store = useModalStepsStore();
     .stagesWork {
 
         &__step {
+            width: 100%;
 
             &--left {
                 .stagesWork__step--content {
@@ -385,16 +409,60 @@ const store = useModalStepsStore();
 
 @media(max-width: 730px) {
     .stagesWork {
+        padding-top: 6px;
+        align-items: flex-start;
+        padding-bottom: 0;
 
-        &__wrapper {
-            padding: 0 15px;
-            align-items: flex-end;
+        .global-title {
+            padding-left: 16px;
+        }
+
+        &__steps {
+            width: 100%;
+        }
+
+        &__weeks {
+
+            &-text {
+                font-size: 113px;
+                line-height: 97.11%;
+                text-align: start;
+
+                span {
+
+                    display: block;
+                    font-size: 113px;
+                    line-height: 97.11%;
+                }
+            }
         }
 
         &__arrow {
-            gap: 120px;
-        }
+            width: 100%;
+            gap: 11px;
+            align-items: flex-end;
+            padding: 0 15px;
 
+            .stagesWork__step {
+
+                &:nth-child(2),
+                &:nth-child(3),
+                &:nth-child(4),
+                &:nth-child(5),
+                &:nth-child(6) {
+                    padding-right: 5px;
+                }
+            }
+
+            img {
+                height: 105%;
+            }
+
+            .stagesWork__arrow-img {
+                position: absolute;
+                top: -5%;
+            }
+        }
 
         &__step {
 
@@ -414,20 +482,79 @@ const store = useModalStepsStore();
             }
 
             &--left {
+
                 .stagesWork__step--content {
-                    width: 600px;
-                    padding: 18px 35px 30px 34px;
+                    width: 100%;
                 }
             }
 
             &--right {
+
                 .stagesWork__step--content {
-                    width: 600px;
-                    right: 40px;
-                    padding: 18px 35px 30px 34px;
+                    width: 100%;
+                }
+
+                .stagesWork__step--done {
+                    order: 1;
                 }
             }
 
+            &--content {
+                position: static;
+            }
+        }
+
+        &__text {
+            width: 100%;
+            padding: 0 15px;
+            margin-top: 0px;
+        }
+
+    }
+
+}
+
+@media(max-width: 500px) {
+    .stagesWork {
+
+        &__arrow {
+
+            &-img {
+                width: 35px;
+            }
+        }
+
+        &__weeks {
+            width: 100%;
+            padding-top: 45px;
+            padding-bottom: 55px;
+
+            &-text {
+                position: absolute;
+                text-align: start;
+                bottom: 0;
+            }
+
+            .button {
+                position: relative;
+            }
+        }
+
+        &__step {
+
+            &--left {
+
+                .stagesWork__step--content {
+                    padding: 20px 30px 20px 12px;
+                }
+            }
+
+            &--right {
+
+                .stagesWork__step--content {
+                    padding: 20px 30px 20px 12px;
+                }
+            }
         }
 
     }

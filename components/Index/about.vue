@@ -120,6 +120,7 @@
 @media(max-width: 900px) {
 
   .section-about {
+    margin-top: 40px;
     margin-bottom: 72px;
 
     .about-card {
