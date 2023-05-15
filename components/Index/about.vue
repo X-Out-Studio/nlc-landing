@@ -25,41 +25,145 @@
 </template>
 <style scoped lang='scss'>
 .section-about {
+  margin-top: 103px;
+  margin-bottom: 140px;
   display: flex;
   flex-direction: column;
-  margin: 103px 188px 140px 150px;
+
+  .global-title {
+    padding-left: 150px;
+  }
 }
+
 .about-card {
   display: flex;
-  align-self: center;
-  width: fit-content;
-  justify-content: space-between;
+  flex-direction: row;
   background: #1b1b1b;
   border-radius: 14px;
-  margin: 81px 0 0 0;
+  max-width: 1375px;
+  width: 100%;
+  margin: 81px auto 0 auto;
+
   &__left-container {
+    width: 54%;
     padding: 48px 55px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
   }
+
   &__right-container {
-    width: 633px;
-    height: 481px;
+    width: 46%;
+
     img {
-      width: fit-content;
-      height: 100%;
       object-fit: cover;
+      height: 100%;
+      width: 100%;
+      border-radius: 14px;
     }
   }
 }
+
 .text {
   font-size: 18px;
   line-height: 137.11%;
   color: #ffffff;
   max-width: 582px;
+
   span {
     font-weight: 700;
   }
 }
+
 .logo {
-  padding: 48px 0 0 0;
+  width: 155px;
+  height: 33px;
+
+  img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+  }
+}
+
+@media(max-width: 1450px) {
+  .section-about {
+    padding: 0 15px;
+
+    .text {
+      font-size: 15px;
+      line-height: 137.11%;
+    }
+
+    .about-card {
+      max-width: 1034px;
+
+      &__left-container {
+        padding: 41px 35px 44px 45px;
+      }
+
+      &__right-container {
+        height: 415px;
+      }
+    }
+  }
+}
+
+@media(max-width: 1170px) {
+  .section-about {
+    .global-title {
+      padding-left: 0;
+    }
+  }
+}
+
+@media(max-width: 900px) {
+
+  .section-about {
+    margin-bottom: 72px;
+
+    .about-card {
+      flex-direction: column;
+      margin-top: 31px;
+
+      &__left-container {
+        width: 100%;
+        gap: 30px;
+        padding: 31px 22px 21px 21px;
+
+        .text {
+          max-width: 100%;
+        }
+      }
+
+      &__right-container {
+        width: 100%;
+        height: 500px;
+      }
+    }
+  }
+}
+
+@media(max-width: 600px) {
+  .section-about {
+
+    .about-card {
+      &__right-container {
+        height: 350px;
+      }
+    }
+  }
+}
+
+@media(max-width: 440px) {
+  .section-about {
+
+    .about-card {
+      &__right-container {
+        height: 282px;
+      }
+    }
+
+  }
 }
 </style>

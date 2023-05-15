@@ -5,7 +5,7 @@
             <div class="deliveredCars__cards">
                 <div class="deliveredCars__item">
                     <div class="deliveredCars__img">
-                        <img src="../../assets/img/deliveredCars/car.jpg" alt="">
+                        <img src="../../assets/img/deliveredCars/car1.png" alt="">
                     </div>
                     <div class="deliveredCars__content">
                         <div class="deliveredCars__info">
@@ -27,7 +27,7 @@
                 </div>
                 <div class="deliveredCars__item">
                     <div class="deliveredCars__img">
-                        <img src="../../assets/img/deliveredCars/car.jpg" alt="">
+                        <img src="../../assets/img/deliveredCars/car2.png" alt="">
                     </div>
                     <div class="deliveredCars__content">
                         <div class="deliveredCars__info">
@@ -49,7 +49,7 @@
                 </div>
                 <div class="deliveredCars__item">
                     <div class="deliveredCars__img">
-                        <img src="../../assets/img/deliveredCars/car.jpg" alt="">
+                        <img src="../../assets/img/deliveredCars/car3.png" alt="">
                     </div>
                     <div class="deliveredCars__content">
                         <div class="deliveredCars__info">
@@ -71,7 +71,7 @@
                 </div>
                 <div class="deliveredCars__item">
                     <div class="deliveredCars__img">
-                        <img src="../../assets/img/deliveredCars/car.jpg" alt="">
+                        <img src="../../assets/img/deliveredCars/car4.png" alt="">
                     </div>
                     <div class="deliveredCars__content">
                         <div class="deliveredCars__info">
@@ -93,7 +93,7 @@
                 </div>
                 <div class="deliveredCars__item">
                     <div class="deliveredCars__img">
-                        <img src="../../assets/img/deliveredCars/car.jpg" alt="">
+                        <img src="../../assets/img/deliveredCars/car5.png" alt="">
                     </div>
                     <div class="deliveredCars__content">
                         <div class="deliveredCars__info">
@@ -115,7 +115,7 @@
                 </div>
                 <div class="deliveredCars__item">
                     <div class="deliveredCars__img">
-                        <img src="../../assets/img/deliveredCars/car.jpg" alt="">
+                        <img src="../../assets/img/deliveredCars/car6.png" alt="">
                     </div>
                     <div class="deliveredCars__content">
                         <div class="deliveredCars__info">
@@ -136,7 +136,7 @@
                     </div>
                 </div>
             </div>
-            <Button class="button button--black" text="Ещё"/>
+            <Button class="button button--black" text="Ещё" />
         </div>
     </section>
 </template>
@@ -167,6 +167,7 @@
 
     &__img {
         border-radius: 14px;
+        height: 317px;
 
         img {
             border-radius: 14px;
@@ -223,6 +224,68 @@
         text-align: center;
         margin-top: 21px;
     }
+}
 
+@media(max-width: 1450px) {
+
+    .deliveredCars {
+
+        &__cards {
+            gap: 26px;
+        }
+
+        &__text {
+            font-size: 16px;
+            line-height: 128.61%;
+        }
+
+        &__price {
+            font-size: 26px;
+            line-height: 128.61%;
+        }
+
+        &__content {
+            padding: 22px 15px 30px 14px;
+        }
+    }
+}
+
+@media(max-width: 1270px) {
+    .deliveredCars {
+        margin-bottom: 40px;
+
+        &__cards {
+            grid-template-columns: 1fr 1fr;
+            margin-top: 20px;
+        }
+
+        &__img {
+            height: 287px;
+        }
+    }
+}
+
+@media(max-width: 600px) {
+    .deliveredCars {
+
+        &__cards {
+            grid-template-columns: 1fr;
+            gap: 17px;
+            margin-bottom: 28px;
+        }
+    
+        .global-title {
+            text-align: start;
+        }
+
+        &__content {
+            padding: 20px 14px 27px 14px;
+        }
+
+        &__price {
+            margin-top: 12px;
+        }
+
+    }
 }
 </style>
