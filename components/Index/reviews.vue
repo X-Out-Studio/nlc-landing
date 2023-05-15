@@ -3,6 +3,11 @@ const navigateParams = {
     nextEl: ".swiper-next",
     prevEl: ".swiper-prev",
 };
+
+const itemRefs = ref([])
+
+onMounted(() => console.log(itemRefs.value));
+
 </script>
 
 <template>
@@ -15,7 +20,7 @@ const navigateParams = {
                 <SwiperSlide>
                     <div class="reviews__card">
                         <div class="reviews__img">
-                            <img src="../../assets/img/reviews/reviews1.png" alt="">
+                            <img src="@/assets/img/reviews/reviews1.png" alt="">
                         </div>
                         <div class="reviews__content">
                             <p class="reviews__text">
@@ -31,10 +36,10 @@ const navigateParams = {
                                 доволен ! Если кто то думает поменять автомобиль , то тогда я рекомендую обратится за
                                 помощью к Юрию 🤝
                             </p>
-                            <a class="reviews__text-more" href="#">
+                            <button class="reviews__text-more" ref="itemRefs">
                                 <img src="../../assets/img/reviews/arrow.svg" alt="" />
                                 Подробнее
-                            </a>
+                            </button>
                             <p class="reviews__name"><i>- Иван</i></p>
                         </div>
                     </div>
@@ -50,10 +55,10 @@ const navigateParams = {
                                 подобрали авто по всем запросам, проверили и уже через 2 недели автомобиль бы у меня 🔥Был
                                 рад сотрудничеству 👍🏻
                             </p>
-                            <a class="reviews__text-more" href="#">
+                            <button class="reviews__text-more" ref="itemRefs">
                                 <img src="../../assets/img/reviews/arrow.svg" alt="" />
                                 Подробнее
-                            </a>
+                            </button>
                             <p class="reviews__name"><i> - Андрей</i></p>
                         </div>
                     </div>
@@ -69,10 +74,10 @@ const navigateParams = {
                                 огромную благодарность за проделанную работу! Связь, сервис на высшем уровне! Буду
                                 рекомендовать знакомым и друзьям👌🏼 Удачи и успехов в работе.
                             </p>
-                            <a class="reviews__text-more" href="#">
+                            <button class="reviews__text-more" ref="itemRefs">
                                 <img src="../../assets/img/reviews/arrow.svg" alt="" />
                                 Подробнее
-                            </a>
+                            </button>
                             <p class="reviews__name"><i>- Руслан</i></p>
                         </div>
                     </div>
@@ -93,10 +98,10 @@ const navigateParams = {
                                 получил качественный и надёжный автомобиль.<br><br>
                                 Спасибо за крутое авто, теперь буду обращаться только к вам!
                             </p>
-                            <a class="reviews__text-more" href="#">
+                            <button class="reviews__text-more" ref="itemRefs">
                                 <img src="../../assets/img/reviews/arrow.svg" alt="" />
                                 Подробнее
-                            </a>
+                            </button>
                             <p class="reviews__name"><i>- Александр</i></p>
                         </div>
                     </div>
@@ -114,10 +119,10 @@ const navigateParams = {
                                 🔥🔥 Очень доволен сотрудничеством с NLC и сейчас уже наслаждаюсь новым автомобилем!
                                 Рекомендую всем обратиться за помощью в подборе машины именно к Юрию.
                             </p>
-                            <a class="reviews__text-more" href="#">
+                            <button class="reviews__text-more" ref="itemRefs">
                                 <img src="../../assets/img/reviews/arrow.svg" alt="" />
                                 Подробнее
-                            </a>
+                            </button>
                             <p class="reviews__name"><i>- Константин</i></p>
                         </div>
                     </div>
@@ -325,6 +330,7 @@ const navigateParams = {
                 color: #BEBEBE;
                 font-size: 14px;
                 line-height: 162.61%;
+                background-color: transparent;
             }
 
             &::after {

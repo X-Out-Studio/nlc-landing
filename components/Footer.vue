@@ -206,6 +206,12 @@
         background-color: transparent;
         padding: 21px 178px 22px 178px;
         cursor: pointer;
+        transition: color 0.3s, background-color 0.3s;
+
+        &:hover {
+            background-color: #FFFFFF;
+            color: #000000;
+        }
     }
 
     &__form {
