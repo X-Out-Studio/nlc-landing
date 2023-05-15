@@ -35,34 +35,66 @@ const openForm = () => {
   </div>
 </template>
 <style scoped lang='scss'>
-.calculator-container {
-  margin: 0 0 140px 0;
-}
+.calculator-container {}
+
 .section-calculator {
   height: 615px;
   width: 100%;
-  background: url("@/assets/img/calculator/background.png") center center/cover
-    no-repeat;
+  background: url("@/assets/img/calculator/background.png") center center/cover no-repeat;
   position: relative;
+
+  @media (max-width: 1656px) {
+    height: 459px;
+  }
+
+  @media (max-width: 1200px) {
+    height: 695px;
+  }
 }
-.button {
-  padding: 30px 106px;
-}
+
+
+
 .img-container {
   position: absolute;
   right: 0;
   top: -40px;
   width: 1391px;
   height: 650px;
+
   img {
     width: 100%;
     height: 100%;
     object-fit: cover;
     object-position: left;
   }
+
+  @media (max-width: 1905px) {
+    width: 1228px;
+  }
+
+  @media (max-width: 1656px) {
+    width: 946px;
+    height: 486px;
+  }
+
+  @media (max-width: 1439px) {
+    width: 726px;
+  }
+
+  @media (max-width: 1200px) {
+    width: auto;
+    height: 486px;
+    top: 110px;
+
+    img {
+      object-position: 22%;
+    }
+  }
 }
+
 .description-container {
   padding: 40px 0 175px 147px;
+
   .description {
     font-family: "Druk Text Wide Cyr";
     font-weight: 900;
@@ -73,7 +105,40 @@ const openForm = () => {
     max-width: 719px;
     margin: 0 0 113px 0;
   }
+
+  .button {
+    padding: 30px 106px;
+
+    @media (max-width: 1200px) {
+      align-self: center;
+      width: 247px;
+      height: 66px;
+      padding: 20px 71px;
+      font-size: 19px;
+    }
+  }
+
+  @media (max-width: 1656px) {
+    .description {
+      font-size: 44px;
+      max-width: 749px;
+      margin: 0 0 76px 0;
+    }
+  }
+
+  @media (max-width: 1200px) {
+    padding: 40px 16px 48px 16px;
+    display: flex;
+    flex-direction: column;
+
+    .description {
+      font-size: 31px;
+      max-width: 369px;
+      margin: 0 0 381px 0;
+    }
+  }
 }
+
 .v-enter-active,
 .v-leave-active {
   transition: opacity 0.3s ease;
