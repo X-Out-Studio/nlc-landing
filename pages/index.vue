@@ -8,4 +8,5 @@
   <IndexPrice />
   <IndexCalculatorMain />
   <IndexReviews />
+  <Modal />
 </template>

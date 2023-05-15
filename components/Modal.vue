@@ -1,5 +1,9 @@
 <script setup>
 import { ref } from "vue";
+import { useModalStepsStore } from "@/store/modalSteps";
+import { VueFinalModal } from "vue-final-modal";
+
+const store = useModalStepsStore();
 
 const done = ref(false);
 
@@ -9,47 +13,55 @@ const doneForm = () => {
 </script>
 
 <template>
-  <section class="modal">
-    <div class="modal__wrapper">
-      <button class="modal__close">
-        <img src="../assets/img/modal/cross.svg" alt="" />
-      </button>
-      <Transition>
-        <div v-if="!done" class="modal__start">
-          <div class="global-title">узнай стоимость своего авто</div>
-          <form class="modal__form">
-            <input class="modal__input" type="text" placeholder="Ваше имя" />
-            <input class="modal__input" type="tel" placeholder="Ваш телефон" />
-          </form>
-          <div class="modal__send">
-            <button class="modal__submit" @click="doneForm()">Отправить</button>
-            <p class="modal__text">
-              Нажимая на кнопку «Оставить заявку», вы соглашаетесь с условиями
-              <a href="#">Политики обработки персональных данных</a>
-            </p>
-          </div>
-        </div>
-      </Transition>
-      <Transition>
-        <div v-if="done" class="modal__end">
-          <div class="modal__thank">спасибо за заявку!</div>
-          <p class="modal__done">наш Специалист уже начал просчет</p>
-          <div class="modal__social">
-            <div class="modal__social-text">
-              Узнай о нас больше в соц. сетях
-              <img src="../assets/img/modal/arrow.svg" alt="" />
+  <vue-final-modal v-model="store.openModal">
+    <section class="modal">
+      <div class="modal__wrapper">
+        <button class="modal__close">
+          <img src="../assets/img/modal/cross.svg" alt="" />
+        </button>
+        <Transition>
+          <div v-if="!done" class="modal__start">
+            <div class="global-title">узнай стоимость своего авто</div>
+            <form class="modal__form">
+              <input class="modal__input" type="text" placeholder="Ваше имя" />
+              <input
+                class="modal__input"
+                type="tel"
+                placeholder="Ваш телефон"
+              />
+            </form>
+            <div class="modal__send">
+              <button class="modal__submit" @click="doneForm()">
+                Отправить
+              </button>
+              <p class="modal__text">
+                Нажимая на кнопку «Оставить заявку», вы соглашаетесь с условиями
+                <a href="#">Политики обработки персональных данных</a>
+              </p>
             </div>
-            <a href="#">
-              <img src="../assets/img/modal/telega.svg" alt="" />
-            </a>
-            <a href="#">
-              <img src="../assets/img/modal/insta.svg" alt="" />
-            </a>
           </div>
-        </div>
-      </Transition>
-    </div>
-  </section>
+        </Transition>
+        <Transition>
+          <div v-if="done" class="modal__end">
+            <div class="modal__thank">спасибо за заявку!</div>
+            <p class="modal__done">наш Специалист уже начал просчет</p>
+            <div class="modal__social">
+              <div class="modal__social-text">
+                Узнай о нас больше в соц. сетях
+                <img src="../assets/img/modal/arrow.svg" alt="" />
+              </div>
+              <a href="#">
+                <img src="../assets/img/modal/telega.svg" alt="" />
+              </a>
+              <a href="#">
+                <img src="../assets/img/modal/insta.svg" alt="" />
+              </a>
+            </div>
+          </div>
+        </Transition>
+      </div>
+    </section>
+  </vue-final-modal>
 </template>
 
 <style lang="scss" scoped>
