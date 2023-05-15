@@ -1,5 +1,7 @@
 @import './scss/variable';
 @import './scss/fonts';
+@import './scss/vfm';
+
 
 * {
   margin: 0;
@@ -351,7 +353,7 @@ body {
   &__end {
     display: flex;
     flex-direction: column;
-    justify-content: end;
+    justify-content: flex-end;
     align-items: center;
     gap: 32px;
     height: 100%;

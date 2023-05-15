@@ -1,12 +1,12 @@
 <template>
-  <!-- <IndexMainCar />
-  <IndexSwiperModels />-->
-  <IndexStagesWork />
-  <IndexAbout /> 
+  <IndexMainCar />
+  <IndexSwiperModels />
+  <!--<IndexStagesWork />
+  <IndexAbout />
   <IndexDeliveredСars />
   <IndexWhy />
   <IndexPrice />
-  <!-- <IndexCalculatorMain /> -->
-  <IndexReviews />
+  <IndexCalculatorMain />
+  <IndexReviews /> -->
   <Modal />
 </template>

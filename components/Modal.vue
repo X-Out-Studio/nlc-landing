@@ -16,7 +16,7 @@ const doneForm = () => {
   <vue-final-modal v-model="store.openModal">
     <section class="modal">
       <div class="modal__wrapper">
-        <button class="modal__close">
+        <button class="modal__close" @click="store.openModal = false">
           <img src="../assets/img/modal/cross.svg" alt="" />
         </button>
         <Transition>

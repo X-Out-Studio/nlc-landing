@@ -19,6 +19,20 @@ const navigateParams = {
         :autoplay="{
           delay: 1000,
         }"
+        :breakpoints="{
+          320: {
+            slidesPerView: 3,
+            spaceBetween: 10,
+          },
+          1020: {
+            slidesPerView: 3.5,
+            spaceBetween: 16,
+          },
+          1575: {
+            slidesPerView: 4.5,
+            spaceBetween: 42,
+          },
+        }"
       >
         <SwiperSlide>
           <div class="slide-content">
@@ -102,7 +116,7 @@ const navigateParams = {
   padding: 57px 150px 61px 150px;
 }
 .title-container {
-  max-width: 700px;
+  max-width: 820px;
 }
 .swiper-container {
   margin: 91px 0 0 0;
