@@ -1,6 +1,6 @@
 <script setup lang="ts">
 defineProps<{
-  text?: string
+    text?: string
 }>()
 </script>
 
@@ -20,6 +20,11 @@ defineProps<{
     font-size: 21px;
     color: #ffffff;
     cursor: pointer;
+    transition: all 0.3s;
+
+    &:hover {
+        background: linear-gradient(#EF002B);
+    }
 
     &--black {
         font-size: 15px;
@@ -29,6 +34,11 @@ defineProps<{
         border: 1px solid #000000;
         background: transparent;
         box-shadow: none;
+
+        &:hover {
+            background: #000000;
+            color: #FFFFFF;
+        }
     }
 
     &--white {
