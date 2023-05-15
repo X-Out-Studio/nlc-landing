@@ -5,7 +5,7 @@ const openForm = () => {
   store.openModal ? (store.openModal = false) : (store.openModal = true);
 };
 const changeState = (param) => {
-  store.answers.firstStep = param;
+  store.answers.thirdStep = param;
 };
 let active = ref(null);
 const changeActive = (field) => {
@@ -17,8 +17,8 @@ const changeActive = (field) => {
   <div>
     <div class="calc-container">
       <div class="title-container">
-        <div class="name">Какой автомобиль хотите купить?</div>
-        <div class="page">01<span>/08</span></div>
+        <div class="name">Выберите тип&nbsp;кузова</div>
+        <div class="page">03<span>/08</span></div>
       </div>
       <div class="select-container">
         <div
@@ -26,29 +26,65 @@ const changeActive = (field) => {
           :class="active == 1 ? 'active' : ''"
           @click="
             () => {
-              changeState('Новый');
+              changeState('Cедан');
               changeActive(1);
             }
           "
         >
-          Новый
+          Cедан
         </div>
         <div
           class="gray-select"
           :class="active == 2 ? 'active' : ''"
           @click="
             () => {
-              changeState('С пробегом');
+              changeState('Хэтчбек');
               changeActive(2);
             }
           "
         >
-          С пробегом
+          Хэтчбек
+        </div>
+        <div
+          class="gray-select"
+          :class="active == 3 ? 'active' : ''"
+          @click="
+            () => {
+              changeState('Универсал');
+              changeActive(3);
+            }
+          "
+        >
+          Универсал
+        </div>
+        <div
+          class="gray-select"
+          :class="active == 4 ? 'active' : ''"
+          @click="
+            () => {
+              changeState('Внедорожник');
+              changeActive(4);
+            }
+          "
+        >
+          Внедорожник
+        </div>
+        <div
+          class="gray-select"
+          :class="active == 5 ? 'active' : ''"
+          @click="
+            () => {
+              changeState('Минивен');
+              changeActive(5);
+            }
+          "
+        >
+          Минивен
         </div>
       </div>
       <div class="navigate-container">
         <svg
-          @click="openForm"
+          @click="store.currentStep--"
           width="67"
           height="67"
           viewBox="0 0 67 67"

@@ -5,7 +5,7 @@ const openForm = () => {
   store.openModal ? (store.openModal = false) : (store.openModal = true);
 };
 const changeState = (param) => {
-  store.answers.firstStep = param;
+  store.answers.fourthStep = param;
 };
 let active = ref(null);
 const changeActive = (field) => {
@@ -17,8 +17,8 @@ const changeActive = (field) => {
   <div>
     <div class="calc-container">
       <div class="title-container">
-        <div class="name">Какой автомобиль хотите купить?</div>
-        <div class="page">01<span>/08</span></div>
+        <div class="name engine">Какой тип двигателя вас интересует</div>
+        <div class="page">04<span>/08</span></div>
       </div>
       <div class="select-container">
         <div
@@ -26,29 +26,53 @@ const changeActive = (field) => {
           :class="active == 1 ? 'active' : ''"
           @click="
             () => {
-              changeState('Новый');
+              changeState('Бензин');
               changeActive(1);
             }
           "
         >
-          Новый
+          Бензин
         </div>
         <div
           class="gray-select"
           :class="active == 2 ? 'active' : ''"
           @click="
             () => {
-              changeState('С пробегом');
+              changeState('Дизель');
               changeActive(2);
             }
           "
         >
-          С пробегом
+          Дизель
+        </div>
+        <div
+          class="gray-select"
+          :class="active == 3 ? 'active' : ''"
+          @click="
+            () => {
+              changeState('Гибрид');
+              changeActive(3);
+            }
+          "
+        >
+          Гибрид
+        </div>
+        <div
+          class="gray-select"
+          :class="active == 4 ? 'active' : ''"
+          @click="
+            () => {
+              changeState('Электромобиль');
+              changeActive(4);
+            }
+          "
+        >
+          Электромобиль
         </div>
       </div>
       <div class="navigate-container">
         <svg
-          @click="openForm"
+          @click="store.currentStep--"
           width="67"
           height="67"
           viewBox="0 0 67 67"

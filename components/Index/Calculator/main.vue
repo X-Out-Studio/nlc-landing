@@ -15,13 +15,21 @@ const openForm = () => {
           <Button :text="'Рассчитать'" @click="openForm" />
         </div>
         <div class="img-container">
-          <img src="../../../assets/img/calculator/car.png" alt="" />
+          <img src="@/assets/img/calculator/car.png" alt="" />
         </div>
       </div>
     </Transition>
     <Transition>
       <div v-if="store.openModal">
-        <IndexCalculatorFirstStep />
+        <IndexCalculatorFirstStep v-if="store.currentStep === 1" />
+        <IndexCalculatorSecondStep v-if="store.currentStep === 2" />
+        <IndexCalculatorThirdStep v-if="store.currentStep === 3" />
+        <IndexCalculatorFourthStep v-if="store.currentStep === 4" />
+        <IndexCalculatorFifthStep v-if="store.currentStep === 5" />
+        <IndexCalculatorSixthStep v-if="store.currentStep === 6" />
+        <IndexCalculatorSeventhStep v-if="store.currentStep === 7" />
+        <IndexCalculatorEighthStep v-if="store.currentStep === 8" />
+        <IndexCalculatorFinalStep v-if="store.currentStep === 9" />
       </div>
     </Transition>
   </div>
@@ -33,8 +41,8 @@ const openForm = () => {
 .section-calculator {
   height: 615px;
   width: 100%;
-  background: url("../../../assets/img/calculator/background.png") center
-    center/cover no-repeat;
+  background: url("@/assets/img/calculator/background.png") center center/cover
+    no-repeat;
   position: relative;
 }
 .button {

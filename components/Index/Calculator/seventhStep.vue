@@ -4,9 +4,7 @@ const store = useCalcFormStore();
 const openForm = () => {
   store.openModal ? (store.openModal = false) : (store.openModal = true);
 };
-const changeState = (param) => {
-  store.answers.firstStep = param;
-};
+
 let active = ref(null);
 const changeActive = (field) => {
   active.value = field;
@@ -17,38 +15,20 @@ const changeActive = (field) => {
   <div>
     <div class="calc-container">
       <div class="title-container">
-        <div class="name">Какой автомобиль хотите купить?</div>
-        <div class="page">01<span>/08</span></div>
+        <div class="name wishes">Напишите свои пожелания к комплектации</div>
+        <div class="page">07<span>/08</span></div>
       </div>
-      <div class="select-container">
-        <div
-          class="gray-select"
-          :class="active == 1 ? 'active' : ''"
-          @click="
-            () => {
-              changeState('Новый');
-              changeActive(1);
-            }
-          "
-        >
-          Новый
-        </div>
-        <div
-          class="gray-select"
-          :class="active == 2 ? 'active' : ''"
-          @click="
-            () => {
-              changeState('С пробегом');
-              changeActive(2);
-            }
-          "
-        >
-          С пробегом
-        </div>
+      <div class="select-container with-input">
+        <input
+          type="text"
+          class="wishes-input"
+          v-model="store.answers.seventhStep"
+          placeholder="Климат контроль, подогрев сидений и руля......."
+        />
       </div>
       <div class="navigate-container">
         <svg
-          @click="openForm"
+          @click="store.currentStep--"
           width="67"
           height="67"
           viewBox="0 0 67 67"

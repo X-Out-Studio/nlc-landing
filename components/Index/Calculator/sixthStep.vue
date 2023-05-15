@@ -5,7 +5,7 @@ const openForm = () => {
   store.openModal ? (store.openModal = false) : (store.openModal = true);
 };
 const changeState = (param) => {
-  store.answers.firstStep = param;
+  store.answers.sixthStep = param;
 };
 let active = ref(null);
 const changeActive = (field) => {
@@ -17,8 +17,8 @@ const changeActive = (field) => {
   <div>
     <div class="calc-container">
       <div class="title-container">
-        <div class="name">Какой автомобиль хотите купить?</div>
-        <div class="page">01<span>/08</span></div>
+        <div class="name">На какой бюджет вы&nbsp;рассчитываете?</div>
+        <div class="page">06<span>/08</span></div>
       </div>
       <div class="select-container">
         <div
@@ -26,29 +26,53 @@ const changeActive = (field) => {
           :class="active == 1 ? 'active' : ''"
           @click="
             () => {
-              changeState('Новый');
+              changeState('до 3 млн. руб');
               changeActive(1);
             }
           "
         >
-          Новый
+          до 3 млн. руб
         </div>
         <div
           class="gray-select"
           :class="active == 2 ? 'active' : ''"
           @click="
             () => {
-              changeState('С пробегом');
+              changeState('4-6 млн. руб');
               changeActive(2);
             }
           "
         >
-          С пробегом
+          4-6 млн. руб
+        </div>
+        <div
+          class="gray-select"
+          :class="active == 3 ? 'active' : ''"
+          @click="
+            () => {
+              changeState('7-9 млн. руб.');
+              changeActive(3);
+            }
+          "
+        >
+          7-9 млн. руб.
+        </div>
+        <div
+          class="gray-select"
+          :class="active == 4 ? 'active' : ''"
+          @click="
+            () => {
+              changeState('более10 млн. руб.');
+              changeActive(4);
+            }
+          "
+        >
+          более 10 млн. руб.
         </div>
       </div>
       <div class="navigate-container">
         <svg
-          @click="openForm"
+          @click="store.currentStep--"
           width="67"
           height="67"
           viewBox="0 0 67 67"

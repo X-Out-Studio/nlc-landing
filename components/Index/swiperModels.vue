@@ -22,42 +22,42 @@ const navigateParams = {
       >
         <SwiperSlide>
           <div class="slide-content">
-            <img src="../../assets/img/swiperModels/merc.png" alt="" />
+            <img src="@/assets/img/swiperModels/merc.png" alt="" />
           </div>
         </SwiperSlide>
         <SwiperSlide>
           <div class="slide-content">
-            <img src="../../assets/img/swiperModels/bmw.png" alt="" />
+            <img src="@/assets/img/swiperModels/bmw.png" alt="" />
           </div>
         </SwiperSlide>
         <SwiperSlide>
           <div class="slide-content">
-            <img src="../../assets/img/swiperModels/tesla.png" alt="" />
+            <img src="@/assets/img/swiperModels/tesla.png" alt="" />
           </div>
         </SwiperSlide>
         <SwiperSlide>
           <div class="slide-content">
-            <img src="../../assets/img/swiperModels/pors.png" alt="" />
+            <img src="@/assets/img/swiperModels/pors.png" alt="" />
           </div>
         </SwiperSlide>
         <SwiperSlide>
           <div class="slide-content">
-            <img src="../../assets/img/swiperModels/audi.png" alt="" />
+            <img src="@/assets/img/swiperModels/audi.png" alt="" />
           </div>
         </SwiperSlide>
         <SwiperSlide>
           <div class="slide-content">
-            <img src="../../assets/img/swiperModels/vw.png" alt="" />
+            <img src="@/assets/img/swiperModels/vw.png" alt="" />
           </div>
         </SwiperSlide>
         <SwiperSlide>
           <div class="slide-content">
-            <img src="../../assets/img/swiperModels/toyota.png" alt="" />
+            <img src="@/assets/img/swiperModels/toyota.png" alt="" />
           </div>
         </SwiperSlide>
         <SwiperSlide>
           <div class="slide-content">
-            <img src="../../assets/img/swiperModels/lex.png" alt="" />
+            <img src="@/assets/img/swiperModels/lex.png" alt="" />
           </div>
         </SwiperSlide>
       </Swiper>

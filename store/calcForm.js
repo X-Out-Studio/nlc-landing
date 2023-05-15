@@ -7,6 +7,13 @@ export const useCalcFormStore = defineStore('calcForm', {
     answers: {
       firstStep: null,
       secondStep: null,
+      thirdStep: null,
+      fourthStep: null,
+      fifthStep: null,
+      sixthStep: null,
+      seventhStep: null,
+      fio: null,
+      number: null,
     }
   }),
 
