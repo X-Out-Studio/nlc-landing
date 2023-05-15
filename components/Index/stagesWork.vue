@@ -1,4 +1,6 @@
 <script setup>
+import { useModalStepsStore } from "@/store/modalSteps";
+const store = useModalStepsStore();
 </script>
 
 <template>
@@ -89,7 +91,7 @@
         </p>
         <div class="stagesWork__weeks">
             <p class="stagesWork__weeks-text">2 недели</p>
-            <Button text="Подобрать машину" />
+            <Button @click="store.openModal = true" text="Подобрать машину" />
         </div>
         <div class="stagesWork__car">
             <img src="@/assets/img/stagesWork/car.png" alt="">
