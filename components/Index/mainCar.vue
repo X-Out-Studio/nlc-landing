@@ -152,7 +152,7 @@
         font-size: 30px;
 
         span {
-          font-size: 31px;
+          font-size: 30px;
         }
       }
 

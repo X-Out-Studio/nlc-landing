@@ -8,7 +8,7 @@ const navigateParams = {
 <template>
   <div class="swiper-section">
     <div class="title-container">
-      <div class="global-title">Дилеры, с которыми мы работаем</div>
+      <div class="global-title">Дилеры, с&nbsp;которыми мы работаем</div>
     </div>
     <div class="swiper-container">
       <Swiper
@@ -21,6 +21,10 @@ const navigateParams = {
         }"
         :breakpoints="{
           320: {
+            slidesPerView: 2.5,
+            spaceBetween: 10,
+          },
+          480: {
             slidesPerView: 3,
             spaceBetween: 10,
           },
@@ -176,9 +180,25 @@ const navigateParams = {
     }
   }
 
-  .swiper-prev,
-  .swiper-next {
+  .swiper-prev:not(.swiper-button-disabled),
+  .swiper-next:not(.swiper-button-disabled) {
     cursor: pointer;
+    svg {
+      path,
+      circle {
+        transition: all 0.3s;
+      }
+    }
+    &:hover {
+      svg {
+        path {
+          fill: #9d0620;
+        }
+        circle {
+          stroke: #9d0620;
+        }
+      }
+    }
   }
 
   .swiper-button-disabled {
