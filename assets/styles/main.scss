@@ -418,6 +418,9 @@ body {
     text-align: center;
     text-transform: uppercase;
     color: #1e1e1e;
+    &.footer-done {
+      text-align: start;
+    }
   }
 
   &__send {
@@ -438,6 +441,13 @@ body {
 
     .mobile {
       display: none;
+    }
+    .white {
+      color: white;
+    }
+    &.footer-thank {
+      align-items: flex-start;
+      justify-content: flex-start;
     }
   }
 
