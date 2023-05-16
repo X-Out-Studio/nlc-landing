@@ -1,7 +1,14 @@
+<script setup>
+const navigateParams = {
+    nextEl: ".swiper-next",
+    prevEl: ".swiper-prev",
+};
+</script>
+
 <template>
     <section class="price">
         <div class="global-title">цена в россии vs NLC</div>
-        <div class="price__card">
+        <!-- <div class="price__card">
             <div class="price__item">
                 <div class="price__img">
                     <img class="price__logo price__logo-nlc" src="../../assets/img/price/logoNLC.svg" alt="">
@@ -42,6 +49,105 @@
                     <p class="price__rub">4 000 000 руб.</p>
                 </div>
             </div>
+        </div> -->
+        <div class="price__swipers">
+            <Swiper :slides-per-view="2" :spaceBetween="'37'" :modules="[SwiperNavigation]" :navigation="navigateParams"
+                :autoplay="{
+                    delay: 1000,
+                }" :breakpoints="{
+    320: {
+        slidesPerView: 1,
+        spaceBetween: 10,
+    },
+    768: {
+        slidesPerView: 2,
+        spaceBetween: 17,
+    },
+}">
+                <SwiperSlide>
+                    <div class="price__item">
+                        <div class="price__img">
+                            <img class="price__logo price__logo-nlc" src="../../assets/img/price/logoNLC.svg" alt="">
+                            <img class="price__car" src="../../assets/img/price/car1.jpg" alt="">
+                        </div>
+                        <div class="price__info">
+                            <div class="price__nav">
+                                <p class="price__name">Porshe Macan</p>
+                                <button class="swiper-next">
+                                    <img src="@/assets/img/price/arrowRight.svg" alt="">
+                                </button>
+                            </div>
+                            <p class="price__rub">4 000 000 руб.</p>
+                        </div>
+                    </div>
+                </SwiperSlide>
+                <SwiperSlide>
+                    <div class="price__item">
+                        <div class="price__img">
+                            <img class="price__logo price__logo-avito" src="../../assets/img/price/logoAvito.svg" alt="">
+                            <img class="price__car" src="../../assets/img/price/car2.jpg" alt="">
+                        </div>
+                        <div class="price__info price__info--white">
+                            <div class="price__nav">
+                                <p class="price__name">Porshe Macan</p>
+                                <button class="swiper-prev">
+                                    <img src="@/assets/img/price/arrowLeft.svg" alt="">
+                                </button>
+                            </div>
+                            <p class="price__rub">4 000 000 руб.</p>
+                        </div>
+                    </div>
+                </SwiperSlide>
+            </Swiper>
+
+            <Swiper :slides-per-view="2" :spaceBetween="'37'" :modules="[SwiperNavigation]" :navigation="navigateParams"
+                :autoplay="{
+                    delay: 1000,
+                }" :breakpoints="{
+    320: {
+        slidesPerView: 1,
+        spaceBetween: 10,
+    },
+    768: {
+        slidesPerView: 2,
+        spaceBetween: 17,
+    },
+}">
+                <SwiperSlide>
+                    <div class="price__item">
+                        <div class="price__img">
+                            <img class="price__logo price__logo-nlc" src="../../assets/img/price/logoNLC.svg" alt="">
+                            <img class="price__car" src="../../assets/img/price/car1.jpg" alt="">
+                        </div>
+                        <div class="price__info">
+                            <div class="price__nav">
+                                <p class="price__name">Porshe Macan</p>
+                                <button class="swiper-next">
+                                    <img src="@/assets/img/price/arrowRight.svg" alt="">
+                                </button>
+                            </div>
+                            <p class="price__rub">4 000 000 руб.</p>
+                        </div>
+                    </div>
+                </SwiperSlide>
+                <SwiperSlide>
+                    <div class="price__item">
+                        <div class="price__img">
+                            <img class="price__logo price__logo-avito" src="../../assets/img/price/logoAvito.svg" alt="">
+                            <img class="price__car" src="../../assets/img/price/car2.jpg" alt="">
+                        </div>
+                        <div class="price__info price__info--white">
+                            <div class="price__nav">
+                                <p class="price__name">Porshe Macan</p>
+                                <button class="swiper-prev">
+                                    <img src="@/assets/img/price/arrowLeft.svg" alt="">
+                                </button>
+                            </div>
+                            <p class="price__rub">4 000 000 руб.</p>
+                        </div>
+                    </div>
+                </SwiperSlide>
+            </Swiper>
         </div>
     </section>
 </template>
@@ -93,6 +199,25 @@
         height: 100%;
     }
 
+    &__swipers {
+        padding-top: 46px;
+        max-width: 1237px;
+        width: 100%;
+    }
+
+    &__nav {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+
+        .swiper-next,
+        .swiper-prev {
+            background-color: transparent;
+            display: none;
+        }
+    }
+
     &__info {
         display: flex;
         flex-direction: column;
@@ -104,6 +229,11 @@
         color: #EDEDED;
         position: relative;
         top: -28px;
+
+        &--white {
+            background-color: #FFFFFF;
+            color: var(--blackLight);
+        }
     }
 
     &__name {
@@ -154,6 +284,20 @@
         &__card {
             margin-top: 31px;
         }
+
+        &__nav {
+            justify-content: space-between;
+
+            .swiper-next, 
+            .swiper-prev {
+                display: block;
+            }
+        }
+
+        &__info {
+            align-items: flex-start;
+            padding: 21px 20px 18px 17px;
+        }
     }
 }
 
@@ -186,11 +330,6 @@
             font-weight: 700;
             font-size: 30px;
             line-height: 147.11%;
-        }
-
-        &__info {
-            align-items: flex-start;
-            padding: 21px 20px 18px 17px;
         }
     }
 }
