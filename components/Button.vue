@@ -44,11 +44,6 @@ defineProps<{
             border: 1px solid #000000;
         }
     }
-    &:hover {
-      background: #000000;
-      color: #ffffff;
-    }
-  }
 
   &--white {
     color: #ffffff;
