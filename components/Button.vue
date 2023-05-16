@@ -39,6 +39,11 @@ defineProps<{
             background: #000000;
             color: #FFFFFF;
         }
+
+
+        &:focus {
+            border: 1px solid #000000;
+        }
     }
 
     &--white {

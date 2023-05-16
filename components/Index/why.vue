@@ -225,6 +225,10 @@
         &__cards {
             gap: 31px;
         }
+
+        .container {
+            margin: 0 15px 0 45px;;
+        }
     }
 }
 
@@ -247,6 +251,10 @@
                 gap: 25px;
                 background-size: 249px 166px;
             }
+        }
+
+        .container {
+            margin: 0 15px;
         }
     }
 }

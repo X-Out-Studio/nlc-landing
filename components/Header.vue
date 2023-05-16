@@ -40,17 +40,20 @@ const headerLinks = reactive([
     }
 ])
 
-const onChangeActiveLink = (indexLink) => {
-    console.log(111);
-    headerLinks.forEach((item, index) => {
-        item.active = index === indexLink ? true : false;
-    });
-}
+// const onChangeActiveLink = (indexLink) => {
+//     console.log(111);
+//     headerLinks.forEach((item, index) => {
+//         item.active = index === indexLink ? true : false;
+//     });
+// }
 
 const activeMobileHeader = () => {
     activeHeader.value = true;
     activeMobileMenu.value = !activeMobileMenu.value;
     document.body.classList.toggle('body--hidden');
+    if(!activeMobileMenu.value && window.scrollY === 0) {
+        activeHeader.value = false;
+    }
 }
 
 </script>
@@ -71,7 +74,8 @@ const activeMobileHeader = () => {
                 </ul>
                 <a class="header__call" href="tel:+71234567890">позвонить</a>
             </div>
-            <button class="header__burger" @click="activeMobileHeader()">
+            <button class="header__burger" :class="activeMobileMenu ? 'header__burger--active' : ''"
+                @click="activeMobileHeader()">
                 <div class="header__burger-point"></div>
                 <div class="header__burger-point"></div>
                 <div class="header__burger-point"></div>
@@ -80,54 +84,54 @@ const activeMobileHeader = () => {
 
         <Transition name="slide-fade">
             <div v-if="activeMobileMenu" class="header__mobile">
-            <div class="header__mobile-menu">
-                <ul class="header__nav">
-                    <li v-for="(item, index) in headerLinks" :key="index"
-                        :class="item.active ? 'header__nav-item header__nav-item--active' : 'header__nav-item'">
-                        <a :href="item.href" class="header__link" @click="onChangeActiveLink(index)">{{ item.name }}</a>
-                    </li>
-                </ul>
-                <a class="header__call" href="tel:+71234567890">позвонить</a>
-                <div class="header__info">
-                    <div class="header__info-social">
-                        <p class="header__info-social-text">Узнай о нас больше<br> в соц. сетях</p>
-                        <ul class="header__info-social-items">
-                            <li>
-                                <a href="#" class="footer__social-link">
-                                    <img src="@/assets/img/header/telegram.svg" alt="">
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#" class="footer__social-link footer__social-link--insta">
-                                    <img src="@/assets/img/header/instagram.svg" alt="">
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="header__info-data">
-                        <a href="tel:+71234567890">Телефон<br> +7 123 456 78 90</a>
-                        <a href="mailto:ask@htmlbook.ru?subject=Вопрос по HTML">Почта<br> pochta@gmail.com</a>
+                <div class="header__mobile-menu">
+                    <ul class="header__nav">
+                        <li v-for="(item, index) in headerLinks" :key="index"
+                            :class="item.active ? 'header__nav-item header__nav-item--active' : 'header__nav-item'">
+                            <a :href="item.href" class="header__link" @click="onChangeActiveLink(index)">{{ item.name }}</a>
+                        </li>
+                    </ul>
+                    <a class="header__call" href="tel:+71234567890">позвонить</a>
+                    <div class="header__info">
+                        <div class="header__info-social">
+                            <p class="header__info-social-text">Узнай о нас больше<br> в соц. сетях</p>
+                            <ul class="header__info-social-items">
+                                <li>
+                                    <a href="#" class="footer__social-link">
+                                        <img src="@/assets/img/header/telegram.svg" alt="">
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" class="footer__social-link footer__social-link--insta">
+                                        <img src="@/assets/img/header/instagram.svg" alt="">
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="header__info-data">
+                            <a href="tel:+71234567890">Телефон<br> +7 123 456 78 90</a>
+                            <a href="mailto:ask@htmlbook.ru?subject=Вопрос по HTML">Почта<br> pochta@gmail.com</a>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
         </Transition>
     </header>
 </template>
 
 <style lang="scss">
 .slide-fade-enter-active {
-  transition: all 0.3s ease-out;
+    transition: all 0.3s ease-out;
 }
 
 .slide-fade-leave-active {
-  transition: all 0.3s cubic-bezier(1, 0.5, 0.8, 1);
+    transition: all 0.3s cubic-bezier(1, 0.5, 0.8, 1);
 }
 
 .slide-fade-enter-from,
 .slide-fade-leave-to {
-  transform: translateX(20px);
-  opacity: 0;
+    transform: translateX(20px);
+    opacity: 0;
 }
 
 .header {
@@ -192,6 +196,13 @@ const activeMobileHeader = () => {
         }
     }
 
+    &__link {
+        width: calc(100% + 10px);
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 128.61%;
+    }
+
     &__nav {
         display: flex;
         flex-direction: row;
@@ -205,13 +216,14 @@ const activeMobileHeader = () => {
                 position: absolute;
                 content: "";
                 width: 0;
+                margin: 0 auto;
                 height: 1px;
                 background-color: currentColor;
                 left: 0;
                 bottom: -4px;
             }
 
-            &--active {
+            &:hover {
                 position: relative;
 
                 .header__link {
@@ -222,14 +234,19 @@ const activeMobileHeader = () => {
                     width: 100%;
                 }
             }
-        }
-    }
 
-    &__link {
-        font-weight: 400;
-        font-size: 16px;
-        line-height: 128.61%;
-        transition: font-weight .4s ease-in-out;
+            /* &--active {
+                position: relative;
+
+                .header__link {
+                    font-weight: 700;
+                }
+
+                &::after {
+                    width: 100%;
+                }
+            } */
+        }
     }
 
     &__call {
@@ -289,14 +306,19 @@ const activeMobileHeader = () => {
 
         &__burger {
             display: flex;
+            transition: transform 0.3s;
+
+            &--active {
+                transform: rotate(90deg);
+            }
         }
 
         &__mobile {
-            position: absolute;
+            position: relative;
             top: 0;
             width: 100%;
             height: 100vh;
-            padding: 97px 20px 126px 15px;
+            padding: 46px 20px 126px 15px;
             background-color: #F4F4F4;
             overflow: auto;
             z-index: -1;
