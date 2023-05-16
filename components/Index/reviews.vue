@@ -4,9 +4,17 @@ const navigateParams = {
     prevEl: ".swiper-prev",
 };
 
-const itemRefs = ref([])
+const activeReview = ref();
 
-onMounted(() => console.log(itemRefs.value));
+const changeActiveReviews = (id) => {
+    activeReview.value = activeReview.value !== id ? id : 0;
+    console.log(activeReview.value);
+}
+
+const onSlideChange = () => {
+    activeReview.value = 0;
+    console.log(activeReview.value);
+}
 
 </script>
 
@@ -16,14 +24,14 @@ onMounted(() => console.log(itemRefs.value));
         <div class="reviews__swiper">
             <Swiper :slides-per-view="1" :modules="[SwiperNavigation]" :navigation="navigateParams" :autoplay="{
                 delay: 1000,
-            }">
+            }" @slide-change="onSlideChange()">
                 <SwiperSlide>
                     <div class="reviews__card">
                         <div class="reviews__img">
                             <img src="@/assets/img/reviews/reviews1.png" alt="">
                         </div>
                         <div class="reviews__content">
-                            <p class="reviews__text">
+                            <p class="reviews__text" :class="activeReview == 1 ? 'reviews__text--active' : ''">
                                 Обратился в компанию next level car по поводу подбора нового авто . Были поставлены
                                 определенные задачи
                                 по поиску автомобиля , комплектация , год пробег машины и так далее .<br><br>
@@ -36,7 +44,7 @@ onMounted(() => console.log(itemRefs.value));
                                 доволен ! Если кто то думает поменять автомобиль , то тогда я рекомендую обратится за
                                 помощью к Юрию 🤝
                             </p>
-                            <button class="reviews__text-more" ref="itemRefs">
+                            <button class="reviews__text-more" @click="changeActiveReviews(1)">
                                 <img src="../../assets/img/reviews/arrow.svg" alt="" />
                                 Подробнее
                             </button>
@@ -50,12 +58,12 @@ onMounted(() => console.log(itemRefs.value));
                             <img src="../../assets/img/reviews/reviews2.jpg" alt="">
                         </div>
                         <div class="reviews__content">
-                            <p class="reviews__text">
+                            <p class="reviews__text" :class="activeReview == 2 ? 'reviews__text--active' : ''">
                                 Хочу выразить свою благодарность Юрию и компании NLC! Работа проведена на высшем уровне -
                                 подобрали авто по всем запросам, проверили и уже через 2 недели автомобиль бы у меня 🔥Был
                                 рад сотрудничеству 👍🏻
                             </p>
-                            <button class="reviews__text-more" ref="itemRefs">
+                            <button class="reviews__text-more" @click="changeActiveReviews(2)">
                                 <img src="../../assets/img/reviews/arrow.svg" alt="" />
                                 Подробнее
                             </button>
@@ -69,12 +77,12 @@ onMounted(() => console.log(itemRefs.value));
                             <img src="../../assets/img/reviews/reviews3.jpg" alt="">
                         </div>
                         <div class="reviews__content">
-                            <p class="reviews__text">
+                            <p class="reviews__text" :class="activeReview == 3 ? 'reviews__text--active' : ''">
                                 Переполняют эмоции и даже не знаю, что и сказать)) Юра, выражаю тебе и твоей команде
                                 огромную благодарность за проделанную работу! Связь, сервис на высшем уровне! Буду
                                 рекомендовать знакомым и друзьям👌🏼 Удачи и успехов в работе.
                             </p>
-                            <button class="reviews__text-more" ref="itemRefs">
+                            <button class="reviews__text-more" @click="changeActiveReviews(3)">
                                 <img src="../../assets/img/reviews/arrow.svg" alt="" />
                                 Подробнее
                             </button>
@@ -88,7 +96,7 @@ onMounted(() => console.log(itemRefs.value));
                             <img src="../../assets/img/reviews/reviews4.jpg" alt="">
                         </div>
                         <div class="reviews__content">
-                            <p class="reviews__text">
+                            <p class="reviews__text" :class="activeReview == 4 ? 'reviews__text--active' : ''">
                                 Юрий, очень доволен опытом сотрудничества с вами! Первое, что меня приятно удивило - это
                                 профессиональный подход менеджеров компании. Они были готовы ответить на все мои вопросы,
                                 рассказать о технических возможностях автомобиля, условиях покупки и кредитования. Благодаря
@@ -98,7 +106,7 @@ onMounted(() => console.log(itemRefs.value));
                                 получил качественный и надёжный автомобиль.<br><br>
                                 Спасибо за крутое авто, теперь буду обращаться только к вам!
                             </p>
-                            <button class="reviews__text-more" ref="itemRefs">
+                            <button class="reviews__text-more" @click="changeActiveReviews(4)">
                                 <img src="../../assets/img/reviews/arrow.svg" alt="" />
                                 Подробнее
                             </button>
@@ -112,14 +120,14 @@ onMounted(() => console.log(itemRefs.value));
                             <img src="../../assets/img/reviews/reviews5.jpg" alt="">
                         </div>
                         <div class="reviews__content">
-                            <p class="reviews__text">
+                            <p class="reviews__text" :class="activeReview == 5 ? 'reviews__text--active' : ''">
                                 Юра, хочу сказать тебе и NLC огромное спасибо!)
                                 Я получил профессиональную помощь в подборе авто под мои требования и бюджет.<br><br>
                                 Отношение к клиентам на высшем уровне, работа профессионалов и качественный подбор машин
                                 🔥🔥 Очень доволен сотрудничеством с NLC и сейчас уже наслаждаюсь новым автомобилем!
                                 Рекомендую всем обратиться за помощью в подборе машины именно к Юрию.
                             </p>
-                            <button class="reviews__text-more" ref="itemRefs">
+                            <button class="reviews__text-more" @click="changeActiveReviews(5)">
                                 <img src="../../assets/img/reviews/arrow.svg" alt="" />
                                 Подробнее
                             </button>
@@ -317,11 +325,13 @@ onMounted(() => console.log(itemRefs.value));
         &__text {
             display: block;
             overflow: hidden;
-            text-overflow: ellipsis;
+            max-height: 60px;
+            /* text-overflow: ellipsis;
             display: -webkit-box;
             -webkit-line-clamp: 5;
             -webkit-box-orient: vertical;
-            position: relative;
+            position: relative; */
+            transition: max-height 0.5s;
 
             &-more {
                 display: flex;
@@ -333,15 +343,27 @@ onMounted(() => console.log(itemRefs.value));
                 background-color: transparent;
             }
 
+            &--active {
+                height: fit-content;
+                height: fit-content;
+                max-height: 450px;
+
+                &::after {
+                   opacity: 0;
+                }
+            }
+
             &::after {
                 content: "";
                 position: absolute;
                 background: linear-gradient(180deg, #FFFFFF 0%, rgba(255, 255, 255, 0) 100%);
+                top: 20px;
                 bottom: 0;
                 height: 75px;
                 left: 0;
                 right: 0;
                 transform: rotate(180deg);
+                transition: opacity 0.6s;
             }
         }
 
