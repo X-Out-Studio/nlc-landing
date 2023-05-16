@@ -21,29 +21,31 @@ const changeActive = (field) => {
         <div class="page">01<span>/08</span></div>
       </div>
       <div class="select-container">
-        <div
-          class="gray-select"
-          :class="active == 1 ? 'active' : ''"
-          @click="
-            () => {
-              changeState('Новый');
-              changeActive(1);
-            }
-          "
-        >
-          Новый
-        </div>
-        <div
-          class="gray-select"
-          :class="active == 2 ? 'active' : ''"
-          @click="
-            () => {
-              changeState('С пробегом');
-              changeActive(2);
-            }
-          "
-        >
-          С пробегом
+        <div class="select-row">
+          <div
+            class="gray-select"
+            :class="active == 1 ? 'active' : ''"
+            @click="
+              () => {
+                changeState('Новый');
+                changeActive(1);
+              }
+            "
+          >
+            Новый
+          </div>
+          <div
+            class="gray-select"
+            :class="active == 2 ? 'active' : ''"
+            @click="
+              () => {
+                changeState('С пробегом');
+                changeActive(2);
+              }
+            "
+          >
+            С пробегом
+          </div>
         </div>
       </div>
       <div class="navigate-container">

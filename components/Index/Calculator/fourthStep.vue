@@ -21,53 +21,55 @@ const changeActive = (field) => {
         <div class="page">04<span>/08</span></div>
       </div>
       <div class="select-container">
-        <div
-          class="gray-select"
-          :class="active == 1 ? 'active' : ''"
-          @click="
-            () => {
-              changeState('Бензин');
-              changeActive(1);
-            }
-          "
-        >
-          Бензин
-        </div>
-        <div
-          class="gray-select"
-          :class="active == 2 ? 'active' : ''"
-          @click="
-            () => {
-              changeState('Дизель');
-              changeActive(2);
-            }
-          "
-        >
-          Дизель
-        </div>
-        <div
-          class="gray-select"
-          :class="active == 3 ? 'active' : ''"
-          @click="
-            () => {
-              changeState('Гибрид');
-              changeActive(3);
-            }
-          "
-        >
-          Гибрид
-        </div>
-        <div
-          class="gray-select"
-          :class="active == 4 ? 'active' : ''"
-          @click="
-            () => {
-              changeState('Электромобиль');
-              changeActive(4);
-            }
-          "
-        >
-          Электромобиль
+        <div class="select-row">
+          <div
+            class="gray-select"
+            :class="active == 1 ? 'active' : ''"
+            @click="
+              () => {
+                changeState('Бензин');
+                changeActive(1);
+              }
+            "
+          >
+            Бензин
+          </div>
+          <div
+            class="gray-select"
+            :class="active == 2 ? 'active' : ''"
+            @click="
+              () => {
+                changeState('Дизель');
+                changeActive(2);
+              }
+            "
+          >
+            Дизель
+          </div>
+          <div
+            class="gray-select"
+            :class="active == 3 ? 'active' : ''"
+            @click="
+              () => {
+                changeState('Гибрид');
+                changeActive(3);
+              }
+            "
+          >
+            Гибрид
+          </div>
+          <div
+            class="gray-select"
+            :class="active == 4 ? 'active' : ''"
+            @click="
+              () => {
+                changeState('Электромобиль');
+                changeActive(4);
+              }
+            "
+          >
+            Электромобиль
+          </div>
         </div>
       </div>
       <div class="navigate-container">

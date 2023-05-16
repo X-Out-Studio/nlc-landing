@@ -19,12 +19,14 @@ const changeActive = (field) => {
         <div class="page">07<span>/08</span></div>
       </div>
       <div class="select-container with-input">
-        <input
-          type="text"
-          class="wishes-input"
-          v-model="store.answers.seventhStep"
-          placeholder="Климат контроль, подогрев сидений и руля......."
-        />
+        <div class="select-row">
+          <input
+            type="text"
+            class="wishes-input"
+            v-model="store.answers.seventhStep"
+            placeholder="Климат контроль, подогрев сидений и руля......."
+          />
+        </div>
       </div>
       <div class="navigate-container">
         <svg

@@ -21,65 +21,67 @@ const changeActive = (field) => {
         <div class="page">03<span>/08</span></div>
       </div>
       <div class="select-container">
-        <div
-          class="gray-select"
-          :class="active == 1 ? 'active' : ''"
-          @click="
-            () => {
-              changeState('Cедан');
-              changeActive(1);
-            }
-          "
-        >
-          Cедан
-        </div>
-        <div
-          class="gray-select"
-          :class="active == 2 ? 'active' : ''"
-          @click="
-            () => {
-              changeState('Хэтчбек');
-              changeActive(2);
-            }
-          "
-        >
-          Хэтчбек
-        </div>
-        <div
-          class="gray-select"
-          :class="active == 3 ? 'active' : ''"
-          @click="
-            () => {
-              changeState('Универсал');
-              changeActive(3);
-            }
-          "
-        >
-          Универсал
-        </div>
-        <div
-          class="gray-select"
-          :class="active == 4 ? 'active' : ''"
-          @click="
-            () => {
-              changeState('Внедорожник');
-              changeActive(4);
-            }
-          "
-        >
-          Внедорожник
-        </div>
-        <div
-          class="gray-select"
-          :class="active == 5 ? 'active' : ''"
-          @click="
-            () => {
-              changeState('Минивен');
-              changeActive(5);
-            }
-          "
-        >
-          Минивен
+        <div class="select-row">
+          <div
+            class="gray-select"
+            :class="active == 1 ? 'active' : ''"
+            @click="
+              () => {
+                changeState('Cедан');
+                changeActive(1);
+              }
+            "
+          >
+            Cедан
+          </div>
+          <div
+            class="gray-select"
+            :class="active == 2 ? 'active' : ''"
+            @click="
+              () => {
+                changeState('Хэтчбек');
+                changeActive(2);
+              }
+            "
+          >
+            Хэтчбек
+          </div>
+          <div
+            class="gray-select"
+            :class="active == 3 ? 'active' : ''"
+            @click="
+              () => {
+                changeState('Универсал');
+                changeActive(3);
+              }
+            "
+          >
+            Универсал
+          </div>
+          <div
+            class="gray-select"
+            :class="active == 4 ? 'active' : ''"
+            @click="
+              () => {
+                changeState('Внедорожник');
+                changeActive(4);
+              }
+            "
+          >
+            Внедорожник
+          </div>
+          <div
+            class="gray-select"
+            :class="active == 5 ? 'active' : ''"
+            @click="
+              () => {
+                changeState('Минивен');
+                changeActive(5);
+              }
+            "
+          >
+            Минивен
+          </div>
         </div>
       </div>
       <div class="navigate-container">
