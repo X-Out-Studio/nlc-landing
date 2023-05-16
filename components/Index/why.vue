@@ -1,3 +1,14 @@
+<script setup>
+import { useCalcFormStore } from "@/store/calcForm";
+const store = useCalcFormStore();
+
+const scrollToCalcForm = () => {
+    const el = document.getElementById('calculator-form')
+    store.openModal = true
+    window.scrollTo(0, el.offsetTop - 100);
+}
+</script>
+
 <template>
     <section class="why">
         <div class="container">
@@ -27,7 +38,7 @@
                     <p class="why__text">С учетом таможенных платежей
                         и&nbsp;доставки&nbsp;автомобили обходятся дешевле, чем на внутреннем рынке.</p>
                 </div>
-                <button class="why__item why__item--6">
+                <button class="why__item why__item--6" @click="scrollToCalcForm">
                     <p class="why__name">подобрать авто</p>
                     <svg width="201" height="16" viewBox="0 0 201 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path
@@ -107,11 +118,11 @@
 
         &--6 {
             width: 26%;
-            background-color:rgba(0, 0, 0, 0.5);
+            background-color: rgba(0, 0, 0, 0.5);
             background: url("@/assets/img/why/car.png") no-repeat;
             background-position: right;
             padding-left: 63px;
-            background-color:rgba(0, 0, 0, 0.5);
+            background-color: rgba(0, 0, 0, 0.5);
             gap: 30px;
             justify-content: center;
             cursor: pointer;
@@ -234,7 +245,8 @@
         }
 
         .container {
-            margin: 0 15px 0 45px;;
+            margin: 0 15px 0 45px;
+            ;
         }
     }
 }

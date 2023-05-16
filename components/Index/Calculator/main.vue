@@ -7,7 +7,7 @@ const openForm = () => {
 </script>
 
 <template>
-  <div class="calculator-container">
+  <div class="calculator-container" id="calculator-form">
     <Transition>
       <div class="section-calculator" v-if="!store.openModal">
         <div class="description-container">
@@ -35,15 +35,13 @@ const openForm = () => {
   </div>
 </template>
 <style scoped lang='scss'>
-.calculator-container {
-}
+.calculator-container {}
 
 .section-calculator {
   height: 615px;
   width: 100%;
   position: relative;
-  background: url("@/assets/img/calculator/background.png") center center/cover
-    no-repeat;
+  background: url("@/assets/img/calculator/background.png") center center/cover no-repeat;
   position: relative;
 
   @media (max-width: 1656px) {
@@ -53,6 +51,7 @@ const openForm = () => {
   @media (max-width: 1200px) {
     height: 695px;
   }
+
   @media (max-width: 576px) {
     height: calc(100vh - 78px);
   }
@@ -147,6 +146,7 @@ const openForm = () => {
       margin: 0 0 381px 0;
     }
   }
+
   @media (max-width: 576px) {
     .description {
       top: 20px;
