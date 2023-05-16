@@ -136,7 +136,7 @@
                     </div>
                 </div>
             </div>
-            <Button class="button button--black" text="Ещё" />
+            <a href="https://t.me/avtobodbor77_bot" class="deliveredCars__button" target="_blank">Ещё</a>
         </div>
     </section>
 </template>
@@ -155,6 +155,27 @@
         grid-template-columns: repeat(3, 1fr);
         gap: 47px;
         margin-bottom: 48px;
+    }
+
+    &__button {
+        display: block;
+        border: 1px solid #000000;
+        border-radius: 108px;
+        background-color: transparent;
+        padding: 21px 100px;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 15px;
+        line-height: 128.61%;
+        color: #000000;
+        width: fit-content;
+        margin: 0 auto;
+        transition: background-color 0.3s, color 0.3s;
+
+        &:hover {
+            color: #FFFFFF;
+            background-color: #000000;
+        }
     }
 
     &__item {
@@ -273,7 +294,7 @@
             gap: 17px;
             margin-bottom: 28px;
         }
-    
+
         .global-title {
             text-align: start;
         }

@@ -26,7 +26,7 @@ const navigateParams = {
                     <div class="price__item">
                         <div class="price__img">
                             <img class="price__logo price__logo-nlc" src="../../assets/img/price/logoNLC.svg" alt="">
-                            <img class="price__car" src="../../assets/img/price/car1.jpg" alt="">
+                            <img class="price__car" src="../../assets/img/price/car1.png" alt="">
                         </div>
                         <div class="price__info">
                             <div class="price__nav">
@@ -43,7 +43,7 @@ const navigateParams = {
                     <div class="price__item">
                         <div class="price__img">
                             <img class="price__logo price__logo-avito" src="../../assets/img/price/logoAvito.svg" alt="">
-                            <img class="price__car" src="../../assets/img/price/car2.jpg" alt="">
+                            <img class="price__car" src="../../assets/img/price/car2.png" alt="">
                         </div>
                         <div class="price__info price__info--white">
                             <div class="price__nav">
@@ -75,7 +75,7 @@ const navigateParams = {
                     <div class="price__item">
                         <div class="price__img">
                             <img class="price__logo price__logo-nlc" src="../../assets/img/price/logoNLC.svg" alt="">
-                            <img class="price__car" src="../../assets/img/price/car1.jpg" alt="">
+                            <img class="price__car" src="../../assets/img/price/car1.png" alt="">
                         </div>
                         <div class="price__info">
                             <div class="price__nav">
@@ -92,7 +92,7 @@ const navigateParams = {
                     <div class="price__item">
                         <div class="price__img">
                             <img class="price__logo price__logo-avito" src="../../assets/img/price/logoAvito.svg" alt="">
-                            <img class="price__car" src="../../assets/img/price/car2.jpg" alt="">
+                            <img class="price__car" src="../../assets/img/price/car2.png" alt="">
                         </div>
                         <div class="price__info price__info--white">
                             <div class="price__nav">

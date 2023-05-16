@@ -44,9 +44,13 @@ const onSlideChange = () => {
                                 доволен ! Если кто то думает поменять автомобиль , то тогда я рекомендую обратится за
                                 помощью к Юрию 🤝
                             </p>
-                            <button class="reviews__text-more" @click="changeActiveReviews(1)">
-                                <img src="../../assets/img/reviews/arrow.svg" alt="" />
+                            <button v-if="activeReview!=1" class="reviews__text-more" @click="changeActiveReviews(1)">
+                                <img src="@/assets/img/reviews/arrow.svg" alt="" />
                                 Подробнее
+                            </button>
+                            <button v-if="activeReview==1" class="reviews__text-more" @click="changeActiveReviews(0)">
+                                <img src="@/assets/img/reviews/arrowUp.svg" alt="" />
+                                Скрыть
                             </button>
                             <p class="reviews__name"><i>- Иван</i></p>
                         </div>
@@ -55,7 +59,7 @@ const onSlideChange = () => {
                 <SwiperSlide>
                     <div class="reviews__card">
                         <div class="reviews__img">
-                            <img src="../../assets/img/reviews/reviews2.jpg" alt="">
+                            <img src="@/assets/img/reviews/reviews2.jpg" alt="">
                         </div>
                         <div class="reviews__content">
                             <p class="reviews__text" :class="activeReview == 2 ? 'reviews__text--active' : ''">
@@ -63,9 +67,13 @@ const onSlideChange = () => {
                                 подобрали авто по всем запросам, проверили и уже через 2 недели автомобиль бы у меня 🔥Был
                                 рад сотрудничеству 👍🏻
                             </p>
-                            <button class="reviews__text-more" @click="changeActiveReviews(2)">
-                                <img src="../../assets/img/reviews/arrow.svg" alt="" />
+                            <button v-if="activeReview!=2" class="reviews__text-more" @click="changeActiveReviews(2)">
+                                <img src="@/assets/img/reviews/arrow.svg" alt="" />
                                 Подробнее
+                            </button>
+                            <button v-if="activeReview==2" class="reviews__text-more" @click="changeActiveReviews(0)">
+                                <img src="@/assets/img/reviews/arrowUp.svg" alt="" />
+                                Скрыть
                             </button>
                             <p class="reviews__name"><i> - Андрей</i></p>
                         </div>
@@ -74,7 +82,7 @@ const onSlideChange = () => {
                 <SwiperSlide>
                     <div class="reviews__card">
                         <div class="reviews__img">
-                            <img src="../../assets/img/reviews/reviews3.jpg" alt="">
+                            <img src="@/assets/img/reviews/reviews3.jpg" alt="">
                         </div>
                         <div class="reviews__content">
                             <p class="reviews__text" :class="activeReview == 3 ? 'reviews__text--active' : ''">
@@ -82,9 +90,13 @@ const onSlideChange = () => {
                                 огромную благодарность за проделанную работу! Связь, сервис на высшем уровне! Буду
                                 рекомендовать знакомым и друзьям👌🏼 Удачи и успехов в работе.
                             </p>
-                            <button class="reviews__text-more" @click="changeActiveReviews(3)">
-                                <img src="../../assets/img/reviews/arrow.svg" alt="" />
+                            <button v-if="activeReview!=3" class="reviews__text-more" @click="changeActiveReviews(3)">
+                                <img src="@/assets/img/reviews/arrow.svg" alt="" />
                                 Подробнее
+                            </button>
+                            <button v-if="activeReview==3" class="reviews__text-more" @click="changeActiveReviews(0)">
+                                <img src="@/assets/img/reviews/arrowUp.svg" alt="" />
+                                Скрыть
                             </button>
                             <p class="reviews__name"><i>- Руслан</i></p>
                         </div>
@@ -93,7 +105,7 @@ const onSlideChange = () => {
                 <SwiperSlide>
                     <div class="reviews__card">
                         <div class="reviews__img">
-                            <img src="../../assets/img/reviews/reviews4.jpg" alt="">
+                            <img src="@/assets/img/reviews/reviews4.jpg" alt="">
                         </div>
                         <div class="reviews__content">
                             <p class="reviews__text" :class="activeReview == 4 ? 'reviews__text--active' : ''">
@@ -106,9 +118,13 @@ const onSlideChange = () => {
                                 получил качественный и надёжный автомобиль.<br><br>
                                 Спасибо за крутое авто, теперь буду обращаться только к вам!
                             </p>
-                            <button class="reviews__text-more" @click="changeActiveReviews(4)">
-                                <img src="../../assets/img/reviews/arrow.svg" alt="" />
+                            <button v-if="activeReview!=4" class="reviews__text-more" @click="changeActiveReviews(4)">
+                                <img src="@/assets/img/reviews/arrow.svg" alt="" />
                                 Подробнее
+                            </button>
+                            <button v-if="activeReview==4" class="reviews__text-more" @click="changeActiveReviews(0)">
+                                <img src="@/assets/img/reviews/arrowUp.svg" alt="" />
+                                Скрыть
                             </button>
                             <p class="reviews__name"><i>- Александр</i></p>
                         </div>
@@ -117,7 +133,7 @@ const onSlideChange = () => {
                 <SwiperSlide>
                     <div class="reviews__card">
                         <div class="reviews__img">
-                            <img src="../../assets/img/reviews/reviews5.jpg" alt="">
+                            <img src="@/assets/img/reviews/reviews5.jpg" alt="">
                         </div>
                         <div class="reviews__content">
                             <p class="reviews__text" :class="activeReview == 5 ? 'reviews__text--active' : ''">
@@ -127,9 +143,13 @@ const onSlideChange = () => {
                                 🔥🔥 Очень доволен сотрудничеством с NLC и сейчас уже наслаждаюсь новым автомобилем!
                                 Рекомендую всем обратиться за помощью в подборе машины именно к Юрию.
                             </p>
-                            <button class="reviews__text-more" @click="changeActiveReviews(5)">
-                                <img src="../../assets/img/reviews/arrow.svg" alt="" />
+                            <button v-if="activeReview!=5" class="reviews__text-more" @click="changeActiveReviews(5)">
+                                <img src="@/assets/img/reviews/arrow.svg" alt="" />
                                 Подробнее
+                            </button>
+                            <button v-if="activeReview==5" class="reviews__text-more" @click="changeActiveReviews(0)">
+                                <img src="@/assets/img/reviews/arrowUp.svg" alt="" />
+                                Скрыть
                             </button>
                             <p class="reviews__name"><i>- Константин</i></p>
                         </div>
