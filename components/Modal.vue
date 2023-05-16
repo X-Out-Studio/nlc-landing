@@ -50,10 +50,10 @@ const doneForm = () => {
                 Узнай о нас больше в соц. сетях
                 <img src="../assets/img/modal/arrow.svg" alt="" />
               </div>
-              <a href="#">
+              <a href="https://t.me/nlc_auto" target="_blank">
                 <img src="../assets/img/modal/telega.svg" alt="" />
               </a>
-              <a href="#">
+              <a href="https://instagram.com/_nextlevelcar_" target="_blank">
                 <img src="../assets/img/modal/insta.svg" alt="" />
               </a>
             </div>

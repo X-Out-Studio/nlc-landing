@@ -1,21 +1,20 @@
 <script setup>
 const navigateParams = {
-    nextEl: ".swiper-next",
-    prevEl: ".swiper-prev",
+  nextEl: ".swiper-next",
+  prevEl: ".swiper-prev",
 };
 
 const activeReview = ref();
 
 const changeActiveReviews = (id) => {
-    activeReview.value = activeReview.value !== id ? id : 0;
-    console.log(activeReview.value);
-}
+  activeReview.value = activeReview.value !== id ? id : 0;
+  console.log(activeReview.value);
+};
 
 const onSlideChange = () => {
-    activeReview.value = 0;
-    console.log(activeReview.value);
-}
-
+  activeReview.value = 0;
+  console.log(activeReview.value);
+};
 </script>
 
 <template>
@@ -180,241 +179,257 @@ const onSlideChange = () => {
 
 <style lang="scss" scoped>
 .reviews {
-    padding-top: 100px;
-    padding-bottom: 100px;
+  padding-top: 100px;
+  padding-bottom: 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  &__swiper {
+    margin-top: 29px;
+    width: 100%;
+    max-width: 1325px;
+  }
+
+  &__card {
+    display: flex;
+    flex-direction: row;
+  }
+
+  &__img {
+    border-radius: 14px;
+    width: 562px;
+    height: 462px;
+    position: relative;
+    z-index: -1;
+    left: 20px;
+
+    img {
+      border-radius: 14px;
+      object-fit: cover;
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  &__content {
+    padding: 30px 41px 30px 35px;
+    background: #ffffff;
+    border-radius: 14px;
     display: flex;
     flex-direction: column;
-    align-items: center;
+    justify-content: space-between;
+    max-width: 763px;
+  }
 
-    &__swiper {
-        margin-top: 29px;
-        width: 100%;
-        max-width: 1325px;
+  &__text {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 162.61%;
+
+    &-more {
+      display: none;
     }
-
-    &__card {
-        display: flex;
-        flex-direction: row;
-    }
-
-    &__img {
-        border-radius: 14px;
-        width: 562px;
-        height: 462px;
-        position: relative;
-        z-index: -1;
-        left: 20px;
-
-        img {
-            border-radius: 14px;
-            object-fit: cover;
-            width: 100%;
-            height: 100%;
-        }
-    }
-
-    &__content {
-        padding: 30px 41px 30px 35px;
-        background: #FFFFFF;
-        border-radius: 14px;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        max-width: 763px;
-    }
-
-    &__text {
-        font-weight: 400;
-        font-size: 16px;
-        line-height: 162.61%;
-
-        &-more {
-            display: none;
-        }
-    }
+  }
 }
 
 .swiper-navigate {
-    display: flex;
-    gap: 20px;
-    justify-content: flex-end;
-    margin: 18px 0 0 0;
+  display: flex;
+  gap: 20px;
+  justify-content: flex-end;
+  margin: 18px 0 0 0;
 
-    .swiper-prev {
-        svg {
-            transform: rotate(180deg);
+  .swiper-prev {
+    svg {
+      transform: rotate(180deg);
+    }
+  }
+
+  .swiper-prev:not(.swiper-button-disabled),
+  .swiper-next:not(.swiper-button-disabled) {
+    cursor: pointer;
+    svg {
+      path,
+      circle {
+        transition: all 0.3s;
+      }
+    }
+    &:hover {
+      svg {
+        path {
+          fill: #9d0620;
         }
+        circle {
+          stroke: #9d0620;
+        }
+      }
     }
+  }
 
-    .swiper-prev,
-    .swiper-next {
-        cursor: pointer;
-    }
-
-    .swiper-button-disabled {
-        opacity: 0.24;
-        cursor: auto;
-    }
+  .swiper-button-disabled {
+    opacity: 0.24;
+    cursor: auto;
+  }
 }
 
 @media (max-width: 1450px) {
-    .reviews {
-        &__swiper {
-            max-width: 880px;
-        }
-
-        &__img {
-            width: 356px;
-            height: 382px;
-        }
-
-        &__content {
-            max-width: 549px;
-        }
-
-        &__text {
-            font-size: 14px;
-            line-height: 162.61%;
-        }
+  .reviews {
+    &__swiper {
+      max-width: 880px;
     }
 
-    .swiper-navigate {
-
-        .swiper-prev,
-        .swiper-next {
-            width: 61px;
-            height: 61px;
-
-            svg {
-                object-fit: cover;
-                width: 100%;
-                height: 100%;
-            }
-        }
+    &__img {
+      width: 356px;
+      height: 382px;
     }
+
+    &__content {
+      max-width: 549px;
+    }
+
+    &__text {
+      font-size: 14px;
+      line-height: 162.61%;
+    }
+  }
+
+  .swiper-navigate {
+    .swiper-prev,
+    .swiper-next {
+      width: 61px;
+      height: 61px;
+
+      svg {
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+      }
+    }
+  }
 }
 
-@media(max-width: 992px) {
-    .reviews {
-        padding: 40px 30px;
+@media (max-width: 992px) {
+  .reviews {
+    padding: 40px 30px;
 
-        &__swiper {
-            max-width: 100%;
-        }
-
-        &__content {
-            max-width: 60%;
-        }
-
-        &__img {
-            height: unset;
-        }
-
-        &__card {
-            height: 100%;
-        }
-
-        .swiper-slide {
-            height: auto;
-        }
+    &__swiper {
+      max-width: 100%;
     }
+
+    &__content {
+      max-width: 60%;
+    }
+
+    &__img {
+      height: unset;
+    }
+
+    &__card {
+      height: 100%;
+    }
+
+    .swiper-slide {
+      height: auto;
+    }
+  }
 }
 
-@media(max-width: 800px) {
-    .reviews {
+@media (max-width: 800px) {
+  .reviews {
+    &__card {
+      flex-direction: column;
+    }
 
-        &__card {
-            flex-direction: column;
-        }
+    &__content {
+      order: -1;
+      max-width: 100%;
+      padding: 31px 29px 40px 22px;
+      height: 100%;
+    }
 
-        &__content {
-            order: -1;
-            max-width: 100%;
-            padding: 31px 29px 40px 22px;
-            height: 100%;
-        }
+    &__img {
+      width: 100%;
+      left: 0;
+      top: -20px;
+      z-index: 10;
+      height: 300px;
+    }
 
-        &__img {
-            width: 100%;
-            left: 0;
-            top: -20px;
-            z-index: 10;
-            height: 300px;
-        }
-
-        &__text {
-            display: block;
-            overflow: hidden;
-            max-height: 60px;
-            /* text-overflow: ellipsis;
+    &__text {
+      display: block;
+      overflow: hidden;
+      max-height: 60px;
+      /* text-overflow: ellipsis;
             display: -webkit-box;
             -webkit-line-clamp: 5;
             -webkit-box-orient: vertical;
             position: relative; */
-            transition: max-height 0.5s;
+      transition: max-height 0.5s;
 
-            &-more {
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-                color: #BEBEBE;
-                font-size: 14px;
-                line-height: 162.61%;
-                background-color: transparent;
-            }
+      &-more {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        color: #bebebe;
+        font-size: 14px;
+        line-height: 162.61%;
+        background-color: transparent;
+      }
 
-            &--active {
-                height: fit-content;
-                height: fit-content;
-                max-height: 450px;
+      &--active {
+        height: fit-content;
+        height: fit-content;
+        max-height: 450px;
 
-                &::after {
-                   opacity: 0;
-                }
-            }
-
-            &::after {
-                content: "";
-                position: absolute;
-                background: linear-gradient(180deg, #FFFFFF 0%, rgba(255, 255, 255, 0) 100%);
-                top: 20px;
-                bottom: 0;
-                height: 75px;
-                left: 0;
-                right: 0;
-                transform: rotate(180deg);
-                transition: opacity 0.6s;
-            }
+        &::after {
+          opacity: 0;
         }
+      }
 
-
-        .swiper-navigate {
-            justify-content: center;
-            gap: 11px;
-        }
+      &::after {
+        content: "";
+        position: absolute;
+        background: linear-gradient(
+          180deg,
+          #ffffff 0%,
+          rgba(255, 255, 255, 0) 100%
+        );
+        top: 20px;
+        bottom: 0;
+        height: 75px;
+        left: 0;
+        right: 0;
+        transform: rotate(180deg);
+        transition: opacity 0.6s;
+      }
     }
+
+    .swiper-navigate {
+      justify-content: center;
+      gap: 11px;
+    }
+  }
 }
 
-@media(max-width: 600px) {
-    .reviews {
-        padding: 40px 15px;
+@media (max-width: 600px) {
+  .reviews {
+    padding: 40px 15px;
 
-        &__content {
-            gap: 17px;
-        }
+    &__content {
+      gap: 17px;
     }
+  }
 }
 
-@media(max-width: 450px) {
-    .reviews {
-
-        &__img {
-            height: 249px;
-        }
-
-        .swiper-navigate {
-            margin-top: 0;
-        }
+@media (max-width: 450px) {
+  .reviews {
+    &__img {
+      height: 249px;
     }
+
+    .swiper-navigate {
+      margin-top: 0;
+    }
+  }
 }
 </style>
