@@ -21,53 +21,55 @@ const changeActive = (field) => {
         <div class="page">05<span>/08</span></div>
       </div>
       <div class="select-container">
-        <div
-          class="gray-select"
-          :class="active == 1 ? 'active' : ''"
-          @click="
-            () => {
-              changeState('2018');
-              changeActive(1);
-            }
-          "
-        >
-          2018
-        </div>
-        <div
-          class="gray-select"
-          :class="active == 2 ? 'active' : ''"
-          @click="
-            () => {
-              changeState('2019');
-              changeActive(2);
-            }
-          "
-        >
-          2019
-        </div>
-        <div
-          class="gray-select"
-          :class="active == 3 ? 'active' : ''"
-          @click="
-            () => {
-              changeState('2020');
-              changeActive(3);
-            }
-          "
-        >
-          2020
-        </div>
-        <div
-          class="gray-select"
-          :class="active == 4 ? 'active' : ''"
-          @click="
-            () => {
-              changeState('2023');
-              changeActive(4);
-            }
-          "
-        >
-          2023
+        <div class="select-row">
+          <div
+            class="gray-select"
+            :class="active == 1 ? 'active' : ''"
+            @click="
+              () => {
+                changeState('2018');
+                changeActive(1);
+              }
+            "
+          >
+            2018
+          </div>
+          <div
+            class="gray-select"
+            :class="active == 2 ? 'active' : ''"
+            @click="
+              () => {
+                changeState('2019');
+                changeActive(2);
+              }
+            "
+          >
+            2019
+          </div>
+          <div
+            class="gray-select"
+            :class="active == 3 ? 'active' : ''"
+            @click="
+              () => {
+                changeState('2020');
+                changeActive(3);
+              }
+            "
+          >
+            2020
+          </div>
+          <div
+            class="gray-select"
+            :class="active == 4 ? 'active' : ''"
+            @click="
+              () => {
+                changeState('2023');
+                changeActive(4);
+              }
+            "
+          >
+            2023
+          </div>
         </div>
       </div>
       <div class="navigate-container">

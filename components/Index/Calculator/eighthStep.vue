@@ -25,27 +25,32 @@ const checkForm = () => {
   <div>
     <div class="calc-container">
       <div class="title-container">
-        <div class="name final">
+        <div class="name final desktop">
           Укажите&nbsp;ваши&nbsp;контактные
           данные&nbsp;для&nbsp;обратной&nbsp;связи
+        </div>
+        <div class="name final mobile">
+          Укажите ваши контактные данные для обратной связи
         </div>
         <div class="page">08<span>/08</span></div>
       </div>
       <div class="select-container final with-input">
-        <input
-          type="text"
-          class="wishes-input"
-          v-model="store.answers.fio"
-          :class="errorFlag ? 'error' : ''"
-          placeholder="Имя Фамилия"
-        />
-        <input
-          type="text"
-          class="wishes-input"
-          :class="errorFlag ? 'error' : ''"
-          v-model="store.answers.number"
-          placeholder="+7 ..."
-        />
+        <div class="select-row">
+          <input
+            type="text"
+            class="wishes-input"
+            v-model="store.answers.fio"
+            :class="errorFlag ? 'error' : ''"
+            placeholder="Имя Фамилия"
+          />
+          <input
+            type="text"
+            class="wishes-input"
+            :class="errorFlag ? 'error' : ''"
+            v-model="store.answers.number"
+            placeholder="+7 ..."
+          />
+        </div>
       </div>
       <div class="navigate-container final">
         <button @click="checkForm">Отправить</button>

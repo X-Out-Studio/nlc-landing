@@ -9,4 +9,5 @@
   <IndexCalculatorMain />
   <IndexReviews />
   <Modal />
+  <TelegramPopup />
 </template>

@@ -21,53 +21,55 @@ const changeActive = (field) => {
         <div class="page">06<span>/08</span></div>
       </div>
       <div class="select-container">
-        <div
-          class="gray-select"
-          :class="active == 1 ? 'active' : ''"
-          @click="
-            () => {
-              changeState('до 3 млн. руб');
-              changeActive(1);
-            }
-          "
-        >
-          до 3 млн. руб
-        </div>
-        <div
-          class="gray-select"
-          :class="active == 2 ? 'active' : ''"
-          @click="
-            () => {
-              changeState('4-6 млн. руб');
-              changeActive(2);
-            }
-          "
-        >
-          4-6 млн. руб
-        </div>
-        <div
-          class="gray-select"
-          :class="active == 3 ? 'active' : ''"
-          @click="
-            () => {
-              changeState('7-9 млн. руб.');
-              changeActive(3);
-            }
-          "
-        >
-          7-9 млн. руб.
-        </div>
-        <div
-          class="gray-select"
-          :class="active == 4 ? 'active' : ''"
-          @click="
-            () => {
-              changeState('более10 млн. руб.');
-              changeActive(4);
-            }
-          "
-        >
-          более 10 млн. руб.
+        <div class="select-row">
+          <div
+            class="gray-select"
+            :class="active == 1 ? 'active' : ''"
+            @click="
+              () => {
+                changeState('до 3 млн. руб');
+                changeActive(1);
+              }
+            "
+          >
+            до 3 млн. руб
+          </div>
+          <div
+            class="gray-select"
+            :class="active == 2 ? 'active' : ''"
+            @click="
+              () => {
+                changeState('4-6 млн. руб');
+                changeActive(2);
+              }
+            "
+          >
+            4-6 млн. руб
+          </div>
+          <div
+            class="gray-select"
+            :class="active == 3 ? 'active' : ''"
+            @click="
+              () => {
+                changeState('7-9 млн. руб.');
+                changeActive(3);
+              }
+            "
+          >
+            7-9 млн. руб.
+          </div>
+          <div
+            class="gray-select"
+            :class="active == 4 ? 'active' : ''"
+            @click="
+              () => {
+                changeState('более10 млн. руб.');
+                changeActive(4);
+              }
+            "
+          >
+            более 10 млн. руб.
+          </div>
         </div>
       </div>
       <div class="navigate-container">

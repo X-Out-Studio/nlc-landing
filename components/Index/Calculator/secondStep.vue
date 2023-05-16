@@ -21,77 +21,79 @@ const changeActive = (field) => {
         <div class="page">02<span>/08</span></div>
       </div>
       <div class="select-container">
-        <div class="gray-container">
+        <div class="select-row">
+          <div class="gray-container">
+            <div
+              class="gray-select"
+              :class="active == 1 ? 'active' : ''"
+              @click="
+                () => {
+                  changeState('Mercedes');
+                  changeActive(1);
+                }
+              "
+            >
+              <img src="@/assets/img/car-models/merc.png" alt="" />
+            </div>
+            <div class="model-title">Mercedes</div>
+          </div>
+          <div class="gray-container">
+            <div
+              class="gray-select"
+              :class="active == 2 ? 'active' : ''"
+              @click="
+                () => {
+                  changeState('BMW');
+                  changeActive(2);
+                }
+              "
+            >
+              <img src="@/assets/img/car-models/bmw.png" alt="" />
+            </div>
+            <div class="model-title">BMW</div>
+          </div>
+          <div class="gray-container">
+            <div
+              class="gray-select"
+              :class="active == 3 ? 'active' : ''"
+              @click="
+                () => {
+                  changeState('Toyota');
+                  changeActive(3);
+                }
+              "
+            >
+              <img src="@/assets/img/car-models/toyota.png" alt="" />
+            </div>
+            <div class="model-title">Toyota</div>
+          </div>
+          <div class="gray-container">
+            <div
+              class="gray-select"
+              :class="active == 4 ? 'active' : ''"
+              @click="
+                () => {
+                  changeState('Audi');
+                  changeActive(4);
+                }
+              "
+            >
+              <img src="@/assets/img/car-models/audi.png" alt="" />
+            </div>
+            <div class="model-title">Audi</div>
+          </div>
           <div
             class="gray-select"
-            :class="active == 1 ? 'active' : ''"
+            :class="active == 5 ? 'active' : ''"
             @click="
               () => {
-                changeState('Mercedes');
-                changeActive(1);
+                changeState('Другое');
+                changeActive(5);
               }
             "
           >
-            <img src="@/assets/img/car-models/merc.png" alt="" />
+            Другое
           </div>
-          <div class="model-title">Mercedes</div>
-        </div>
-        <div class="gray-container">
-          <div
-            class="gray-select"
-            :class="active == 2 ? 'active' : ''"
-            @click="
-              () => {
-                changeState('BMW');
-                changeActive(2);
-              }
-            "
-          >
-            <img src="@/assets/img/car-models/bmw.png" alt="" />
-          </div>
-          <div class="model-title">BMW</div>
-        </div>
-        <div class="gray-container">
-          <div
-            class="gray-select"
-            :class="active == 3 ? 'active' : ''"
-            @click="
-              () => {
-                changeState('Toyota');
-                changeActive(3);
-              }
-            "
-          >
-            <img src="@/assets/img/car-models/toyota.png" alt="" />
-          </div>
-          <div class="model-title">Toyota</div>
-        </div>
-        <div class="gray-container">
-          <div
-            class="gray-select"
-            :class="active == 4 ? 'active' : ''"
-            @click="
-              () => {
-                changeState('Audi');
-                changeActive(4);
-              }
-            "
-          >
-            <img src="@/assets/img/car-models/audi.png" alt="" />
-          </div>
-          <div class="model-title">Audi</div>
-        </div>
-        <div
-          class="gray-select"
-          :class="active == 5 ? 'active' : ''"
-          @click="
-            () => {
-              changeState('Другое');
-              changeActive(5);
-            }
-          "
-        >
-          Другое
         </div>
       </div>
       <div class="navigate-container">
