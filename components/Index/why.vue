@@ -241,7 +241,7 @@
 
 @media(max-width: 600px) {
     .why {
-        padding: 29px 0 49px 0;
+        padding: 40px 0;
 
         &__cards {
             gap: 15px;

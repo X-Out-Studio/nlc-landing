@@ -32,19 +32,19 @@
                     <div class="deliveredCars__content">
                         <div class="deliveredCars__info">
                             <div class="deliveredCars__characteristic">
-                                <p class="deliveredCars__name">Audi Q8 50 TDI</p>
+                                <p class="deliveredCars__name">Mercedes-Benz Vito 119</p>
                                 <p class="deliveredCars__text">2020 г.</p>
                             </div>
                             <div class="deliveredCars__characteristic">
                                 <p class="deliveredCars__text">Пробег:</p>
-                                <p class="deliveredCars__text">35 тыс. км.</p>
+                                <p class="deliveredCars__text">20 тыс. км.</p>
                             </div>
                             <div class="deliveredCars__characteristic">
                                 <p class="deliveredCars__text">Объем двигателя:</p>
-                                <p class="deliveredCars__text">0.3 л. (286 л. с.)</p>
+                                <p class="deliveredCars__text">2.1 л. (190 л.с.)</p>
                             </div>
                         </div>
-                        <p class="deliveredCars__price">2 000 500 руб.</p>
+                        <p class="deliveredCars__price">5 000 000 руб.</p>
                     </div>
                 </div>
                 <div class="deliveredCars__item">
@@ -54,19 +54,19 @@
                     <div class="deliveredCars__content">
                         <div class="deliveredCars__info">
                             <div class="deliveredCars__characteristic">
-                                <p class="deliveredCars__name">Audi Q8 50 TDI</p>
-                                <p class="deliveredCars__text">2020 г.</p>
+                                <p class="deliveredCars__name">Porshe Macan </p>
+                                <p class="deliveredCars__text">2022 г.</p>
                             </div>
                             <div class="deliveredCars__characteristic">
                                 <p class="deliveredCars__text">Пробег:</p>
-                                <p class="deliveredCars__text">35 тыс. км.</p>
+                                <p class="deliveredCars__text">0 км.</p>
                             </div>
                             <div class="deliveredCars__characteristic">
                                 <p class="deliveredCars__text">Объем двигателя:</p>
-                                <p class="deliveredCars__text">0.3 л. (286 л. с.)</p>
+                                <p class="deliveredCars__text">2.0 л. (265 л.с.)</p>
                             </div>
                         </div>
-                        <p class="deliveredCars__price">2 000 500 руб.</p>
+                        <p class="deliveredCars__price">8 550 000 руб.</p>
                     </div>
                 </div>
                 <div class="deliveredCars__item">
@@ -76,19 +76,19 @@
                     <div class="deliveredCars__content">
                         <div class="deliveredCars__info">
                             <div class="deliveredCars__characteristic">
-                                <p class="deliveredCars__name">Audi Q8 50 TDI</p>
-                                <p class="deliveredCars__text">2020 г.</p>
+                                <p class="deliveredCars__name">Porshe Macan</p>
+                                <p class="deliveredCars__text">2019 г.</p>
                             </div>
                             <div class="deliveredCars__characteristic">
                                 <p class="deliveredCars__text">Пробег:</p>
-                                <p class="deliveredCars__text">35 тыс. км.</p>
+                                <p class="deliveredCars__text">70 604 тыс. км.</p>
                             </div>
                             <div class="deliveredCars__characteristic">
                                 <p class="deliveredCars__text">Объем двигателя:</p>
-                                <p class="deliveredCars__text">0.3 л. (286 л. с.)</p>
+                                <p class="deliveredCars__text"> 2.0 л. (245 л.с.)</p>
                             </div>
                         </div>
-                        <p class="deliveredCars__price">2 000 500 руб.</p>
+                        <p class="deliveredCars__price">4 500 500 руб.</p>
                     </div>
                 </div>
                 <div class="deliveredCars__item">
@@ -98,16 +98,16 @@
                     <div class="deliveredCars__content">
                         <div class="deliveredCars__info">
                             <div class="deliveredCars__characteristic">
-                                <p class="deliveredCars__name">Audi Q8 50 TDI</p>
+                                <p class="deliveredCars__name">BMW 340i</p>
                                 <p class="deliveredCars__text">2020 г.</p>
                             </div>
                             <div class="deliveredCars__characteristic">
                                 <p class="deliveredCars__text">Пробег:</p>
-                                <p class="deliveredCars__text">35 тыс. км.</p>
+                                <p class="deliveredCars__text">25 тыс. км.</p>
                             </div>
                             <div class="deliveredCars__characteristic">
                                 <p class="deliveredCars__text">Объем двигателя:</p>
-                                <p class="deliveredCars__text">0.3 л. (286 л. с.)</p>
+                                <p class="deliveredCars__text">3.0 л (326 л. с.)</p>
                             </div>
                         </div>
                         <p class="deliveredCars__price">2 000 500 руб.</p>
@@ -121,15 +121,15 @@
                         <div class="deliveredCars__info">
                             <div class="deliveredCars__characteristic">
                                 <p class="deliveredCars__name">Audi Q8 50 TDI</p>
-                                <p class="deliveredCars__text">2020 г.</p>
+                                <p class="deliveredCars__text">2022 г.</p>
                             </div>
                             <div class="deliveredCars__characteristic">
                                 <p class="deliveredCars__text">Пробег:</p>
-                                <p class="deliveredCars__text">35 тыс. км.</p>
+                                <p class="deliveredCars__text">0 км.</p>
                             </div>
                             <div class="deliveredCars__characteristic">
                                 <p class="deliveredCars__text">Объем двигателя:</p>
-                                <p class="deliveredCars__text">0.3 л. (286 л. с.)</p>
+                                <p class="deliveredCars__text">450 л.с</p>
                             </div>
                         </div>
                         <p class="deliveredCars__price">2 000 500 руб.</p>
@@ -143,7 +143,7 @@
 
 <style lang="scss" scoped>
 .deliveredCars {
-    margin-bottom: 140px;
+    margin-bottom: 100px;
 
     .container {
         text-align: center;

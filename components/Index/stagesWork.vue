@@ -38,9 +38,9 @@ const store = useModalStepsStore();
                                 приобретением!
                             </p>
                             <ul class="stagesWork__step--list">
-                                <li class="stagesWork__step--item">Видообзор машины;</li>
-                                <li class="stagesWork__step--item">Назначаем встречи с продавцами;</li>
-                                <li class="stagesWork__step--item">Проводим техническую и юридическую проверки авто.</li>
+                                <li class="stagesWork__step--item"> Видообзор машины;</li>
+                                <li class="stagesWork__step--item"> Назначаем встречи с продавцами;</li>
+                                <li class="stagesWork__step--item"> Проводим техническую и юридическую проверки авто.</li>
                             </ul>
                         </div>
                         <div class="stagesWork__step--done">
@@ -82,12 +82,8 @@ const store = useModalStepsStore();
             </div>
         </div>
         <p class="stagesWork__text">
-            <span>Наш подход</span> заключается в том, чтобы полностью удовлетворить потребности каждого клиента и сделать
-            процесс
-            покупки автомобиля максимально простым и удобным. Мы гарантируем максимальную прозрачность сделок и лучшие цены
-            на автомобили!
-            <br><br>
-            Свяжитесь с нами, и мы поможем вам подобрать автомобиль вашей мечты!
+            Мы предлагаем максимально <span>простой и удобный</span> процесс покупки,
+            а также гарантируем прозрачность сделок и лучшие цены на автомобили.
         </p>
         <div class="stagesWork__weeks">
             <p class="stagesWork__weeks-text">2 <span>недели</span></p>
@@ -119,8 +115,8 @@ const store = useModalStepsStore();
     &__text {
         margin-top: 41px;
         font-weight: 400;
-        font-size: 15px;
-        line-height: 137.11%;
+        font-size: 20px;
+        line-height: 143.61%;
         color: #ffffff;
         text-align: center;
         font-style: normal;
@@ -409,7 +405,6 @@ const store = useModalStepsStore();
 
 @media(max-width: 730px) {
     .stagesWork {
-        padding-top: 6px;
         align-items: flex-start;
         padding-bottom: 0;
 
