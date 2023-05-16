@@ -4,7 +4,7 @@ const store = useModalStepsStore();
 </script>
 
 <template>
-    <section class="stagesWork">
+    <section id="stagesWork" class="stagesWork">
         <div class="global-title white">этапы работы</div>
         <div class="stagesWork__wrapper">
             <div class="stagesWork__steps">

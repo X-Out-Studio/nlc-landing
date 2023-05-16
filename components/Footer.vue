@@ -1,5 +1,5 @@
 <template>
-    <footer class="footer">
+    <footer id="footer" class="footer">
         <div class="footer__top">
             <div class="container">
                 <div class="global-title white">связаться с нами</div>
@@ -248,7 +248,6 @@
         height: 51px;
 
         img {
-            object-fit: cover;
             width: 100%;
             height: 100%;
         }

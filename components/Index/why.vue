@@ -107,12 +107,19 @@
 
         &--6 {
             width: 26%;
-            background: url("../../assets/img/why/car.png") no-repeat;
+            background-color:rgba(0, 0, 0, 0.5);
+            background: url("@/assets/img/why/car.png") no-repeat;
             background-position: right;
             padding-left: 63px;
+            background-color:rgba(0, 0, 0, 0.5);
             gap: 30px;
             justify-content: center;
             cursor: pointer;
+            transition: background 0.2s ease;
+
+            &:hover {
+                background-image: url("@/assets/img/why/car1.png");
+            }
         }
     }
 

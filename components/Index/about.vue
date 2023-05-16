@@ -1,5 +1,5 @@
 <template>
-  <div class="section-about">
+  <div id="about" class="section-about">
     <div class="global-title">О нас</div>
     <div class="about-card">
       <div class="about-card__left-container">

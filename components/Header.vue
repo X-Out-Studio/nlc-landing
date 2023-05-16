@@ -20,32 +20,33 @@ onMounted(() => {
 const headerLinks = reactive([
     {
         name: "Этапы работы",
-        active: true,
-        href: "#"
+        active: false,
+        href: "#stagesWork"
     },
     {
         name: "О нас",
         active: false,
-        href: "#"
+        href: "#about"
     },
     {
         name: "Отзывы",
         active: false,
-        href: "#"
+        href: "#reviews"
     },
     {
         name: "Контакты",
         active: false,
-        href: "#"
+        href: "#footer"
     }
 ])
 
-// const onChangeActiveLink = (indexLink) => {
-//     console.log(111);
-//     headerLinks.forEach((item, index) => {
-//         item.active = index === indexLink ? true : false;
-//     });
-// }
+const onChangeActiveLink = (indexLink) => {
+    headerLinks.forEach((item, index) => {
+        item.active = index === indexLink ? true : false;
+    });
+    activeMobileMenu.value = false;
+    document.body.classList.remove('body--hidden');
+}
 
 const activeMobileHeader = () => {
     activeHeader.value = true;
@@ -157,7 +158,6 @@ const activeMobileHeader = () => {
         height: 34px;
 
         img {
-            object-fit: cover;
             width: 100%;
             height: 100%;
         }
@@ -211,6 +211,7 @@ const activeMobileHeader = () => {
 
         &-item {
             list-style-type: none;
+            position: relative;
 
             &::after {
                 position: absolute;
@@ -221,6 +222,7 @@ const activeMobileHeader = () => {
                 background-color: currentColor;
                 left: 0;
                 bottom: -4px;
+                transition: width .3s ease-in 0s;  
             }
 
             &:hover {
@@ -235,7 +237,7 @@ const activeMobileHeader = () => {
                 }
             }
 
-            /* &--active {
+            &--active {
                 position: relative;
 
                 .header__link {
@@ -245,7 +247,7 @@ const activeMobileHeader = () => {
                 &::after {
                     width: 100%;
                 }
-            } */
+            }
         }
     }
 
@@ -268,6 +270,7 @@ const activeMobileHeader = () => {
         &:hover {
             background-color: #000000;
             border: 1px solid #000000;
+            color: #FFFFFF;
         }
     }
 }

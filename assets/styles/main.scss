@@ -26,6 +26,10 @@ button:focus {
   outline: none;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 .global-title {
   font-weight: 900;
   font-size: 45px;

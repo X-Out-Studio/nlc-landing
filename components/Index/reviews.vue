@@ -19,7 +19,7 @@ const onSlideChange = () => {
 </script>
 
 <template>
-    <section class="reviews">
+    <section id="reviews" class="reviews">
         <div class="global-title">отзывы</div>
         <div class="reviews__swiper">
             <Swiper :slides-per-view="1" :modules="[SwiperNavigation]" :navigation="navigateParams" :autoplay="{
