@@ -138,8 +138,6 @@ body {
     gap: 9px;
     flex-wrap: wrap;
 
-
-
     .select-row {
       display: flex;
       align-self: center;
@@ -287,6 +285,7 @@ body {
     .select-container .gray-select {
       width: 152px;
       height: 89px;
+      text-align: center;
     }
 
     .select-container {
@@ -298,6 +297,9 @@ body {
         gap: 13px;
         align-items: center;
         justify-content: center;
+        &.eighth {
+          gap: 32px;
+        }
       }
 
       &.with-input {
@@ -461,7 +463,6 @@ body {
   }
 
   @media (max-width: 576px) {
-
     &__end {
       .mobile {
         display: block;
