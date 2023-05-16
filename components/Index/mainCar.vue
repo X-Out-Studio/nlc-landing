@@ -7,7 +7,7 @@
           БЕСПЛАТНЫЙ ПОДБОР АВТО
           <span>ЗА 2 ЧАСА</span>
         </div>
-        <a class="telegram-button" href="https://ya.ru" target="_blank">
+        <a class="telegram-button" href="https://t.me/nlc_auto" target="_blank">
           <svg
             width="66"
             height="14"
