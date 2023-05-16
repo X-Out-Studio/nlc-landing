@@ -273,12 +273,14 @@ body {
 
   @media (max-width: 576px) {
     padding: 29px 15px 50px 15px;
+    height: calc(100vh - 78px);
+    justify-content: space-between;
 
     .title-container {
       gap: 35px;
 
       .name {
-        font-size: 20px;
+        font-size: 17px;
       }
     }
 
@@ -289,11 +291,11 @@ body {
 
     .select-container {
       margin: 13px 0 0 0;
-      min-height: 353px;
+      // min-height: 353px;
       align-items: center;
 
       .select-row {
-        gap: 23px;
+        gap: 13px;
         align-items: center;
         justify-content: center;
       }
@@ -308,7 +310,7 @@ body {
     }
 
     .navigate-container {
-      margin: 44px 0 0 0;
+      margin: 15px 0 0 0;
     }
   }
 }
@@ -439,7 +441,6 @@ body {
 
   &__social {
     margin-top: 28px;
-    border: 1px solid #000000;
     border-radius: 53.5px;
     padding: 30px 53px;
     display: flex;

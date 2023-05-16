@@ -142,14 +142,14 @@
   }
 
   @media (max-width: 1020px) {
-    padding: 97px 16px 36px 10px;
+    padding: 97px 15px 36px 15px;
     height: 689px;
 
     background-position: center;
 
     .content-container {
       .title {
-        font-size: 31px;
+        font-size: 30px;
 
         span {
           font-size: 31px;
