@@ -2,7 +2,7 @@
     <footer id="footer" class="footer">
         <div class="footer__top">
             <div class="container">
-                <div class="global-title white">связаться с нами</div>
+                <div class="global-title white">связаться с&nbsp;нами</div>
                 <div class="footer__social">
                     <p class="footer__social-text">Узнай о нас больше в соц. сетях</p>
                     <ul class="footer__social-items">
@@ -139,7 +139,7 @@
     &__social {
         display: flex;
         flex-direction: row;
-        gap: 180px;
+        gap: 110px;
 
         &-text {
             font-weight: 400;

@@ -160,8 +160,8 @@ const onSlideChange = () => {
 
 <style lang="scss" scoped>
 .reviews {
-    padding-top: 110px;
-    padding-bottom: 133px;
+    padding-top: 100px;
+    padding-bottom: 100px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -370,6 +370,7 @@ const onSlideChange = () => {
 
         .swiper-navigate {
             justify-content: center;
+            gap: 11px;
         }
     }
 }

@@ -7,49 +7,7 @@ const navigateParams = {
 
 <template>
     <section class="price">
-        <div class="global-title">цена в россии vs NLC</div>
-        <!-- <div class="price__card">
-            <div class="price__item">
-                <div class="price__img">
-                    <img class="price__logo price__logo-nlc" src="../../assets/img/price/logoNLC.svg" alt="">
-                    <img class="price__car" src="../../assets/img/price/car1.jpg" alt="">
-                </div>
-                <div class="price__info">
-                    <p class="price__name">Porshe Macan</p>
-                    <p class="price__rub">4 000 000 руб.</p>
-                </div>
-            </div>
-            <div class="price__item">
-                <div class="price__img">
-                    <img class="price__logo price__logo-avito" src="../../assets/img/price/logoAvito.svg" alt="">
-                    <img class="price__car" src="../../assets/img/price/car2.jpg" alt="">
-                </div>
-                <div class="price__info">
-                    <p class="price__name">Porshe Macan</p>
-                    <p class="price__rub">4 000 000 руб.</p>
-                </div>
-            </div>
-            <div class="price__item">
-                <div class="price__img">
-                    <img class="price__logo price__logo-nlc" src="../../assets/img/price/logoNLC.svg" alt="">
-                    <img class="price__car" src="../../assets/img/price/car1.jpg" alt="">
-                </div>
-                <div class="price__info">
-                    <p class="price__name">Porshe Macan</p>
-                    <p class="price__rub">4 000 000 руб.</p>
-                </div>
-            </div>
-            <div class="price__item">
-                <div class="price__img">
-                    <img class="price__logo price__logo-avito" src="../../assets/img/price/logoAvito.svg" alt="">
-                    <img class="price__car" src="../../assets/img/price/car2.jpg" alt="">
-                </div>
-                <div class="price__info">
-                    <p class="price__name">Porshe Macan</p>
-                    <p class="price__rub">4 000 000 руб.</p>
-                </div>
-            </div>
-        </div> -->
+        <div class="global-title">цена в россии vs&nbsp;NLC</div>
         <div class="price__swipers">
             <Swiper :slides-per-view="2" :spaceBetween="'37'" :modules="[SwiperNavigation]" :navigation="navigateParams"
                 :autoplay="{
@@ -154,8 +112,8 @@ const navigateParams = {
 
 <style lang="scss" scoped>
 .price {
-    margin-top: 140px;
-    margin-bottom: 147px;
+    margin-top: 100px;
+    margin-bottom: 100px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -262,7 +220,7 @@ const navigateParams = {
 @media(max-width: 992px) {
     .price {
         margin-top: 40px;
-        margin-bottom: 30px;
+        margin-bottom: 20px;
 
         &__logo {
 
@@ -276,6 +234,10 @@ const navigateParams = {
                 height: 48px;
             }
         }
+
+        &__swipers {
+            padding-top: 30px;
+        }
     }
 }
 
@@ -288,7 +250,7 @@ const navigateParams = {
         &__nav {
             justify-content: space-between;
 
-            .swiper-next, 
+            .swiper-next,
             .swiper-prev {
                 display: block;
             }

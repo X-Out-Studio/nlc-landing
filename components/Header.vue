@@ -228,10 +228,6 @@ const activeMobileHeader = () => {
             &:hover {
                 position: relative;
 
-                .header__link {
-                    font-weight: 700;
-                }
-
                 &::after {
                     width: 100%;
                 }
@@ -259,7 +255,7 @@ const activeMobileHeader = () => {
         padding: 21px 38px;
         font-weight: 900;
         font-size: 16px;
-        line-height: 128.61%;
+        line-height: 0.7;
         color: currentColor;
         font-family: 'Druk Text Wide Cyr';
         border: 1px solid currentColor;
@@ -341,6 +337,10 @@ const activeMobileHeader = () => {
                 .header__call {
                     width: fit-content;
                     color: #1F1F1F;
+
+                    &:hover {
+                        color: #ffffff;
+                    }
                 }
 
                 .header__info {

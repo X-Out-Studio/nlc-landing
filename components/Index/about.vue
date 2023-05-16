@@ -25,8 +25,8 @@
 </template>
 <style scoped lang='scss'>
 .section-about {
-  margin-top: 103px;
-  margin-bottom: 140px;
+  margin-top: 100px;
+  margin-bottom: 100px;
   display: flex;
   flex-direction: column;
 
@@ -121,7 +121,7 @@
 
   .section-about {
     margin-top: 40px;
-    margin-bottom: 72px;
+    margin-bottom: 40px;
 
     .about-card {
       flex-direction: column;
@@ -147,6 +147,11 @@
 
 @media(max-width: 600px) {
   .section-about {
+
+    .text {
+      font-size: 14px;
+      line-height: 137.11%;
+    }
 
     .about-card {
       &__right-container {
