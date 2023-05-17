@@ -131,6 +131,10 @@ const scrollToCalcForm = () => {
             &:hover {
                 background-image: url("@/assets/img/why/car1.png");
             }
+
+            &:focus {
+                border: 1px solid #FFFFFF; 
+            }
         }
     }
 
