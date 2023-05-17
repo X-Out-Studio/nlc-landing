@@ -27,7 +27,9 @@ const doneForm = () => {
               <input
                 class="modal__input"
                 type="tel"
-                placeholder="Ваш телефон"
+                placeholder="Ваш телефонy"
+                v-maska
+                data-maska="+7 ### ###-##-##"
               />
             </form>
             <div class="modal__send">
