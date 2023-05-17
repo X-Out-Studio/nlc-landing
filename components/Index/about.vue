@@ -14,7 +14,7 @@
           будьте уверены - с NLC вы точно найдете то, что вам нужно.
         </div>
         <div class="logo">
-          <img src="../../assets/img/nlc-logo.svg" alt="" />
+          <img src="@/assets/img/about/logo.png" alt="" />
         </div>
       </div>
       <div class="about-card__right-container">

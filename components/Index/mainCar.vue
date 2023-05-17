@@ -1,7 +1,9 @@
 <template>
-  <div class="main-content">
+  <div class="main-content" id="main">
     <div class="content-container">
-      <div class="title">Автомобили из Европы <span>под&nbsp;заказ</span></div>
+      <div class="title">
+        Автомобили из Европы и&nbsp;кореи <span>под&nbsp;заказ</span>
+      </div>
       <div class="telegram-box">
         <div class="text">
           БЕСПЛАТНЫЙ ПОДБОР АВТО
@@ -41,7 +43,7 @@
   background-image: url("@/assets/img/mainCar/img2.png");
   background-repeat: no-repeat;
   background-size: cover;
-  padding: 118px 150px 49px 150px;
+  padding: 135px 150px 49px 150px;
 
   .content-container {
     display: flex;
@@ -51,9 +53,9 @@
     justify-content: space-between;
 
     .title {
-      max-width: 800px;
+      max-width: 969px;
       font-weight: 900;
-      font-size: 79px;
+      font-size: 64px;
       line-height: 128.61%;
       text-transform: uppercase;
       color: #ffffff;
@@ -62,7 +64,7 @@
 
       span {
         font-family: "Druk Text Wide Cyr";
-        font-size: 65px;
+        font-size: 50px;
       }
     }
 
@@ -120,11 +122,14 @@
 
     .content-container {
       text-shadow: 2px 5px 3px rgb(36 36 36 / 12%);
+
       .title {
-        font-size: 61px;
+        font-size: 46px;
+        line-height: 128.61%;
+        max-width: 635px;
 
         span {
-          font-size: 47px;
+          font-size: 32px;
         }
       }
 
@@ -154,9 +159,10 @@
     .content-container {
       .title {
         font-size: 30px;
+        line-height: 128.61%;
 
         span {
-          font-size: 30px;
+          font-size: 22px;
         }
       }
 

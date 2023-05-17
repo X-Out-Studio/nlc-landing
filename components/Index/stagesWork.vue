@@ -108,7 +108,7 @@ const store = useModalStepsStore();
       а также гарантируем прозрачность сделок и лучшие цены на автомобили.
     </p>
     <div class="stagesWork__weeks">
-      <p class="stagesWork__weeks-text">2 <span>недели</span></p>
+      <p class="stagesWork__weeks-text">3 <span>недели</span></p>
       <Button @click="store.openModal = true" text="Подобрать машину" />
     </div>
     <div class="stagesWork__car">
@@ -424,10 +424,6 @@ const store = useModalStepsStore();
   .stagesWork {
     align-items: flex-start;
     padding-bottom: 0;
-
-    &__text {
-      
-    }
 
     .global-title {
       padding-left: 16px;
