@@ -22,7 +22,7 @@
                                 <p class="deliveredCars__text">0.3 л. (286 л. с.)</p>
                             </div>
                         </div>
-                        <p class="deliveredCars__price">2 000 500 руб.</p>
+                        <p class="deliveredCars__price">6 900 000 руб.</p>
                     </div>
                 </div>
                 <div class="deliveredCars__item">
@@ -44,7 +44,7 @@
                                 <p class="deliveredCars__text">2.1 л. (190 л.с.)</p>
                             </div>
                         </div>
-                        <p class="deliveredCars__price">5 000 000 руб.</p>
+                        <p class="deliveredCars__price">5 600 000 руб.</p>
                     </div>
                 </div>
                 <div class="deliveredCars__item">
@@ -88,7 +88,7 @@
                                 <p class="deliveredCars__text"> 2.0 л. (245 л.с.)</p>
                             </div>
                         </div>
-                        <p class="deliveredCars__price">4 500 500 руб.</p>
+                        <p class="deliveredCars__price">5 250 000 руб.</p>
                     </div>
                 </div>
                 <div class="deliveredCars__item">
@@ -110,7 +110,7 @@
                                 <p class="deliveredCars__text">3.0 л (326 л. с.)</p>
                             </div>
                         </div>
-                        <p class="deliveredCars__price">2 000 500 руб.</p>
+                        <p class="deliveredCars__price">3 700 000 руб.</p>
                     </div>
                 </div>
                 <div class="deliveredCars__item">
@@ -132,7 +132,7 @@
                                 <p class="deliveredCars__text">450 л.с</p>
                             </div>
                         </div>
-                        <p class="deliveredCars__price">2 000 500 руб.</p>
+                        <p class="deliveredCars__price">5 900 000 руб.</p>
                     </div>
                 </div>
             </div>
