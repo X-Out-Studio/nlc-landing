@@ -142,7 +142,7 @@ const store = useModalStepsStore();
     color: #ffffff;
     text-align: center;
     font-style: normal;
-    width: 515px;
+    width: 763px;
 
     span {
       font-weight: 700;
@@ -425,6 +425,10 @@ const store = useModalStepsStore();
     align-items: flex-start;
     padding-bottom: 0;
 
+    &__text {
+      
+    }
+
     .global-title {
       padding-left: 16px;
     }
@@ -511,8 +515,9 @@ const store = useModalStepsStore();
 
     &__text {
       width: 100%;
-      padding: 0 15px;
+      padding: 0 20px;
       margin-top: 0px;
+      text-align: left;
     }
   }
 }
