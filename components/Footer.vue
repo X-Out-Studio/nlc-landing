@@ -12,6 +12,7 @@ const sendForm = () => {
   }
 }
 </script>
+
 <template>
   <footer id="footer" class="footer">
     <div class="footer__top">
@@ -62,7 +63,7 @@ const sendForm = () => {
                 <a href="#">Политики обработки персональных данных</a>
               </p>
             </div>
-            <div class="footer__logo">
+            <div class="footer__logo footer__logo-desktop">
               <img src="../assets/img/footer/logo.png" alt="" />
             </div>
           </div>
@@ -71,11 +72,11 @@ const sendForm = () => {
       <template v-if="finishForm">
         <div class="container footer-done">
           <div class="modal__end footer-thank">
-            <div class="modal__thank white">спасибо за заявку!</div>
-            <p class="modal__done white footer-done">наш Специалист уже начал просчет</p>
+            <div class="modal__thank white">Спасибо за обращение!</div>
+            <p class="modal__done white footer-done">Наш специалист свяжется с вами в ближайшее время</p>
           </div>
           <div class="footer__block">
-            <div class="footer__logo">
+            <div class="footer__logo footer__logo-desktop">
               <img src="../assets/img/footer/logo.png" alt="" />
             </div>
           </div>
@@ -85,7 +86,12 @@ const sendForm = () => {
     <div class="footer__info">
       <div class="container">
         <div class="footer__contact">
-          <a class="footer__phone" href="tel:+79381332323">Телефон +7&nbsp;938&nbsp;133&nbsp;-23&nbsp;-23</a>
+          <div class="footer__contact-top">
+            <a class="footer__phone" href="tel:+79381332323">Телефон +7&nbsp;938&nbsp;133&nbsp;-23&nbsp;-23</a>
+            <div class="footer__logo footer__logo-mobile">
+              <img src="../assets/img/footer/logo.png" alt="" />
+            </div>
+          </div>
           <a class="footer__email" href="mailto:nlc-auto@yandex.ru ">Почта nlc-auto@yandex.ru </a>
         </div>
         <ul class="footer__menu">
@@ -316,9 +322,26 @@ const sendForm = () => {
     }
   }
 
+  .container.footer-done {
+    align-items: flex-start;
+
+    .modal__end {
+      gap: 50px;
+    }
+  }
+
+  &-thank {
+    max-width: 1034px;
+    margin: 0 auto 0 0;
+  }
+
   &__logo {
     width: 241px;
     height: 51px;
+
+    &-mobile {
+      display: none;
+    }
 
     img {
       width: 100%;
@@ -517,6 +540,11 @@ const sendForm = () => {
       flex-direction: column;
       gap: 50px;
     }
+
+    .container.footer-done {
+      flex-direction: column;
+      gap: 50px;
+    }
   }
 }
 
@@ -528,6 +556,22 @@ const sendForm = () => {
     &__top {
       .global-title {
         max-width: 264px;
+      }
+    }
+
+    .container.footer-done {
+      .modal__done {
+        font-size: 20px;
+        line-height: 150.61%;
+      }
+
+      .modal__end {
+        gap: 22px;
+      }
+
+      .modal__thank {
+        font-size: 27px;
+        line-height: 128.61%;
       }
     }
 
@@ -575,11 +619,6 @@ const sendForm = () => {
       }
     }
 
-    &__block {
-      text-align: center;
-      position: relative;
-    }
-
     &__rule {
       align-items: flex-start;
     }
@@ -595,19 +634,34 @@ const sendForm = () => {
     }
 
     &__logo {
-      width: 153px;
-      height: 33px;
-      position: absolute;
-      right: 0;
-      bottom: -90px;
+
+      &-desktop {
+        display: none;
+      }
+
+      &-mobile {
+        display: block;
+        width: 153px;
+        height: 33px;
+      }
     }
 
     &__contact {
       flex-direction: column;
       gap: 15px;
+      width: 100%;
+      align-items: flex-start;
 
       a {
         max-width: 136px;
+      }
+
+      &-top {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
       }
     }
 
