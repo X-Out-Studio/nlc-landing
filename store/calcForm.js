@@ -1,12 +1,16 @@
-import { defineStore } from 'pinia'
+import { defineStore } from "pinia";
 
-export const useCalcFormStore = defineStore('calcForm', {
+export const useCalcFormStore = defineStore("calcForm", {
   state: () => ({
     openModal: false,
     currentStep: 1,
     answers: {
       firstStep: null,
+      firstStepBU: null,
+      firstStepBUWaiting: false,
       secondStep: null,
+      secondStepOther: null,
+      secondStepOtherWaiting: false,
       thirdStep: null,
       fourthStep: null,
       fifthStep: null,
@@ -14,7 +18,6 @@ export const useCalcFormStore = defineStore('calcForm', {
       seventhStep: null,
       fio: null,
       number: null,
-    }
+    },
   }),
-
-})
+});

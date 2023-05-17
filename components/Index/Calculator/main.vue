@@ -21,8 +21,11 @@ const openForm = () => {
     </Transition>
     <Transition>
       <div v-show="store.openModal">
-        <IndexCalculatorFirstStep v-show="store.currentStep === 1" />
-        <IndexCalculatorSecondStep v-show="store.currentStep === 2" />
+        <IndexCalculatorFirstStep v-show="store.currentStep === 1 && store.answers.firstStepBUWaiting === false" />
+        <IndexCalculatorFirstStepBU v-show="store.currentStep === 1 && store.answers.firstStepBUWaiting === true" />
+        <IndexCalculatorSecondStep v-show="store.currentStep === 2 && store.answers.secondStepOtherWaiting === false" />
+        <IndexCalculatorSecondStepOther
+          v-show="store.currentStep === 2 && store.answers.secondStepOtherWaiting === true" />
         <IndexCalculatorThirdStep v-show="store.currentStep === 3" />
         <IndexCalculatorFourthStep v-show="store.currentStep === 4" />
         <IndexCalculatorFifthStep v-show="store.currentStep === 5" />

@@ -17,12 +17,13 @@
     "sass-loader": "^13.2.2"
   },
   "dependencies": {
-    "@nuxtjs/recaptcha": "^1.1.2",
     "@pinia/nuxt": "^0.4.10",
+    "axios": "^1.4.0",
     "maska": "^2.1.9",
     "nuxt-swiper": "^1.1.0",
     "pinia": "^2.0.36",
-    "vue-final-modal": "^3.4.11"
+    "vue-final-modal": "^3.4.11",
+    "vue-recaptcha-v3": "^2.0.1"
   },
   "overrides": {
     "vue": "latest"
