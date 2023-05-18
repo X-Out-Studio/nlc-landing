@@ -18,6 +18,15 @@ a {
   overflow: hidden;
 }
 
+body::-webkit-scrollbar {
+  width: 10px;
+}
+ 
+body::-webkit-scrollbar-thumb {
+  background-color: darkgrey;
+  border-radius: 30px;
+}
+
 button,
 input,
 textarea,
