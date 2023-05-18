@@ -56,9 +56,6 @@ const sendForm = async () => {
 watch(store, (a) => {
   if (store.phone?.length == 16) {
     errorPhone.value = false;
-  if (store.phone?.length == 16) {
-    errorPhone.value = false
-  }
 });
 </script>
 
