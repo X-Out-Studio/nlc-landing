@@ -13,7 +13,55 @@ let errorFlag = ref(false);
 let errorPhone = ref(false);
 let finishForm = ref(false);
 
-const checkForm = () => {
+import { useConfigStore } from "@/store/config";
+const config = useConfigStore();
+
+import { useReCaptcha } from "vue-recaptcha-v3";
+import axios from "axios";
+
+const recaptchaInstance = useReCaptcha();
+const recaptcha = async () => {
+  await recaptchaInstance?.recaptchaLoaded();
+  const token = await recaptchaInstance?.executeRecaptcha("action");
+  const data = await axios(
+    `${config.handlBack}${config.endpoints.captcha}${token}`,
+    {
+      method: "GET",
+      headers: {
+        Accept: "application/json",
+        "Content-type": "application/json",
+      },
+    }
+  );
+  console.log(data);
+  return data.data.bot;
+};
+
+const telegramSend = () => {
+  axios(`${config.handlBack}${config.endpoints.telegramSend}`, {
+    method: "POST",
+    headers: {
+      Accept: "application/json",
+      "Content-type": "application/json",
+    },
+    data: {
+      from: "calculator",
+      firstStep: store.answers.firstStep,
+      firstStepBU: store.answers.firstStepBU,
+      secondStep: store.answers.secondStep,
+      secondStepOther: store.answers.secondStepOther,
+      thirdStep: store.answers.thirdStep,
+      fourthStep: store.answers.fourthStep,
+      fifthStep: store.answers.fifthStep,
+      sixthStep: store.answers.sixthStep,
+      seventhStep: store.answers.seventhStep,
+      fio: store.answers.fio,
+      phone: store.answers.number,
+    },
+  });
+};
+
+const checkForm = async () => {
   if (!(store.answers.number && store.answers.fio)) {
     errorFlag.value = true;
     errorPhone.value = false;
@@ -25,15 +73,19 @@ const checkForm = () => {
       console.log(3);
     }
     else {
-      errorFlag.value = false;
-      errorPhone.value = false;
-      finishForm.value = true;
-      errorFlag.value = false;
-      store.currentStep++;
-      setTimeout(() => {
-        openForm();
-        store.$reset();
-      }, "4000");
+      if (!(await recaptcha())) {
+        telegramSend()
+
+        errorFlag.value = false;
+        errorPhone.value = false;
+        finishForm.value = true;
+        errorFlag.value = false;
+        store.currentStep++;
+        setTimeout(() => {
+          openForm();
+          store.$reset();
+        }, "4000");
+      } else { }
     }
   }
 };
