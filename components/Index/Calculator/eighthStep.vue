@@ -1,6 +1,5 @@
 <script setup>
 import { useCalcFormStore } from "@/store/calcForm";
-const runtimeConfig = useRuntimeConfig();
 const store = useCalcFormStore();
 const openForm = () => {
   store.openModal ? (store.openModal = false) : (store.openModal = true);
