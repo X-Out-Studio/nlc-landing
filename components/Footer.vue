@@ -3,12 +3,15 @@ import { useFooterFormStore } from "@/store/footerForm";
 const store = useFooterFormStore();
 let errorActive = ref(false)
 let finishForm = ref(false)
+
 const sendForm = () => {
-  if (store.fio && store.phone && store.question) {
+  if (store.fio && store.phone && store.phone.length === 16 && store.question) {
     errorActive.value = false;
     finishForm.value = true;
+    console.log(1111);
   } else {
     errorActive.value = true;
+    console.log(222);
   }
 }
 </script>
@@ -50,11 +53,11 @@ const sendForm = () => {
           <div class="footer__data">
             <input class="footer__form-input" :class="errorActive ? 'error' : ''" placeholder="Ваше имя"
               v-model="store.fio" />
-            <input class="footer__form-input" :class="errorActive ? 'error' : ''" placeholder="Ваш телефон"
-              v-model="store.phone" />
+            <input class="footer__form-input footer__form-input-phone" :class="errorActive ? 'error' : ''"
+              placeholder="+7..." v-model="store.phone" v-maska data-maska="+7 ### ###-##-##" />
           </div>
           <input class="footer__form-input footer__form-input--question" :class="errorActive ? 'error' : ''"
-            placeholder="Ваш вопрос" v-model="store.question" />
+            placeholder="Ваш вопрос" required v-model="store.question" />
           <div class="footer__block">
             <div>
               <button class="footer__submit" @click="sendForm">Отправить</button>
@@ -294,6 +297,19 @@ const sendForm = () => {
       line-height: 128.61%;
       color: #ffffff;
       width: 100%;
+
+      &-phone {
+
+        &:focus {
+          border-bottom: 1px solid red;
+        }
+
+        &-valid {
+          &:focus {
+            border-bottom: 1px solid #ffffff;
+          }
+        }
+      }
 
       &::placeholder {
         font-style: normal;
