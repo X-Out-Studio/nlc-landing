@@ -53,8 +53,8 @@ const sendForm = async () => {
     if (store.phone?.length < 16 && store.phone != null) {
       errorPhone.value = true;
     } else {
-      // if (!(await recaptcha())) {
-      if (true) {
+      if (!(await recaptcha())) {
+        // if (true) {
 
         telegramSend();
         errorActive.value = false;
