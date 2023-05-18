@@ -23,7 +23,7 @@ const changeActive = (field) => {
       <div class="select-container">
         <div class="select-row">
           <div class="gray-container">
-            <div class="gray-select" :class="active == 1 ? 'active' : ''" @click="() => {
+            <div class="gray-select with-img" :class="active == 1 ? 'active' : ''" @click="() => {
               changeState('Mercedes');
               changeActive(1);
             }
@@ -33,7 +33,7 @@ const changeActive = (field) => {
             <div class="model-title">Mercedes</div>
           </div>
           <div class="gray-container">
-            <div class="gray-select" :class="active == 2 ? 'active' : ''" @click="() => {
+            <div class="gray-select with-img" :class="active == 2 ? 'active' : ''" @click="() => {
               changeState('BMW');
               changeActive(2);
             }
@@ -43,7 +43,7 @@ const changeActive = (field) => {
             <div class="model-title">BMW</div>
           </div>
           <div class="gray-container">
-            <div class="gray-select" :class="active == 3 ? 'active' : ''" @click="() => {
+            <div class="gray-select with-img" :class="active == 3 ? 'active' : ''" @click="() => {
               changeState('porsche');
               changeActive(3);
             }
@@ -53,7 +53,7 @@ const changeActive = (field) => {
             <div class="model-title">Porsche</div>
           </div>
           <div class="gray-container">
-            <div class="gray-select" :class="active == 4 ? 'active' : ''" @click="() => {
+            <div class="gray-select with-img" :class="active == 4 ? 'active' : ''" @click="() => {
               changeState('Audi');
               changeActive(4);
             }
@@ -63,7 +63,7 @@ const changeActive = (field) => {
             <div class="model-title">Audi</div>
           </div>
           <div class="gray-container">
-            <div class="gray-select" :class="active == 5 ? 'active' : ''" @click="() => {
+            <div class="gray-select with-img" :class="active == 5 ? 'active' : ''" @click="() => {
               changeState('Volkswagen');
               changeActive(5);
             }
@@ -73,7 +73,7 @@ const changeActive = (field) => {
             <div class="model-title">Volkswagen</div>
           </div>
           <div class="gray-container">
-            <div class="gray-select" :class="active == 6 ? 'active' : ''" @click="() => {
+            <div class="gray-select with-img" :class="active == 6 ? 'active' : ''" @click="() => {
               changeState('Tesla');
               changeActive(6);
             }
@@ -82,7 +82,7 @@ const changeActive = (field) => {
             </div>
             <div class="model-title">Tesla</div>
           </div>
-          <div class="gray-select" :class="active == 7 ? 'active' : ''" @click="() => {
+          <div class="gray-select with-img" :class="active == 7 ? 'active' : ''" @click="() => {
             changeState('Другое');
             changeActive(7);
           }
