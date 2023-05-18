@@ -98,8 +98,8 @@
                     <div class="deliveredCars__content">
                         <div class="deliveredCars__info">
                             <div class="deliveredCars__characteristic">
-                                <p class="deliveredCars__name">BMW 340i</p>
-                                <p class="deliveredCars__text">2020 г.</p>
+                                <p class="deliveredCars__name">BMW X6 XDrive40d М Sport</p>
+                                <p class="deliveredCars__text">2018 г.</p>
                             </div>
                             <div class="deliveredCars__characteristic">
                                 <p class="deliveredCars__text">Пробег:</p>
@@ -110,7 +110,7 @@
                                 <p class="deliveredCars__text">3.0 л (326 л. с.)</p>
                             </div>
                         </div>
-                        <p class="deliveredCars__price">3 700 000 руб.</p>
+                        <p class="deliveredCars__price">5 000 000 руб.</p>
                     </div>
                 </div>
                 <div class="deliveredCars__item" data-aos="fade-up">
@@ -120,7 +120,7 @@
                     <div class="deliveredCars__content">
                         <div class="deliveredCars__info">
                             <div class="deliveredCars__characteristic">
-                                <p class="deliveredCars__name">Audi Q8 50 TDI</p>
+                                <p class="deliveredCars__name">Tesla Model Y</p>
                                 <p class="deliveredCars__text">2022 г.</p>
                             </div>
                             <div class="deliveredCars__characteristic">

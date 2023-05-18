@@ -19,8 +19,8 @@ const onSlideChange = () => {
 
 <template>
   <section id="reviews" class="reviews">
-    <div class="global-title" data-aos="fade">отзывы</div>
-    <div class="reviews__swiper" data-aos="fade-up">
+    <div class="global-title" data-aos="fade-up">отзывы</div>
+    <div class="reviews__swiper">
       <Swiper :slides-per-view="1" :modules="[SwiperNavigation]" :navigation="navigateParams" :autoplay="{
         delay: 1000,
       }" @slide-change="onSlideChange()">
@@ -434,4 +434,5 @@ const onSlideChange = () => {
       margin-top: 0;
     }
   }
-}</style>
+}
+</style>

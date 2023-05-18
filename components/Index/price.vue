@@ -25,34 +25,32 @@ const navigateParams = {
                 <SwiperSlide>
                     <div class="price__item">
                         <div class="price__img">
-                            <img class="price__logo price__logo-nlc" src="../../assets/img/price/logoNLC.svg" alt="">
                             <img class="price__car" src="../../assets/img/price/car1.png" alt="">
                         </div>
                         <div class="price__info">
                             <div class="price__nav">
-                                <p class="price__name">Porshe Macan</p>
+                                <p class="price__name">Mercedes-Benz G-Класс AMG </p>
                                 <button class="swiper-next">
                                     <img src="@/assets/img/price/arrowRight.svg" alt="">
                                 </button>
                             </div>
-                            <p class="price__rub">4 000 000 руб.</p>
+                            <p class="price__rub">19 500 000 руб.</p>
                         </div>
                     </div>
                 </SwiperSlide>
                 <SwiperSlide>
                     <div class="price__item">
                         <div class="price__img">
-                            <img class="price__logo price__logo-avito" src="../../assets/img/price/logoAvito.svg" alt="">
                             <img class="price__car" src="../../assets/img/price/car2.png" alt="">
                         </div>
                         <div class="price__info price__info--white">
                             <div class="price__nav">
-                                <p class="price__name">Porshe Macan</p>
+                                <p class="price__name">Mercedes-Benz G-Класс AMG </p>
                                 <button class="swiper-prev">
                                     <img src="@/assets/img/price/arrowLeft.svg" alt="">
                                 </button>
                             </div>
-                            <p class="price__rub">4 000 000 руб.</p>
+                            <p class="price__rub">22 950 000 руб.</p>
                         </div>
                     </div>
                 </SwiperSlide>
@@ -74,34 +72,32 @@ const navigateParams = {
                 <SwiperSlide>
                     <div class="price__item">
                         <div class="price__img">
-                            <img class="price__logo price__logo-nlc" src="../../assets/img/price/logoNLC.svg" alt="">
-                            <img class="price__car" src="../../assets/img/price/car1.png" alt="">
+                            <img class="price__car" src="@/assets/img/price/car3.png" alt="">
                         </div>
                         <div class="price__info">
                             <div class="price__nav">
-                                <p class="price__name">Porshe Macan</p>
+                                <p class="price__name">BMW X6 30d</p>
                                 <button class="swiper-next">
                                     <img src="@/assets/img/price/arrowRight.svg" alt="">
                                 </button>
                             </div>
-                            <p class="price__rub">4 000 000 руб.</p>
+                            <p class="price__rub">10 500 000 руб. </p>
                         </div>
                     </div>
                 </SwiperSlide>
                 <SwiperSlide>
                     <div class="price__item">
                         <div class="price__img">
-                            <img class="price__logo price__logo-avito" src="../../assets/img/price/logoAvito.svg" alt="">
-                            <img class="price__car" src="../../assets/img/price/car2.png" alt="">
+                            <img class="price__car" src="@/assets/img/price/car4.png" alt="">
                         </div>
                         <div class="price__info price__info--white">
                             <div class="price__nav">
-                                <p class="price__name">Porshe Macan</p>
+                                <p class="price__name">BMW X6 30d</p>
                                 <button class="swiper-prev">
                                     <img src="@/assets/img/price/arrowLeft.svg" alt="">
                                 </button>
                             </div>
-                            <p class="price__rub">4 000 000 руб.</p>
+                            <p class="price__rub">13 000 000 руб. </p>
                         </div>
                     </div>
                 </SwiperSlide>
