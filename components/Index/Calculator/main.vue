@@ -3,7 +3,9 @@ import { useCalcFormStore } from "@/store/calcForm";
 const store = useCalcFormStore();
 const openForm = () => {
   store.openModal ? (store.openModal = false) : (store.openModal = true);
+  if(!store.openModal) store.$reset();
 };
+
 </script>
 
 <template>
@@ -20,7 +22,7 @@ const openForm = () => {
       </div>
     </Transition>
     <Transition>
-      <div v-show="store.openModal">
+      <div v-show="store.openModal" class="steps">
         <IndexCalculatorFirstStep v-show="store.currentStep === 1 && store.answers.firstStepBUWaiting === false" />
         <IndexCalculatorFirstStepBU v-show="store.currentStep === 1 && store.answers.firstStepBUWaiting === true" />
         <IndexCalculatorSecondStep v-show="store.currentStep === 2 && store.answers.secondStepOtherWaiting === false" />
@@ -33,6 +35,9 @@ const openForm = () => {
         <IndexCalculatorSeventhStep v-show="store.currentStep === 7" />
         <IndexCalculatorEighthStep v-show="store.currentStep === 8" />
         <IndexCalculatorFinalStep v-show="store.currentStep === 9" />
+        <button class="steps__cross" @click="openForm">
+          <img src="@/assets/img/calculator/cross.svg" alt="">
+        </button>
       </div>
     </Transition>
   </div>
@@ -95,6 +100,24 @@ const openForm = () => {
     img {
       object-position: 22%;
     }
+  }
+}
+
+.steps {
+  position: relative;
+
+  &__cross {
+    position: absolute;
+    top: 45px;
+    right: 40px;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    background-color: transparent;
+    cursor: pointer;
   }
 }
 

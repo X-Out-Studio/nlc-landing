@@ -63,8 +63,8 @@ const activeMobileHeader = () => {
     <header :class="!activeHeader ? 'header' : 'header header--active'">
         <div class="container">
             <a href="#main" class="header__logo">
-                <img v-if="!activeHeader" activeHeader src="../assets/img/header/logo.png" alt="">
-                <img v-if="activeHeader" src="../assets/img/header/logoActive.png" alt="">
+                <img v-if="!activeHeader" activeHeader src="@/assets/img/header/logo.svg" alt="">
+                <img v-if="activeHeader" src="../assets/img/header/logoActive.svg" alt="">
             </a>
             <div class="header__menu">
                 <ul class="header__nav">
