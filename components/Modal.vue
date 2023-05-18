@@ -9,19 +9,63 @@ let errorActive = ref(false)
 let errorPhone = ref(false)
 let finishForm = ref(false)
 
-const sendForm = () => {
+import { useConfigStore } from "@/store/config";
+const config = useConfigStore();
+
+import { useReCaptcha } from "vue-recaptcha-v3";
+import axios from "axios";
+
+const recaptchaInstance = useReCaptcha();
+const recaptcha = async () => {
+  await recaptchaInstance?.recaptchaLoaded();
+  const token = await recaptchaInstance?.executeRecaptcha("action");
+  const data = await axios(
+    `${config.handlBack}${config.endpoints.captcha}${token}`,
+    {
+      method: "GET",
+      headers: {
+        Accept: "application/json",
+        "Content-type": "application/json",
+      },
+    }
+  );
+  console.log(data);
+  return data.data.bot;
+};
+
+const telegramSend = () => {
+  axios(`${config.handlBack}${config.endpoints.telegramSend}`, {
+    method: "POST",
+    headers: {
+      Accept: "application/json",
+      "Content-type": "application/json",
+    },
+    data: {
+      from: "modal",
+      fio: store.name,
+      phone: store.phone,
+    },
+  });
+};
+
+const sendForm = async () => {
   if (store.name && store.phone) {
     if (store.phone?.length < 16 && store.phone != null) {
       errorPhone.value = true;
     } else {
-      errorActive.value = false;
-      errorPhone.value = false;
-      finishForm.value = true;
-      setTimeout(() => {
-        store.openModal = false;
-        store.$reset();
-        finishForm.value = false;
-      }, 3000);
+      // if (!(await recaptcha())) {
+      if (true) {
+
+        telegramSend();
+        errorActive.value = false;
+        errorPhone.value = false;
+        finishForm.value = true;
+        setTimeout(() => {
+          store.openModal = false;
+          store.$reset();
+          finishForm.value = false;
+        }, 3000);
+      } else { } // если бот
     }
 
   } else {
