@@ -21,7 +21,7 @@ a {
 body::-webkit-scrollbar {
   width: 10px;
 }
- 
+
 body::-webkit-scrollbar-thumb {
   background-color: darkgrey;
   border-radius: 30px;
@@ -306,6 +306,7 @@ body {
         gap: 13px;
         align-items: center;
         justify-content: center;
+
         &.eighth {
           gap: 32px;
         }
@@ -382,6 +383,19 @@ body {
       line-height: 128.61%;
       color: #ababab;
     }
+
+    &.error-phone {
+      color: #ff0000;
+    }
+
+    &.error {
+
+      &::placeholder {
+        font-style: normal;
+        font-weight: 400;
+        color: #ff0000;
+      }
+    }
   }
 
   &__submit {
@@ -433,6 +447,7 @@ body {
     text-align: center;
     text-transform: uppercase;
     color: #1e1e1e;
+
     &.footer-done {
       text-align: start;
     }
@@ -457,9 +472,11 @@ body {
     .mobile {
       display: none;
     }
+
     .white {
       color: white;
     }
+
     &.footer-thank {
       align-items: flex-start;
       justify-content: flex-start;

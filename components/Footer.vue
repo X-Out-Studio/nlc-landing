@@ -324,7 +324,7 @@ watch(store, (a) => {
       }
 
       &.error-phone {
-        color: red;
+        color: #ff0000;
       }
 
       &--question {
