@@ -1,19 +1,35 @@
 <script setup>
+import { watch } from 'vue'
 import { useFooterFormStore } from "@/store/footerForm";
 const store = useFooterFormStore();
 let errorActive = ref(false)
+let errorPhone = ref(false)
 let finishForm = ref(false)
 
 const sendForm = () => {
-  if (store.fio && store.phone && store.phone.length === 16 && store.question) {
-    errorActive.value = false;
-    finishForm.value = true;
-    console.log(1111);
+  if (store.fio && store.phone && store.question) {
+    if (store.phone?.length < 16 && store.phone != null) {
+      errorPhone.value = true;
+    } else {
+      errorActive.value = false;
+      errorPhone.value = false;
+      finishForm.value = true;
+    }
+
   } else {
+    if (store.phone?.length < 16 && store.phone != null) {
+      errorPhone.value = true;
+    }
     errorActive.value = true;
-    console.log(222);
   }
 }
+
+watch(store, (a) => {
+  if (store.phone.length == 16) {
+    errorPhone.value = false
+  }
+})
+
 </script>
 
 <template>
@@ -53,8 +69,9 @@ const sendForm = () => {
           <div class="footer__data">
             <input class="footer__form-input" :class="errorActive ? 'error' : ''" placeholder="Ваше имя"
               v-model="store.fio" />
-            <input class="footer__form-input footer__form-input-phone" :class="errorActive ? 'error' : ''"
-              placeholder="+7..." v-model="store.phone" v-maska data-maska="+7 ### ###-##-##" />
+            <input class="footer__form-input footer__form-input-phone"
+              :class="[errorActive ? 'error' : '', errorPhone ? 'error-phone' : '']" placeholder="+7..."
+              v-model="store.phone" v-maska data-maska="+7 ### ###-##-##" />
           </div>
           <input class="footer__form-input footer__form-input--question" :class="errorActive ? 'error' : ''"
             placeholder="Ваш вопрос" required v-model="store.question" />
@@ -298,25 +315,16 @@ const sendForm = () => {
       color: #ffffff;
       width: 100%;
 
-      &-phone {
-
-        &:focus {
-          border-bottom: 1px solid red;
-        }
-
-        &-valid {
-          &:focus {
-            border-bottom: 1px solid #ffffff;
-          }
-        }
-      }
-
       &::placeholder {
         font-style: normal;
         font-weight: 400;
         font-size: 16px;
         line-height: 128.61%;
         color: #ffffff;
+      }
+
+      &.error-phone {
+        color: red;
       }
 
       &--question {
