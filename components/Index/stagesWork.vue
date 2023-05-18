@@ -5,11 +5,11 @@ const store = useModalStepsStore();
 
 <template>
   <section id="stagesWork" class="stagesWork">
-    <div class="global-title white">этапы работы</div>
+    <div class="global-title white" data-aos="fade">этапы работы</div>
     <div class="stagesWork__wrapper">
       <div class="stagesWork__steps">
         <div class="stagesWork__arrow">
-          <div class="stagesWork__step stagesWork__step--left">
+          <div class="stagesWork__step stagesWork__step--left" data-aos="fade-up">
             <div class="stagesWork__step--content stagesWork__step--content--1">
               <p class="stagesWork__step--name">1. подбор автомобиля</p>
               <p class="stagesWork__step--text">
@@ -21,7 +21,7 @@ const store = useModalStepsStore();
               <img src="@/assets/img/stagesWork/done.svg" alt="" />
             </div>
           </div>
-          <div class="stagesWork__step stagesWork__step--right">
+          <div class="stagesWork__step stagesWork__step--right" data-aos="fade-up">
             <div class="stagesWork__step--content stagesWork__step--content--2">
               <p class="stagesWork__step--name">2. заключение договора</p>
               <p class="stagesWork__step--text">
@@ -34,7 +34,7 @@ const store = useModalStepsStore();
               <img src="@/assets/img/stagesWork/done.svg" alt="" />
             </div>
           </div>
-          <div class="stagesWork__step stagesWork__step--left">
+          <div class="stagesWork__step stagesWork__step--left" data-aos="fade-up">
             <div class="stagesWork__step--content stagesWork__step--content--3">
               <p class="stagesWork__step--name">3. проверка автомобиля</p>
               <p class="stagesWork__step--text">
@@ -54,7 +54,7 @@ const store = useModalStepsStore();
               <img src="@/assets/img/stagesWork/done.svg" alt="" />
             </div>
           </div>
-          <div class="stagesWork__step stagesWork__step--right">
+          <div class="stagesWork__step stagesWork__step--right" data-aos="fade-up">
             <div class="stagesWork__step--content stagesWork__step--content--4">
               <p class="stagesWork__step--name">
                 4. оплата автомобиля в Европе
@@ -69,7 +69,7 @@ const store = useModalStepsStore();
               <img src="@/assets/img/stagesWork/done.svg" alt="" />
             </div>
           </div>
-          <div class="stagesWork__step stagesWork__step--left">
+          <div class="stagesWork__step stagesWork__step--left" data-aos="fade-up">
             <div class="stagesWork__step--content stagesWork__step--content--5">
               <p class="stagesWork__step--name">
                 5. доставка автомобилей из Европы
@@ -82,7 +82,7 @@ const store = useModalStepsStore();
               <img src="@/assets/img/stagesWork/done.svg" alt="" />
             </div>
           </div>
-          <div class="stagesWork__step stagesWork__step--right">
+          <div class="stagesWork__step stagesWork__step--right" data-aos="fade-up">
             <div class="stagesWork__step--content stagesWork__step--content--6">
               <p class="stagesWork__step--name">6. растаможка автомобиля</p>
               <p class="stagesWork__step--text">
@@ -95,15 +95,11 @@ const store = useModalStepsStore();
               <img src="@/assets/img/stagesWork/done.svg" alt="" />
             </div>
           </div>
-          <img
-            class="stagesWork__arrow-img"
-            src="@/assets/img/stagesWork/arrow.png"
-            alt=""
-          />
+          <img class="stagesWork__arrow-img" src="@/assets/img/stagesWork/arrow.png" alt="" />
         </div>
       </div>
     </div>
-    <p class="stagesWork__text">
+    <p class="stagesWork__text" data-aos="fade">
       Мы предлагаем максимально <span>простой и удобный</span> процесс покупки,
       а также гарантируем прозрачность сделок и лучшие цены на автомобили.
     </p>
@@ -454,6 +450,7 @@ const store = useModalStepsStore();
       padding: 0 15px;
 
       .stagesWork__step {
+
         &:nth-child(2),
         &:nth-child(3),
         &:nth-child(4),

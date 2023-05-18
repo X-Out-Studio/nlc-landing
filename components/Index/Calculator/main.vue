@@ -3,7 +3,7 @@ import { useCalcFormStore } from "@/store/calcForm";
 const store = useCalcFormStore();
 const openForm = () => {
   store.openModal ? (store.openModal = false) : (store.openModal = true);
-  if(!store.openModal) store.$reset();
+  if (!store.openModal) store.$reset();
 };
 
 </script>

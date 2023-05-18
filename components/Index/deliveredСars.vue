@@ -1,9 +1,9 @@
 <template>
     <section class="deliveredCars">
         <div class="container">
-            <div class="global-title">доставленные<br>автомобили</div>
+            <div class="global-title" data-aos="fade">доставленные<br>автомобили</div>
             <div class="deliveredCars__cards">
-                <div class="deliveredCars__item">
+                <div class="deliveredCars__item" data-aos="fade-up">
                     <div class="deliveredCars__img">
                         <img src="../../assets/img/deliveredCars/car1.png" alt="">
                     </div>
@@ -25,7 +25,7 @@
                         <p class="deliveredCars__price">6 900 000 руб.</p>
                     </div>
                 </div>
-                <div class="deliveredCars__item">
+                <div class="deliveredCars__item" data-aos="fade-up">
                     <div class="deliveredCars__img">
                         <img src="../../assets/img/deliveredCars/car2.png" alt="">
                     </div>
@@ -47,7 +47,7 @@
                         <p class="deliveredCars__price">5 600 000 руб.</p>
                     </div>
                 </div>
-                <div class="deliveredCars__item">
+                <div class="deliveredCars__item" data-aos="fade-up">
                     <div class="deliveredCars__img">
                         <img src="../../assets/img/deliveredCars/car3.png" alt="">
                     </div>
@@ -69,7 +69,7 @@
                         <p class="deliveredCars__price">8 550 000 руб.</p>
                     </div>
                 </div>
-                <div class="deliveredCars__item">
+                <div class="deliveredCars__item" data-aos="fade-up">
                     <div class="deliveredCars__img">
                         <img src="../../assets/img/deliveredCars/car4.png" alt="">
                     </div>
@@ -91,7 +91,7 @@
                         <p class="deliveredCars__price">5 250 000 руб.</p>
                     </div>
                 </div>
-                <div class="deliveredCars__item">
+                <div class="deliveredCars__item" data-aos="fade-up">
                     <div class="deliveredCars__img">
                         <img src="../../assets/img/deliveredCars/car5.png" alt="">
                     </div>
@@ -113,7 +113,7 @@
                         <p class="deliveredCars__price">3 700 000 руб.</p>
                     </div>
                 </div>
-                <div class="deliveredCars__item">
+                <div class="deliveredCars__item" data-aos="fade-up">
                     <div class="deliveredCars__img">
                         <img src="../../assets/img/deliveredCars/car6.png" alt="">
                     </div>

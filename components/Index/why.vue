@@ -12,8 +12,8 @@ const scrollToCalcForm = () => {
 <template>
     <section class="why">
         <div class="container">
-            <div class="global-title white">Почему стоит заказать автомобиль из Европы?</div>
-            <div class="why__cards">
+            <div class="global-title white" data-aos="fade-up">Почему стоит заказать автомобиль из Европы?</div>
+            <div class="why__cards" data-aos="fade">
                 <div class="why__item why__item--white why__item--1">
                     <p class="why__name">Честный пробег</p>
                     <p class="why__text">В Европейских странах корректировка пробега уголовно наказуема.</p>
@@ -133,7 +133,7 @@ const scrollToCalcForm = () => {
             }
 
             &:focus {
-                border: 1px solid #FFFFFF; 
+                border: 1px solid #FFFFFF;
             }
         }
     }

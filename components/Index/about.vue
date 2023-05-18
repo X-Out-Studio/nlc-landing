@@ -1,8 +1,8 @@
 <template>
   <div id="about" class="section-about">
-    <div class="global-title">О нас</div>
+    <div class="global-title" data-aos="fade-up">О нас</div>
     <div class="about-card">
-      <div class="about-card__left-container">
+      <div class="about-card__left-container" data-aos="fade">
         <div class="text">
           <span>Next Level Car</span> - ваш надежный партнер в покупке
           автомобиля мечты!<br /><br />

@@ -7,8 +7,8 @@ const navigateParams = {
 
 <template>
     <section class="price">
-        <div class="global-title">цена в россии vs&nbsp;NLC</div>
-        <div class="price__swipers">
+        <div class="global-title" data-aos="fade">цена в россии vs&nbsp;NLC</div>
+        <div class="price__swipers" data-aos="fade-up">
             <Swiper :slides-per-view="2" :spaceBetween="'37'" :modules="[SwiperNavigation]" :navigation="navigateParams"
                 :autoplay="{
                     delay: 1000,
