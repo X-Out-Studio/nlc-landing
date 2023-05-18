@@ -152,6 +152,10 @@ body {
       align-self: center;
       gap: 9px;
       flex-wrap: wrap;
+
+      &.eighth {
+        gap: 48px;
+      }
     }
 
     &.with-input {
@@ -172,6 +176,10 @@ body {
           color: rgb(230, 1, 1);
           font-size: 18px;
         }
+      }
+
+      &.error-phone {
+        color: #ff0000;
       }
 
       &::placeholder {
@@ -309,7 +317,7 @@ body {
         justify-content: center;
 
         &.eighth {
-          gap: 32px;
+          gap: 36px;
         }
       }
 

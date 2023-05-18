@@ -25,7 +25,7 @@ const sendForm = () => {
 }
 
 watch(store, (a) => {
-  if (store.phone.length == 16) {
+  if (store.phone?.length == 16) {
     errorPhone.value = false
   }
 })

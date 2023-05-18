@@ -4,6 +4,8 @@ export const useCalcFormStore = defineStore("calcForm", {
   state: () => ({
     openModal: false,
     currentStep: 1,
+    phone: null,
+    name: null,
     answers: {
       firstStep: null,
       firstStepBU: null,

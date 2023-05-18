@@ -11,19 +11,43 @@ const changeActive = (field) => {
   active.value = field;
 };
 let errorFlag = ref(false);
+let errorPhone = ref(false);
+let finishForm = ref(false);
 
 const checkForm = () => {
   if (!(store.answers.number && store.answers.fio)) {
     errorFlag.value = true;
+    errorPhone.value = false;
+    finishForm.value = false;
   } else {
-    errorFlag.value = false;
-    store.currentStep++;
-    setTimeout(() => {
-      openForm();
-      store.$reset();
-    }, "2000");
+    console.log('else');
+    if (store.answers.number?.length < 16 && store.answers?.number != null) {
+      errorPhone.value = true;
+      console.log(3);
+    }
+    else {
+      errorFlag.value = false;
+      errorPhone.value = false;
+      finishForm.value = true;
+      errorFlag.value = false;
+      store.currentStep++;
+      setTimeout(() => {
+        openForm();
+        store.$reset();
+      }, "4000");
+    }
   }
 };
+
+watch(store.answers, (a) => {
+  if (store.answers.number?.length == 16) {
+    errorPhone.value = false;
+  }
+  else {
+    errorPhone.value = true;
+  }
+})
+
 </script>
 
 <template>
@@ -41,32 +65,16 @@ const checkForm = () => {
       </div>
       <div class="select-container final with-input">
         <div class="select-row eighth">
-          <input
-            type="text"
-            class="wishes-input"
-            v-model="store.answers.fio"
-            :class="errorFlag ? 'error' : ''"
-            placeholder="Имя Фамилия"
-          />
-          <input
-            type="text"
-            class="wishes-input"
-            :class="errorFlag ? 'error' : ''"
-            v-model="store.answers.number"
-            placeholder="+7 ..."
-            v-maska
-            data-maska="+7 ### ###-##-##"
-            required
-          />
+          <input type="text" class="wishes-input" v-model="store.answers.fio" :class="errorFlag ? 'error' : ''"
+            placeholder="Имя Фамилия" />
+          <input type="text" class="wishes-input" :class="[errorFlag ? 'error' : '', errorPhone ? 'error-phone' : '']"
+            v-model="store.answers.number" placeholder="+7 ..." v-maska data-maska="+7 ### ###-##-##" />
         </div>
       </div>
       <div class="navigate-container final">
         <button @click="checkForm">Отправить</button>
-        <span
-          >Нажимая на кнопку «Отправить», вы соглашаетесь с условиями
-          <a href="/#" target="_blank"
-            >Политики обработки персональных данных</a
-          >
+        <span>Нажимая на кнопку «Отправить», вы соглашаетесь с условиями
+          <a href="/#" target="_blank">Политики обработки персональных данных</a>
         </span>
       </div>
     </div>
