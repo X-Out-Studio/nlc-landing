@@ -6,7 +6,7 @@
       </div>
       <div class="telegram-box">
         <div class="text">
-          БЕСПЛАТНЫЙ ПОДБОР АВТО1
+          БЕСПЛАТНЫЙ ПОДБОР АВТО
           <span>ЗА 2 ЧАСА</span>
         </div>
         <a
