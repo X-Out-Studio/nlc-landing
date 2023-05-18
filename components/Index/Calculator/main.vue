@@ -118,6 +118,11 @@ const openForm = () => {
     justify-content: center;
     background-color: transparent;
     cursor: pointer;
+
+    @media(max-width: 768px) {
+      top: 10px;
+      right: 10px;
+    }
   }
 }
 
