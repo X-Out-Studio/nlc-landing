@@ -13,7 +13,9 @@ const navigateParams = {
         <p class="price__place">в россии:</p>
       </div>
       <div class="price__item">
-        <p class="price__place">в Next level car:</p>
+        <p class="price__place price__place-next">
+          в Next level car:
+        </p>
       </div>
       <div class="price__item">
         <div class="price__img">
@@ -69,28 +71,28 @@ const navigateParams = {
         <div class="price__img">
           <img
             class="price__car"
-            src="@/assets/img/price/car2.png"
+            src="@/assets/img/price/car4.png"
             alt=""
           />
         </div>
         <div class="price__info">
           <div class="price__info-logo">
-            <img src="@/assets/img/price/logoAuto.svg" alt="" />
+            <img src="@/assets/img/price/logoAvito.svg" alt="" />
           </div>
           <div class="price__nav">
-            <p class="price__name">Mercedes-Benz G-Класс AMG</p>
+            <p class="price__name">BMW X6 30d</p>
             <button class="swiper-next">
               <img src="@/assets/img/price/arrowRight.svg" alt="" />
             </button>
           </div>
-          <p class="price__rub"><span>ЦЕНА:</span>22 950 000 руб.</p>
+          <p class="price__rub"><span>ЦЕНА:</span>13 000 000 руб.</p>
         </div>
       </div>
       <div class="price__item">
         <div class="price__img">
           <img
             class="price__car"
-            src="@/assets/img/price/car1.png"
+            src="@/assets/img/price/car3.png"
             alt=""
           />
         </div>
@@ -99,12 +101,20 @@ const navigateParams = {
             <img src="@/assets/img/price/logoNLC.svg" alt="" />
           </div>
           <div class="price__nav">
-            <p class="price__name">Mercedes-Benz G-Класс AMG</p>
+            <p class="price__name">BMW X6 30d</p>
             <button class="swiper-next">
               <img src="@/assets/img/price/arrowRight.svg" alt="" />
             </button>
           </div>
-          <p class="price__rub"><span>ЦЕНА:</span>19 500 000 руб.</p>
+          <p class="price__rub"><span>ЦЕНА:</span>10 500 000 руб.</p>
+          <div class="price__info-circle">
+            <p>2,5 млн.</p>
+            <img
+              class="price__info-text"
+              src="@/assets/img/price/text.svg"
+              alt=""
+            />
+          </div>
         </div>
       </div>
     </div>
@@ -336,6 +346,12 @@ const navigateParams = {
 
     &-logo {
       max-width: 157px;
+
+      img {
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+      }
     }
 
     &--white {
@@ -376,7 +392,7 @@ const navigateParams = {
       left: 0;
       bottom: 0;
       border-radius: 50%;
-      animation: rotate 3s ease-in-out infinite;
+      animation: rotate 8s linear infinite;
     }
   }
 
@@ -414,81 +430,141 @@ const navigateParams = {
 }
 
 @keyframes rotate {
-  0% {
-    transform: rotate(0deg);
-  }
-  25% {
-    transform: rotate(45deg);
-  }
-  50% {
-    transform: rotate(45deg);
-  }
-  75% {
-    transform: rotate(270deg);
-  }
-  100% {
-    transform: rotate(360deg);
+  from {
+    transform: rotate(-360deg);
   }
 }
 
-@media (max-width: 992px) {
+@media (max-width: 1450px) {
+  .price {
+    &__card {
+      column-gap: 19px;
+      row-gap: 10px;
+      max-width: 903px;
+    }
+
+    &__place {
+      margin-bottom: 12px;
+    }
+
+    &__img {
+      height: 298px;
+    }
+
+    &__info {
+      padding: 23px 31px 25px 31px;
+      gap: 17px;
+
+      &-logo {
+        max-width: 129px;
+      }
+
+      &-circle {
+        width: 157px;
+        height: 157px;
+        right: -60px;
+        bottom: -20px;
+      }
+    }
+
+    &__name {
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 147.11%;
+    }
+
+    &__rub {
+      font-weight: 700;
+      font-size: 30px;
+      line-height: 147.11%;
+
+      span {
+        font-weight: 400;
+        font-size: 20px;
+        line-height: 147.11%;
+      }
+    }
+  }
+}
+
+@media (max-width: 1090px) {
+  .price {
+    &__card {
+      max-width: 800px;
+    }
+
+    &__place {
+      font-weight: 900;
+      font-size: 14px;
+      line-height: 141.11%;
+    }
+
+    &__rub {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 0;
+    }
+  }
+}
+
+@media (max-width: 940px) {
   .price {
     margin-top: 40px;
     margin-bottom: 20px;
 
-    &__logo {
-      &-nlc {
-        width: 116px;
-        height: 24px;
+    &__info {
+      &-circle {
+        right: -20px;
+        bottom: 130px;
       }
-
-      &-avito {
-        width: 191px;
-        height: 48px;
-      }
-    }
-
-    &__swipers {
-      padding-top: 30px;
     }
   }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 854px) {
   .price {
+    overflow: hidden;
     &__card {
       margin-top: 31px;
+      grid-template-columns: 1fr;
+      max-height: 100%;
     }
 
-    &__nav {
+    &__item {
+      padding: 0 30px;
+    }
+
+    &__img {
+      height: 400px;
+    }
+
+    &__place {
+      &-next {
+        display: none;
+      }
+    }
+
+    /* &__nav {
       justify-content: space-between;
 
       .swiper-next,
       .swiper-prev {
         display: block;
       }
-    }
+    } */
 
-    &__info {
+    /* &__info {
       align-items: flex-start;
       padding: 21px 20px 18px 17px;
-    }
+    } */
   }
 }
 
-@media (max-width: 670px) {
+@media (max-width: 500px) {
   .price {
+    gap: 0;
     &__card {
-      grid-template-columns: 1fr;
-    }
-  }
-}
-
-@media (max-width: 600px) {
-  .price {
-    align-items: flex-start;
-
-    &__card {
+      margin-top: 6px;
       row-gap: 0;
     }
 
@@ -505,6 +581,32 @@ const navigateParams = {
       font-weight: 700;
       font-size: 30px;
       line-height: 147.11%;
+    }
+
+    &__name {
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 147.11%;
+    }
+
+    &__info {
+      padding: 22px 15px 15px 15px;
+      &-logo {
+        max-width: 124px;
+      }
+
+      &-circle {
+        font-size: 19px;
+        line-height: 82.61%;
+        width: 110px;
+        height: 110px;
+        right: -15px;
+        bottom: 150px;
+      }
+    }
+
+    &__img {
+      height: 252px;
     }
   }
 }

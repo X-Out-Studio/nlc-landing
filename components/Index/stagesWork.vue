@@ -1,47 +1,76 @@
 <script setup>
-import { useModalStepsStore } from "@/store/modalSteps";
+import { useModalStepsStore } from '@/store/modalSteps';
 const store = useModalStepsStore();
 </script>
 
 <template>
   <section id="stagesWork" class="stagesWork">
-    <div class="global-title white" data-aos="fade">этапы работы</div>
+    <div class="global-title white" data-aos="fade">
+      как проходит сделка
+    </div>
     <div class="stagesWork__wrapper">
       <div class="stagesWork__steps">
         <div class="stagesWork__arrow">
-          <div class="stagesWork__step stagesWork__step--left" data-aos="fade-up">
-            <div class="stagesWork__step--content stagesWork__step--content--1">
-              <p class="stagesWork__step--name">1. подбор автомобиля</p>
+          <div
+            class="stagesWork__step stagesWork__step--left"
+            data-aos="fade-up"
+          >
+            <div
+              class="stagesWork__step--content stagesWork__step--content--1"
+            >
+              <p class="stagesWork__step--name">
+                1. подбор автомобиля
+              </p>
               <p class="stagesWork__step--text">
-                Специалисты NLC подбирают вам авто по необходимым параметрам на
-                площадках Европы.
+                Специалисты NLC подбирают вам авто по необходимым
+                параметрам на площадках Европы.
               </p>
             </div>
-            <div class="stagesWork__step--done stagesWork__step--done--1">
+            <div
+              class="stagesWork__step--done stagesWork__step--done--1"
+            >
               <img src="@/assets/img/stagesWork/done.svg" alt="" />
             </div>
           </div>
-          <div class="stagesWork__step stagesWork__step--right" data-aos="fade-up">
-            <div class="stagesWork__step--content stagesWork__step--content--2">
-              <p class="stagesWork__step--name">2. заключение договора</p>
+          <div
+            class="stagesWork__step stagesWork__step--right"
+            data-aos="fade-up"
+          >
+            <div
+              class="stagesWork__step--content stagesWork__step--content--2"
+            >
+              <p class="stagesWork__step--name">
+                2. заключение договора
+              </p>
               <p class="stagesWork__step--text">
                 Компания NLC заключает договоры
-                с&nbsp;клиентами&nbsp;на&nbsp;поставку автомобиля как по полной,
-                так и по частичной оплате (мин. аванс - 25%).
+                с&nbsp;клиентами&nbsp;на&nbsp;поставку автомобиля как
+                по полной, так и по частичной оплате (мин. аванс -
+                25%).
               </p>
             </div>
             <div class="stagesWork__step--done">
               <img src="@/assets/img/stagesWork/done.svg" alt="" />
             </div>
           </div>
-          <div class="stagesWork__step stagesWork__step--left" data-aos="fade-up">
-            <div class="stagesWork__step--content stagesWork__step--content--3">
-              <p class="stagesWork__step--name">3. проверка автомобиля</p>
+          <div
+            class="stagesWork__step stagesWork__step--left"
+            data-aos="fade-up"
+          >
+            <div
+              class="stagesWork__step--content stagesWork__step--content--3"
+            >
+              <p class="stagesWork__step--name">
+                3. проверка автомобиля
+              </p>
               <p class="stagesWork__step--text">
-                Мы проводим полную проверку автомобиля перед его приобретением!
+                Мы проводим полную проверку автомобиля перед его
+                приобретением!
               </p>
               <ul class="stagesWork__step--list">
-                <li class="stagesWork__step--item">Видообзор машины;</li>
+                <li class="stagesWork__step--item">
+                  Видообзор машины;
+                </li>
                 <li class="stagesWork__step--item">
                   Назначаем встречи с продавцами;
                 </li>
@@ -54,58 +83,84 @@ const store = useModalStepsStore();
               <img src="@/assets/img/stagesWork/done.svg" alt="" />
             </div>
           </div>
-          <div class="stagesWork__step stagesWork__step--right" data-aos="fade-up">
-            <div class="stagesWork__step--content stagesWork__step--content--4">
+          <div
+            class="stagesWork__step stagesWork__step--right"
+            data-aos="fade-up"
+          >
+            <div
+              class="stagesWork__step--content stagesWork__step--content--4"
+            >
               <p class="stagesWork__step--name">
                 4. оплата автомобиля в Европе
               </p>
               <p class="stagesWork__step--text">
-                У компании NLC открыты представительства в Польше, Германии и
-                Италии. Мы быстро и беспрепятственно оплачиваем автомобиль и
-                забираем его у дилера.
+                У компании NLC открыты представительства в Польше,
+                Германии и Италии. Мы быстро и беспрепятственно
+                оплачиваем автомобиль и забираем его у дилера.
               </p>
             </div>
             <div class="stagesWork__step--done">
               <img src="@/assets/img/stagesWork/done.svg" alt="" />
             </div>
           </div>
-          <div class="stagesWork__step stagesWork__step--left" data-aos="fade-up">
-            <div class="stagesWork__step--content stagesWork__step--content--5">
+          <div
+            class="stagesWork__step stagesWork__step--left"
+            data-aos="fade-up"
+          >
+            <div
+              class="stagesWork__step--content stagesWork__step--content--5"
+            >
               <p class="stagesWork__step--name">
                 5. доставка автомобилей из Европы
               </p>
               <p class="stagesWork__step--text">
-                Мы доставляем автомобиль автовозом от дилера до клиента.
+                Мы доставляем автомобиль автовозом от дилера до
+                клиента.
               </p>
             </div>
             <div class="stagesWork__step--done">
               <img src="@/assets/img/stagesWork/done.svg" alt="" />
             </div>
           </div>
-          <div class="stagesWork__step stagesWork__step--right" data-aos="fade-up">
-            <div class="stagesWork__step--content stagesWork__step--content--6">
-              <p class="stagesWork__step--name">6. растаможка автомобиля</p>
+          <div
+            class="stagesWork__step stagesWork__step--right"
+            data-aos="fade-up"
+          >
+            <div
+              class="stagesWork__step--content stagesWork__step--content--6"
+            >
+              <p class="stagesWork__step--name">
+                6. растаможка автомобиля
+              </p>
               <p class="stagesWork__step--text">
-                Клиент получает полностью растаможенный, юридически и технически
-                чистый автомобиль, готовый к постановке на РФ учет. Также NLC
-                делает ЭПТС и СБКТС.
+                Клиент получает полностью растаможенный, юридически и
+                технически чистый автомобиль, готовый к постановке на
+                РФ учет. Также NLC делает ЭПТС и СБКТС.
               </p>
             </div>
             <div class="stagesWork__step--done">
               <img src="@/assets/img/stagesWork/done.svg" alt="" />
             </div>
           </div>
-          <img class="stagesWork__arrow-img" src="@/assets/img/stagesWork/arrow.png" alt="" />
+          <img
+            class="stagesWork__arrow-img"
+            src="@/assets/img/stagesWork/arrow.png"
+            alt=""
+          />
         </div>
       </div>
     </div>
     <p class="stagesWork__text" data-aos="fade">
-      Мы предлагаем максимально <span>простой и удобный</span> процесс покупки,
-      а также гарантируем прозрачность сделок и лучшие цены на автомобили.
+      Мы предлагаем максимально <span>простой и удобный</span> процесс
+      покупки, а также гарантируем прозрачность сделок и лучшие цены
+      на автомобили.
     </p>
     <div class="stagesWork__weeks">
       <p class="stagesWork__weeks-text">3 <span>недели</span></p>
-      <Button @click="store.openModal = true" text="Подобрать машину" />
+      <Button
+        @click="store.openModal = true"
+        text="Подобрать машину"
+      />
     </div>
     <div class="stagesWork__car">
       <img src="@/assets/img/stagesWork/car.png" alt="" />
@@ -171,27 +226,27 @@ const store = useModalStepsStore();
       background-size: 100% 100%;
 
       &--1 {
-        background-image: url("../../assets/img/stagesWork/step1.png");
+        background-image: url('../../assets/img/stagesWork/step1.png');
       }
 
       &--2 {
-        background-image: url("../../assets/img/stagesWork/step2.png");
+        background-image: url('../../assets/img/stagesWork/step2.png');
       }
 
       &--3 {
-        background-image: url("../../assets/img/stagesWork/step3.png");
+        background-image: url('../../assets/img/stagesWork/step3.png');
       }
 
       &--4 {
-        background-image: url("../../assets/img/stagesWork/step4.png");
+        background-image: url('../../assets/img/stagesWork/step4.png');
       }
 
       &--5 {
-        background-image: url("../../assets/img/stagesWork/step5.png");
+        background-image: url('../../assets/img/stagesWork/step5.png');
       }
 
       &--6 {
-        background-image: url("../../assets/img/stagesWork/step6.png");
+        background-image: url('../../assets/img/stagesWork/step6.png');
       }
     }
 
@@ -200,7 +255,7 @@ const store = useModalStepsStore();
       font-size: 16px;
       line-height: 128.61%;
       text-transform: uppercase;
-      color: #ededed;
+      color: #afdaa0;
     }
 
     &--text {
@@ -223,7 +278,7 @@ const store = useModalStepsStore();
         list-style-type: none;
 
         &::before {
-          content: "✅";
+          content: '✅';
         }
       }
     }
@@ -303,7 +358,7 @@ const store = useModalStepsStore();
       color: rgba(255, 255, 255, 0.1);
       letter-spacing: 0.015em;
       text-transform: uppercase;
-      font-family: "Druk Text Wide Cyr";
+      font-family: 'Druk Text Wide Cyr';
 
       span {
         font-style: normal;
@@ -313,7 +368,7 @@ const store = useModalStepsStore();
         color: rgba(255, 255, 255, 0.1);
         letter-spacing: 0.015em;
         text-transform: uppercase;
-        font-family: "Druk Text Wide Cyr";
+        font-family: 'Druk Text Wide Cyr';
       }
     }
   }
@@ -323,10 +378,9 @@ const store = useModalStepsStore();
     left: 0;
     position: absolute;
     width: 82%;
-    height: 71%;
+    height: 55%;
 
     img {
-      object-fit: contain;
       width: 100%;
       height: 100%;
     }
@@ -450,7 +504,6 @@ const store = useModalStepsStore();
       padding: 0 15px;
 
       .stagesWork__step {
-
         &:nth-child(2),
         &:nth-child(3),
         &:nth-child(4),
@@ -458,10 +511,6 @@ const store = useModalStepsStore();
         &:nth-child(6) {
           padding-right: 5px;
         }
-      }
-
-      img {
-        height: 105%;
       }
 
       .stagesWork__arrow-img {
@@ -473,15 +522,15 @@ const store = useModalStepsStore();
     &__step {
       &--content {
         &--2 {
-          background-image: url("@/assets/img/stagesWork/step2Mobile.png");
+          background-image: url('@/assets/img/stagesWork/step2Mobile.png');
         }
 
         &--4 {
-          background-image: url("@/assets/img/stagesWork/step4Mobile.png");
+          background-image: url('@/assets/img/stagesWork/step4Mobile.png');
         }
 
         &--6 {
-          background-image: url("@/assets/img/stagesWork/step6Mobile.png");
+          background-image: url('@/assets/img/stagesWork/step6Mobile.png');
         }
       }
 
