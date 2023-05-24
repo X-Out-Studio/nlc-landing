@@ -346,14 +346,7 @@ watch(store, (a) => {
     }
 
     &-link {
-      display: flex;
-      flex-direction: row;
-      align-items: center;
-      justify-content: center;
-      max-width: 60px;
-      height: 50px;
-      background-repeat: no-repeat;
-      background-size: contain;
+      display: block;
     }
   }
 
@@ -561,12 +554,7 @@ watch(store, (a) => {
       }
 
       &-items {
-        gap: 21px;
-      }
-
-      &-link {
-        max-width: 34px;
-        height: 34px;
+        gap: 62px;
       }
     }
 
@@ -618,11 +606,6 @@ watch(store, (a) => {
 
     &__social {
       gap: 70px;
-
-      &-link {
-        width: 27px;
-        height: 27px;
-      }
     }
   }
 }
@@ -719,7 +702,16 @@ watch(store, (a) => {
       }
 
       &-items {
-        gap: 27px;
+        gap: 21px;
+      }
+
+      &-link {
+        height: 25px;
+
+        svg {
+          width: 100%;
+          height: 100%;
+        }
       }
     }
 

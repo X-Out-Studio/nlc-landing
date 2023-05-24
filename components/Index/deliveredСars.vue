@@ -1,34 +1,40 @@
 <script setup>
 import { ref } from 'vue';
 
-const mobileDevice = ref(false);
 const textButton = ref('Ещё');
-const lastCard = ref(null);
+const currentState = ref(0);
+
+//0 - Desktop
+//1 - Mobile
+//2 - activeCards in Mobile
 
 /* Мобильная версия*/
 onMounted(() => {
-  mobileDevice.value = window.screen.width < 600 ? true : false;
+  currentState.value = window.screen.width < 600 ? 1 : 0;
 
   window.addEventListener('resize', () => {
-    if (window.screen.width < 600) {
-      mobileDevice.value = true;
-    } else {
-      mobileDevice.value = false;
-      textButton.value = 'Ещё';
-    }
+    currentState.value =
+      window.screen.width < 600 && currentState.value == 2
+        ? 2
+        : window.screen.width < 600
+        ? 1
+        : 0;
+    textButton.value = currentState.value == 2 ? 'Скрыть' : 'Ещё';
   });
 });
 
 /* Открытие карточек Mobile*/
 const openCarsItem = () => {
-  if (mobileDevice.value == true) {
-    mobileDevice.value = false;
+  if (currentState.value == 1) {
+    currentState.value = 2;
     textButton.value = 'Скрыть';
   } else {
-    mobileDevice.value = true;
+    currentState.value = 1;
     textButton.value = 'Ещё';
   }
 };
+
+function scrollCard() {}
 </script>
 
 <template>
@@ -84,7 +90,11 @@ const openCarsItem = () => {
             <p class="deliveredCars__price">5 600 000 руб.</p>
           </div>
         </div>
-        <div class="deliveredCars__item" data-aos="fade-up">
+        <div
+          id="lastCard"
+          class="deliveredCars__item"
+          data-aos="fade-up"
+        >
           <div class="deliveredCars__img">
             <img src="@/assets/img/deliveredCars/car3.png" alt="" />
           </div>
@@ -107,7 +117,7 @@ const openCarsItem = () => {
           </div>
         </div>
         <div
-          v-if="!mobileDevice"
+          v-if="currentState == 0 || currentState == 2"
           class="deliveredCars__item"
           data-aos="fade-up"
         >
@@ -135,7 +145,7 @@ const openCarsItem = () => {
           </div>
         </div>
         <div
-          v-if="!mobileDevice"
+          v-if="currentState == 0 || currentState == 2"
           class="deliveredCars__item"
           data-aos="fade-up"
         >
@@ -163,7 +173,7 @@ const openCarsItem = () => {
           </div>
         </div>
         <div
-          v-if="!mobileDevice"
+          v-if="currentState == 0 || currentState == 2"
           class="deliveredCars__item"
           data-aos="fade-up"
         >
@@ -189,7 +199,7 @@ const openCarsItem = () => {
           </div>
         </div>
         <div
-          v-if="!mobileDevice"
+          v-if="currentState == 0 || currentState == 2"
           class="deliveredCars__item"
           data-aos="fade-up"
         >
@@ -215,7 +225,7 @@ const openCarsItem = () => {
           </div>
         </div>
         <div
-          v-if="!mobileDevice"
+          v-if="currentState == 0 || currentState == 2"
           class="deliveredCars__item"
           data-aos="fade-up"
         >
@@ -244,6 +254,7 @@ const openCarsItem = () => {
       <button class="deliveredCars__button" @click="openCarsItem()">
         {{ textButton }}
       </button>
+      <!-- <a @click="openCarsItem()" href="#lastCard">Скрыть</a> -->
     </div>
   </section>
 </template>

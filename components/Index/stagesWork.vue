@@ -374,11 +374,11 @@ const store = useModalStepsStore();
   }
 
   &__car {
-    top: 203px;
+    top: 410px;
     left: 0;
     position: absolute;
-    width: 82%;
-    height: 55%;
+    width: 65%;
+    height: auto;
 
     img {
       width: 100%;
@@ -516,6 +516,7 @@ const store = useModalStepsStore();
       .stagesWork__arrow-img {
         position: absolute;
         top: -5%;
+        height: 105%;
       }
     }
 
@@ -574,13 +575,13 @@ const store = useModalStepsStore();
 
     &__weeks {
       width: 100%;
-      padding-top: 45px;
+      padding-top: 23px;
       padding-bottom: 55px;
 
       &-text {
         position: absolute;
         text-align: start;
-        bottom: 0;
+        bottom: 20px;
       }
 
       .button {
