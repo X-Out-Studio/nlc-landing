@@ -165,6 +165,11 @@ const navigateParams = {
   @media (max-width: 576px) {
     height: 88px;
 
+    img {
+      width: 72%;
+      height: 75%;
+    }
+
     .audi {
       width: unset;
       height: 70px;

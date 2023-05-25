@@ -65,9 +65,6 @@ const openForm = () => {
   </div>
 </template>
 <style scoped lang="scss">
-.calculator-container {
-}
-
 .section-calculator {
   height: 615px;
   width: 100%;
