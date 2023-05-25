@@ -39,7 +39,7 @@ const telegramSend = () => {
     data: {
       from: 'footer',
       fio: store.fio,
-      phone: store.phone,
+      phone: store.phone.replaceAll(' ', ''),
       question: store.question,
     },
   });
