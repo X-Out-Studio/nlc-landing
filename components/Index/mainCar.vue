@@ -60,8 +60,7 @@ const store = useModalStepsStore();
   background-image: url('@/assets/img/mainCar/img2.png');
   background-repeat: no-repeat;
   background-size: cover;
-  background-position: center;
-  padding: 135px 150px 49px 150px;
+  padding: 117px 150px 49px 150px;
 
   .content-container {
     display: flex;

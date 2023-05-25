@@ -312,6 +312,10 @@ const onSlideChange = () => {
       width: 100%;
       height: 100%;
     }
+
+    .reviews1 {
+      object-position: bottom;
+    }
   }
 
   &__content {
@@ -522,12 +526,6 @@ const onSlideChange = () => {
 
     &__content {
       gap: 17px;
-    }
-
-    &__img {
-      .reviews1 {
-        object-position: bottom;
-      }
     }
   }
 }

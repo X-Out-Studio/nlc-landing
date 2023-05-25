@@ -6,12 +6,14 @@
         <div class="text">
           <span>Next Level Car</span> - ваш надежный партнер в покупке
           автомобиля мечты!<br /><br />
-          Мы занимаемся подбором и покупкой автомобилей из Европы, США, Китая,
-          ОАЭ и предоставляем услуги высочайшего качества. Наша команда
-          профессионалов имеет многолетний опыт в автомобильной индустрии и
-          может найти любой автомобиль, основываясь на ваших предпочтениях.<br /><br />
-          Мы сотрудничаем с дилерами и автохаусами по всей Европе, поэтому
-          будьте уверены - с NLC вы точно найдете то, что вам нужно.
+          Мы занимаемся подбором и покупкой автомобилей из Европы,
+          США, Китая, ОАЭ и предоставляем услуги высочайшего качества.
+          Наша команда профессионалов имеет многолетний опыт в
+          автомобильной индустрии и может найти любой автомобиль,
+          основываясь на ваших предпочтениях.<br /><br />
+          Мы сотрудничаем с дилерами и автохаусами по всей Европе,
+          поэтому будьте уверены - с NLC вы точно найдете то, что вам
+          нужно.
         </div>
         <div class="logo">
           <img src="@/assets/img/about/logo.png" alt="" />
@@ -23,7 +25,7 @@
     </div>
   </div>
 </template>
-<style scoped lang='scss'>
+<style scoped lang="scss">
 .section-about {
   margin-top: 100px;
   margin-bottom: 100px;
@@ -86,7 +88,7 @@
   }
 }
 
-@media(max-width: 1450px) {
+@media (max-width: 1450px) {
   .section-about {
     padding: 0 15px;
 
@@ -109,7 +111,7 @@
   }
 }
 
-@media(max-width: 1170px) {
+@media (max-width: 1170px) {
   .section-about {
     .global-title {
       padding-left: 0;
@@ -117,8 +119,7 @@
   }
 }
 
-@media(max-width: 900px) {
-
+@media (max-width: 900px) {
   .section-about {
     margin-top: 40px;
     margin-bottom: 40px;
@@ -145,9 +146,8 @@
   }
 }
 
-@media(max-width: 600px) {
+@media (max-width: 600px) {
   .section-about {
-
     .text {
       font-size: 14px;
       line-height: 137.11%;
@@ -161,15 +161,13 @@
   }
 }
 
-@media(max-width: 440px) {
+@media (max-width: 440px) {
   .section-about {
-
     .about-card {
       &__right-container {
-        height: 282px;
+        height: 325px;
       }
     }
-
   }
 }
 </style>
