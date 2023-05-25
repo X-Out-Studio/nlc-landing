@@ -7,12 +7,11 @@ export default defineNuxtConfig({
     [
       "yandex-metrika-module-nuxt3",
       {
-        id: "93635804",
+        id: "93715127",
         clickmap: true,
         trackLinks: true,
         accurateTrackBounce: true,
         webvisor: true,
-        ecommerce: "dataLayer",
       },
     ],
   ],

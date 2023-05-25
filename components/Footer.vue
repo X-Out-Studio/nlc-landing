@@ -46,7 +46,7 @@ const telegramSend = () => {
 };
 const sendForm = async () => {
   if (store.fio && store.phone && store.question) {
-    if (store.phone?.length < 16 && store.phone != null) {
+    if (store.phone?.length < 30 && store.phone != null) {
       errorPhone.value = true;
     } else {
       if (!(await recaptcha())) {
@@ -60,7 +60,7 @@ const sendForm = async () => {
       }
     }
   } else {
-    if (store.phone?.length < 16 && store.phone != null) {
+    if (store.phone?.length < 30 && store.phone != null) {
       errorPhone.value = true;
     }
     errorActive.value = true;
@@ -68,7 +68,7 @@ const sendForm = async () => {
 };
 
 watch(store, (a) => {
-  if (store.phone?.length == 16) {
+  if (store.phone?.length == 30) {
     errorPhone.value = false;
   }
 });
@@ -188,7 +188,7 @@ watch(store, (a) => {
               placeholder="+7 (_ _ _) _ _ _ - _ _  -  _ _ "
               v-model="store.phone"
               v-maska
-              data-maska="+7 (# # #) # # # - # #  -  # # "
+              data-maska="+7 (# # #) # # # - # #  -  # #"
             />
           </div>
           <input
