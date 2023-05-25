@@ -1,12 +1,12 @@
-@import "./scss/variable";
-@import "./scss/fonts";
-@import "./scss/vfm";
+@import './scss/variable';
+@import './scss/fonts';
+@import './scss/vfm';
 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Evolventa", sans-serif;
+  font-family: 'Evolventa', sans-serif;
 }
 
 a {
@@ -45,7 +45,7 @@ html {
   line-height: 128.61%;
   text-transform: uppercase;
   color: #000000;
-  font-family: "Druk Text Wide Cyr";
+  font-family: 'Druk Text Wide Cyr';
 
   &.white {
     color: white;
@@ -92,7 +92,7 @@ body {
     flex-wrap: wrap;
 
     .name {
-      font-family: "Druk Text Wide Cyr";
+      font-family: 'Druk Text Wide Cyr';
       max-width: 650px;
       font-weight: 900;
       font-size: 37px;
@@ -183,7 +183,7 @@ body {
       }
 
       &::placeholder {
-        font-family: "Evolventa";
+        font-family: 'Evolventa';
         font-weight: normal;
         font-size: 16px;
         line-height: 128.61%;
@@ -430,6 +430,10 @@ body {
       color: #ffffff;
       background-color: #1e1e1e;
     }
+
+    &:focus {
+      border: 1px solid #000000;
+    }
   }
 
   &__text {
@@ -445,7 +449,7 @@ body {
   }
 
   &__thank {
-    font-family: "Druk Text Wide Cyr";
+    font-family: 'Druk Text Wide Cyr';
     font-style: normal;
     font-weight: 900;
     font-size: 38px;
@@ -455,7 +459,7 @@ body {
   }
 
   &__done {
-    font-family: "Druk Text Wide Cyr";
+    font-family: 'Druk Text Wide Cyr';
     font-style: normal;
     font-weight: 900;
     font-size: 29px;

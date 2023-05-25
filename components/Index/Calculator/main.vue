@@ -1,11 +1,12 @@
 <script setup>
-import { useCalcFormStore } from "@/store/calcForm";
+import { useCalcFormStore } from '@/store/calcForm';
 const store = useCalcFormStore();
 const openForm = () => {
-  store.openModal ? (store.openModal = false) : (store.openModal = true);
+  store.openModal
+    ? (store.openModal = false)
+    : (store.openModal = true);
   if (!store.openModal) store.$reset();
 };
-
 </script>
 
 <template>
@@ -23,33 +24,56 @@ const openForm = () => {
     </Transition>
     <Transition>
       <div v-show="store.openModal" class="steps">
-        <IndexCalculatorFirstStep v-show="store.currentStep === 1 && store.answers.firstStepBUWaiting === false" />
-        <IndexCalculatorFirstStepBU v-show="store.currentStep === 1 && store.answers.firstStepBUWaiting === true" />
-        <IndexCalculatorSecondStep v-show="store.currentStep === 2 && store.answers.secondStepOtherWaiting === false" />
+        <IndexCalculatorFirstStep
+          v-show="
+            store.currentStep === 1 &&
+            store.answers.firstStepBUWaiting === false
+          "
+        />
+        <IndexCalculatorFirstStepBU
+          v-show="
+            store.currentStep === 1 &&
+            store.answers.firstStepBUWaiting === true
+          "
+        />
+        <IndexCalculatorSecondStep
+          v-show="
+            store.currentStep === 2 &&
+            store.answers.secondStepOtherWaiting === false
+          "
+        />
         <IndexCalculatorSecondStepOther
-          v-show="store.currentStep === 2 && store.answers.secondStepOtherWaiting === true" />
+          v-show="
+            store.currentStep === 2 &&
+            store.answers.secondStepOtherWaiting === true
+          "
+        />
         <IndexCalculatorThirdStep v-show="store.currentStep === 3" />
         <IndexCalculatorFourthStep v-show="store.currentStep === 4" />
         <IndexCalculatorFifthStep v-show="store.currentStep === 5" />
         <IndexCalculatorSixthStep v-show="store.currentStep === 6" />
-        <IndexCalculatorSeventhStep v-show="store.currentStep === 7" />
+        <IndexCalculatorSeventhStep
+          v-show="store.currentStep === 7"
+        />
         <IndexCalculatorEighthStep v-show="store.currentStep === 8" />
         <IndexCalculatorFinalStep v-show="store.currentStep === 9" />
         <button class="steps__cross" @click="openForm">
-          <img src="@/assets/img/calculator/cross.svg" alt="">
+          <img src="@/assets/img/calculator/cross.svg" alt="" />
         </button>
       </div>
     </Transition>
   </div>
 </template>
-<style scoped lang='scss'>
-.calculator-container {}
+<style scoped lang="scss">
+.calculator-container {
+}
 
 .section-calculator {
   height: 615px;
   width: 100%;
   position: relative;
-  background: url("@/assets/img/calculator/background.png") center center/cover no-repeat;
+  background: url('@/assets/img/calculator/background.png') center
+    center/cover no-repeat;
   position: relative;
 
   @media (max-width: 1656px) {
@@ -62,6 +86,7 @@ const openForm = () => {
 
   @media (max-width: 576px) {
     height: calc(100vh - 78px);
+    overflow: hidden;
   }
 }
 
@@ -101,6 +126,12 @@ const openForm = () => {
       object-position: 22%;
     }
   }
+
+  @media (max-width: 500px) {
+    height: 266px;
+    top: 180px;
+    right: -460px;
+  }
 }
 
 .steps {
@@ -119,7 +150,7 @@ const openForm = () => {
     background-color: transparent;
     cursor: pointer;
 
-    @media(max-width: 768px) {
+    @media (max-width: 768px) {
       top: 10px;
       right: 10px;
     }
@@ -130,7 +161,7 @@ const openForm = () => {
   padding: 40px 0 175px 147px;
 
   .description {
-    font-family: "Druk Text Wide Cyr";
+    font-family: 'Druk Text Wide Cyr';
     font-weight: 900;
     font-size: 51px;
     line-height: 128.61%;

@@ -41,7 +41,7 @@ const navigateParams = {
       <div class="price__item">
         <div class="price__img">
           <img
-            class="price__car"
+            class="price__car right"
             src="@/assets/img/price/car1.png"
             alt=""
           />
@@ -422,6 +422,7 @@ const navigateParams = {
   &__img {
     border-radius: 14px;
     position: relative;
+    height: 360px;
 
     img {
       border-radius: 14px;
@@ -570,6 +571,12 @@ const navigateParams = {
 
     &__logo {
       top: 21px;
+    }
+
+    &__img {
+      .right {
+        object-position: left;
+      }
     }
 
     &__name {

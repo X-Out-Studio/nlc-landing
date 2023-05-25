@@ -46,7 +46,11 @@ function scrollCard() {}
       <div class="deliveredCars__cards">
         <div class="deliveredCars__item" data-aos="fade-up">
           <div class="deliveredCars__img">
-            <img src="@/assets/img/deliveredCars/car1.png" alt="" />
+            <img
+              class="bottom"
+              src="@/assets/img/deliveredCars/car1.png"
+              alt=""
+            />
           </div>
           <div class="deliveredCars__content">
             <div class="deliveredCars__info">
@@ -436,6 +440,10 @@ function scrollCard() {}
 
     &__img {
       height: 237px;
+
+      .bottom {
+        object-position: bottom;
+      }
     }
 
     &__characteristic:nth-child(1) {

@@ -1,7 +1,7 @@
 <script setup>
 const navigateParams = {
-  nextEl: ".swiper-next",
-  prevEl: ".swiper-prev",
+  nextEl: '.swiper-next',
+  prevEl: '.swiper-prev',
 };
 
 const activeReview = ref();
@@ -21,33 +21,57 @@ const onSlideChange = () => {
   <section id="reviews" class="reviews">
     <div class="global-title" data-aos="fade-up">отзывы</div>
     <div class="reviews__swiper">
-      <Swiper :slides-per-view="1" :modules="[SwiperNavigation]" :navigation="navigateParams" :autoplay="{
-        delay: 1000,
-      }" @slide-change="onSlideChange()">
+      <Swiper
+        :slides-per-view="1"
+        :modules="[SwiperNavigation]"
+        :navigation="navigateParams"
+        :autoplay="{
+          delay: 1000,
+        }"
+        @slide-change="onSlideChange()"
+      >
         <SwiperSlide>
           <div class="reviews__card">
             <div class="reviews__img">
-              <img src="@/assets/img/reviews/reviews1.png" alt="">
+              <img
+                class="reviews1"
+                src="@/assets/img/reviews/reviews1.png"
+                alt=""
+              />
             </div>
             <div class="reviews__content">
-              <p class="reviews__text" :class="activeReview == 1 ? 'reviews__text--active' : ''">
-                Обратился в компанию next level car по поводу подбора нового авто . Были поставлены
-                определенные задачи
-                по поиску автомобиля , комплектация , год пробег машины и так далее .<br><br>
-                Юрием , было предложено много вариантов и на одном из них он прямо настоял . Машина 2020
-                года , полный
-                фарш , пробег минимальный . Мною и компанией был подписан договор на покупку моего нового
-                автомобиля .
-                На всех этапах были предоставлены фото , видео . Было сделано обследование лкп
-                машины. Машиной очень
-                доволен ! Если кто то думает поменять автомобиль , то тогда я рекомендую обратится за
-                помощью к Юрию 🤝
+              <p
+                class="reviews__text"
+                :class="
+                  activeReview == 1 ? 'reviews__text--active' : ''
+                "
+              >
+                Обратился в компанию next level car по поводу подбора
+                нового авто . Были поставлены определенные задачи по
+                поиску автомобиля , комплектация , год пробег машины и
+                так далее .<br /><br />
+                Юрием , было предложено много вариантов и на одном из
+                них он прямо настоял . Машина 2020 года , полный фарш
+                , пробег минимальный . Мною и компанией был подписан
+                договор на покупку моего нового автомобиля . На всех
+                этапах были предоставлены фото , видео . Было сделано
+                обследование лкп машины. Машиной очень доволен ! Если
+                кто то думает поменять автомобиль , то тогда я
+                рекомендую обратится за помощью к Юрию 🤝
               </p>
-              <button v-if="activeReview != 1" class="reviews__text-more" @click="changeActiveReviews(1)">
+              <button
+                v-if="activeReview != 1"
+                class="reviews__text-more"
+                @click="changeActiveReviews(1)"
+              >
                 <img src="@/assets/img/reviews/arrow.svg" alt="" />
                 Подробнее
               </button>
-              <button v-if="activeReview == 1" class="reviews__text-more" @click="changeActiveReviews(0)">
+              <button
+                v-if="activeReview == 1"
+                class="reviews__text-more"
+                @click="changeActiveReviews(0)"
+              >
                 <img src="@/assets/img/reviews/arrowUp.svg" alt="" />
                 Скрыть
               </button>
@@ -58,19 +82,33 @@ const onSlideChange = () => {
         <SwiperSlide>
           <div class="reviews__card">
             <div class="reviews__img">
-              <img src="@/assets/img/reviews/reviews2.jpg" alt="">
+              <img src="@/assets/img/reviews/reviews2.jpg" alt="" />
             </div>
             <div class="reviews__content">
-              <p class="reviews__text" :class="activeReview == 2 ? 'reviews__text--active' : ''">
-                Хочу выразить свою благодарность Юрию и компании NLC! Работа проведена на высшем уровне -
-                подобрали авто по всем запросам, проверили и уже через 2 недели автомобиль бы у меня 🔥Был
-                рад сотрудничеству 👍🏻
+              <p
+                class="reviews__text"
+                :class="
+                  activeReview == 2 ? 'reviews__text--active' : ''
+                "
+              >
+                Хочу выразить свою благодарность Юрию и компании NLC!
+                Работа проведена на высшем уровне - подобрали авто по
+                всем запросам, проверили и уже через 2 недели
+                автомобиль бы у меня 🔥Был рад сотрудничеству 👍🏻
               </p>
-              <button v-if="activeReview != 2" class="reviews__text-more" @click="changeActiveReviews(2)">
+              <button
+                v-if="activeReview != 2"
+                class="reviews__text-more"
+                @click="changeActiveReviews(2)"
+              >
                 <img src="@/assets/img/reviews/arrow.svg" alt="" />
                 Подробнее
               </button>
-              <button v-if="activeReview == 2" class="reviews__text-more" @click="changeActiveReviews(0)">
+              <button
+                v-if="activeReview == 2"
+                class="reviews__text-more"
+                @click="changeActiveReviews(0)"
+              >
                 <img src="@/assets/img/reviews/arrowUp.svg" alt="" />
                 Скрыть
               </button>
@@ -81,19 +119,34 @@ const onSlideChange = () => {
         <SwiperSlide>
           <div class="reviews__card">
             <div class="reviews__img">
-              <img src="@/assets/img/reviews/reviews3.jpg" alt="">
+              <img src="@/assets/img/reviews/reviews3.jpg" alt="" />
             </div>
             <div class="reviews__content">
-              <p class="reviews__text" :class="activeReview == 3 ? 'reviews__text--active' : ''">
-                Переполняют эмоции и даже не знаю, что и сказать)) Юра, выражаю тебе и твоей команде
-                огромную благодарность за проделанную работу! Связь, сервис на высшем уровне! Буду
-                рекомендовать знакомым и друзьям👌🏼 Удачи и успехов в работе.
+              <p
+                class="reviews__text"
+                :class="
+                  activeReview == 3 ? 'reviews__text--active' : ''
+                "
+              >
+                Переполняют эмоции и даже не знаю, что и сказать))
+                Юра, выражаю тебе и твоей команде огромную
+                благодарность за проделанную работу! Связь, сервис на
+                высшем уровне! Буду рекомендовать знакомым и друзьям👌🏼
+                Удачи и успехов в работе.
               </p>
-              <button v-if="activeReview != 3" class="reviews__text-more" @click="changeActiveReviews(3)">
+              <button
+                v-if="activeReview != 3"
+                class="reviews__text-more"
+                @click="changeActiveReviews(3)"
+              >
                 <img src="@/assets/img/reviews/arrow.svg" alt="" />
                 Подробнее
               </button>
-              <button v-if="activeReview == 3" class="reviews__text-more" @click="changeActiveReviews(0)">
+              <button
+                v-if="activeReview == 3"
+                class="reviews__text-more"
+                @click="changeActiveReviews(0)"
+              >
                 <img src="@/assets/img/reviews/arrowUp.svg" alt="" />
                 Скрыть
               </button>
@@ -104,24 +157,43 @@ const onSlideChange = () => {
         <SwiperSlide>
           <div class="reviews__card">
             <div class="reviews__img">
-              <img src="@/assets/img/reviews/reviews4.jpg" alt="">
+              <img src="@/assets/img/reviews/reviews4.jpg" alt="" />
             </div>
             <div class="reviews__content">
-              <p class="reviews__text" :class="activeReview == 4 ? 'reviews__text--active' : ''">
-                Юрий, очень доволен опытом сотрудничества с вами! Первое, что меня приятно удивило - это
-                профессиональный подход менеджеров компании. Они были готовы ответить на все мои вопросы,
-                рассказать о технических возможностях автомобиля, условиях покупки и кредитования. Благодаря
-                этому я смог выбрать для себя наилучший вариант на самых выгодных условиях.<br><br>
-                Кроме того, NLC предоставляет широкий спектр дополнительных услуг. Например, компания
-                помогла мне оформить страховку на авто. Это дало мне дополнительную уверенность в том, что я
-                получил качественный и надёжный автомобиль.<br><br>
-                Спасибо за крутое авто, теперь буду обращаться только к вам!
+              <p
+                class="reviews__text"
+                :class="
+                  activeReview == 4 ? 'reviews__text--active' : ''
+                "
+              >
+                Юрий, очень доволен опытом сотрудничества с вами!
+                Первое, что меня приятно удивило - это
+                профессиональный подход менеджеров компании. Они были
+                готовы ответить на все мои вопросы, рассказать о
+                технических возможностях автомобиля, условиях покупки
+                и кредитования. Благодаря этому я смог выбрать для
+                себя наилучший вариант на самых выгодных условиях.<br /><br />
+                Кроме того, NLC предоставляет широкий спектр
+                дополнительных услуг. Например, компания помогла мне
+                оформить страховку на авто. Это дало мне
+                дополнительную уверенность в том, что я получил
+                качественный и надёжный автомобиль.<br /><br />
+                Спасибо за крутое авто, теперь буду обращаться только
+                к вам!
               </p>
-              <button v-if="activeReview != 4" class="reviews__text-more" @click="changeActiveReviews(4)">
+              <button
+                v-if="activeReview != 4"
+                class="reviews__text-more"
+                @click="changeActiveReviews(4)"
+              >
                 <img src="@/assets/img/reviews/arrow.svg" alt="" />
                 Подробнее
               </button>
-              <button v-if="activeReview == 4" class="reviews__text-more" @click="changeActiveReviews(0)">
+              <button
+                v-if="activeReview == 4"
+                class="reviews__text-more"
+                @click="changeActiveReviews(0)"
+              >
                 <img src="@/assets/img/reviews/arrowUp.svg" alt="" />
                 Скрыть
               </button>
@@ -132,21 +204,37 @@ const onSlideChange = () => {
         <SwiperSlide>
           <div class="reviews__card">
             <div class="reviews__img">
-              <img src="@/assets/img/reviews/reviews5.jpg" alt="">
+              <img src="@/assets/img/reviews/reviews5.jpg" alt="" />
             </div>
             <div class="reviews__content">
-              <p class="reviews__text" :class="activeReview == 5 ? 'reviews__text--active' : ''">
-                Юра, хочу сказать тебе и NLC огромное спасибо!)
-                Я получил профессиональную помощь в подборе авто под мои требования и бюджет.<br><br>
-                Отношение к клиентам на высшем уровне, работа профессионалов и качественный подбор машин
-                🔥🔥 Очень доволен сотрудничеством с NLC и сейчас уже наслаждаюсь новым автомобилем!
-                Рекомендую всем обратиться за помощью в подборе машины именно к Юрию.
+              <p
+                class="reviews__text"
+                :class="
+                  activeReview == 5 ? 'reviews__text--active' : ''
+                "
+              >
+                Юра, хочу сказать тебе и NLC огромное спасибо!) Я
+                получил профессиональную помощь в подборе авто под мои
+                требования и бюджет.<br /><br />
+                Отношение к клиентам на высшем уровне, работа
+                профессионалов и качественный подбор машин 🔥🔥 Очень
+                доволен сотрудничеством с NLC и сейчас уже наслаждаюсь
+                новым автомобилем! Рекомендую всем обратиться за
+                помощью в подборе машины именно к Юрию.
               </p>
-              <button v-if="activeReview != 5" class="reviews__text-more" @click="changeActiveReviews(5)">
+              <button
+                v-if="activeReview != 5"
+                class="reviews__text-more"
+                @click="changeActiveReviews(5)"
+              >
                 <img src="@/assets/img/reviews/arrow.svg" alt="" />
                 Подробнее
               </button>
-              <button v-if="activeReview == 5" class="reviews__text-more" @click="changeActiveReviews(0)">
+              <button
+                v-if="activeReview == 5"
+                class="reviews__text-more"
+                @click="changeActiveReviews(0)"
+              >
                 <img src="@/assets/img/reviews/arrowUp.svg" alt="" />
                 Скрыть
               </button>
@@ -157,19 +245,33 @@ const onSlideChange = () => {
       </Swiper>
       <div class="swiper-navigate">
         <div class="swiper-prev">
-          <svg width="88" height="88" viewBox="0 0 88 88" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <svg
+            width="88"
+            height="88"
+            viewBox="0 0 88 88"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
             <circle cx="44" cy="44" r="43.5" stroke="#35322E" />
             <path
               d="M58.5092 44.7391C58.7045 44.5438 58.7045 44.2272 58.5092 44.0319L55.3273 40.85C55.132 40.6547 54.8154 40.6547 54.6201 40.85C54.4249 41.0452 54.4249 41.3618 54.6201 41.5571L57.4486 44.3855L54.6201 47.2139C54.4249 47.4092 54.4249 47.7258 54.6201 47.921C54.8154 48.1163 55.132 48.1163 55.3273 47.921L58.5092 44.7391ZM29.8906 44.8855H58.1557V43.8855H29.8906V44.8855Z"
-              fill="#35322E" />
+              fill="#35322E"
+            />
           </svg>
         </div>
         <div class="swiper-next">
-          <svg width="88" height="88" viewBox="0 0 88 88" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <svg
+            width="88"
+            height="88"
+            viewBox="0 0 88 88"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
             <circle cx="44" cy="44" r="43.5" stroke="#35322E" />
             <path
               d="M58.5092 44.7391C58.7045 44.5438 58.7045 44.2272 58.5092 44.0319L55.3273 40.85C55.132 40.6547 54.8154 40.6547 54.6201 40.85C54.4249 41.0452 54.4249 41.3618 54.6201 41.5571L57.4486 44.3855L54.6201 47.2139C54.4249 47.4092 54.4249 47.7258 54.6201 47.921C54.8154 48.1163 55.132 48.1163 55.3273 47.921L58.5092 44.7391ZM29.8906 44.8855H58.1557V43.8855H29.8906V44.8855Z"
-              fill="#35322E" />
+              fill="#35322E"
+            />
           </svg>
         </div>
       </div>
@@ -250,7 +352,6 @@ const onSlideChange = () => {
     cursor: pointer;
 
     svg {
-
       path,
       circle {
         transition: all 0.3s;
@@ -298,7 +399,6 @@ const onSlideChange = () => {
   }
 
   .swiper-navigate {
-
     .swiper-prev,
     .swiper-next {
       width: 61px;
@@ -392,11 +492,13 @@ const onSlideChange = () => {
       }
 
       &::after {
-        content: "";
+        content: '';
         position: absolute;
-        background: linear-gradient(180deg,
-            #ffffff 0%,
-            rgba(255, 255, 255, 0) 100%);
+        background: linear-gradient(
+          180deg,
+          #ffffff 0%,
+          rgba(255, 255, 255, 0) 100%
+        );
         top: 20px;
         bottom: 0;
         height: 75px;
@@ -420,6 +522,12 @@ const onSlideChange = () => {
 
     &__content {
       gap: 17px;
+    }
+
+    &__img {
+      .reviews1 {
+        object-position: bottom;
+      }
     }
   }
 }
