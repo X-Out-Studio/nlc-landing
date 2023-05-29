@@ -8,12 +8,10 @@ const activeReview = ref();
 
 const changeActiveReviews = (id) => {
   activeReview.value = activeReview.value !== id ? id : 0;
-  console.log(activeReview.value);
 };
 
 const onSlideChange = () => {
   activeReview.value = 0;
-  console.log(activeReview.value);
 };
 </script>
 

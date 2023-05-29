@@ -21,7 +21,6 @@ const recaptcha = async () => {
       },
     }
   );
-  console.log(data);
   return data.data.bot;
 };
 
@@ -108,7 +107,7 @@ watch(store, (a) => {
             </li>
             <li>
               <a
-                href="https://t.me/nlc_auto"
+                href="https://youtube.com/@NextLevelCar"
                 target="_blank"
                 class="footer__social-link"
               >
@@ -284,8 +283,8 @@ watch(store, (a) => {
               <img src="@/assets/img/footer/logoUmax.svg" alt="" />
             </a>
           </p>
-          <a class="footer__policy" href="#"
-            >Политика конфиденциальности</a
+          <NuxtLink class="footer__policy" to="/policy"
+            >Политика конфиденциальности</NuxtLink
           >
         </div>
         <p class="footer__year">2023</p>

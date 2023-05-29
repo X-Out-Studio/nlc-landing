@@ -1,8 +1,10 @@
 <script setup>
-import { useCalcFormStore } from "@/store/calcForm";
+import { useCalcFormStore } from '@/store/calcForm';
 const store = useCalcFormStore();
 const openForm = () => {
-  store.openModal ? (store.openModal = false) : (store.openModal = true);
+  store.openModal
+    ? (store.openModal = false)
+    : (store.openModal = true);
 };
 
 let active = ref(null);
@@ -13,39 +15,38 @@ let errorFlag = ref(false);
 let errorPhone = ref(false);
 let finishForm = ref(false);
 
-import { useConfigStore } from "@/store/config";
+import { useConfigStore } from '@/store/config';
 const config = useConfigStore();
 
-import { useReCaptcha } from "vue-recaptcha-v3";
-import axios from "axios";
+import { useReCaptcha } from 'vue-recaptcha-v3';
+import axios from 'axios';
 
 const recaptchaInstance = useReCaptcha();
 const recaptcha = async () => {
   await recaptchaInstance?.recaptchaLoaded();
-  const token = await recaptchaInstance?.executeRecaptcha("action");
+  const token = await recaptchaInstance?.executeRecaptcha('action');
   const data = await axios(
     `${config.handlBack}${config.endpoints.captcha}${token}`,
     {
-      method: "GET",
+      method: 'GET',
       headers: {
-        Accept: "application/json",
-        "Content-type": "application/json",
+        Accept: 'application/json',
+        'Content-type': 'application/json',
       },
     }
   );
-  console.log(data);
   return data.data.bot;
 };
 
 const telegramSend = () => {
   axios(`${config.handlBack}${config.endpoints.telegramSend}`, {
-    method: "POST",
+    method: 'POST',
     headers: {
-      Accept: "application/json",
-      "Content-type": "application/json",
+      Accept: 'application/json',
+      'Content-type': 'application/json',
     },
     data: {
-      from: "calculator",
+      from: 'calculator',
       firstStep: store.answers.firstStep,
       firstStepBU: store.answers.firstStepBU,
       secondStep: store.answers.secondStep,
@@ -67,14 +68,14 @@ const checkForm = async () => {
     errorPhone.value = false;
     finishForm.value = false;
   } else {
-    console.log('else');
-    if (store.answers.number?.length < 16 && store.answers?.number != null) {
+    if (
+      store.answers.number?.length < 16 &&
+      store.answers?.number != null
+    ) {
       errorPhone.value = true;
-      console.log(3);
-    }
-    else {
+    } else {
       if (!(await recaptcha())) {
-        telegramSend()
+        telegramSend();
 
         errorFlag.value = false;
         errorPhone.value = false;
@@ -84,8 +85,9 @@ const checkForm = async () => {
         setTimeout(() => {
           openForm();
           store.$reset();
-        }, "4000");
-      } else { }
+        }, '4000');
+      } else {
+      }
     }
   }
 };
@@ -93,12 +95,10 @@ const checkForm = async () => {
 watch(store.answers, (a) => {
   if (store.answers.number?.length == 16) {
     errorPhone.value = false;
-  }
-  else {
+  } else {
     errorPhone.value = true;
   }
-})
-
+});
 </script>
 
 <template>
@@ -116,16 +116,34 @@ watch(store.answers, (a) => {
       </div>
       <div class="select-container final with-input">
         <div class="select-row eighth">
-          <input type="text" class="wishes-input" v-model="store.answers.fio" :class="errorFlag ? 'error' : ''"
-            placeholder="Имя Фамилия" />
-          <input type="text" class="wishes-input" :class="[errorFlag ? 'error' : '', errorPhone ? 'error-phone' : '']"
-            v-model="store.answers.number" placeholder="+7 ..." v-maska data-maska="+7 ### ###-##-##" />
+          <input
+            type="text"
+            class="wishes-input"
+            v-model="store.answers.fio"
+            :class="errorFlag ? 'error' : ''"
+            placeholder="Имя Фамилия"
+          />
+          <input
+            type="text"
+            class="wishes-input"
+            :class="[
+              errorFlag ? 'error' : '',
+              errorPhone ? 'error-phone' : '',
+            ]"
+            v-model="store.answers.number"
+            placeholder="+7 ..."
+            v-maska
+            data-maska="+7 ### ###-##-##"
+          />
         </div>
       </div>
       <div class="navigate-container final">
         <button @click="checkForm">Отправить</button>
-        <span>Нажимая на кнопку «Отправить», вы соглашаетесь с условиями
-          <a href="/#" target="_blank">Политики обработки персональных данных</a>
+        <span
+          >Нажимая на кнопку «Отправить», вы соглашаетесь с условиями
+          <a href="/#" target="_blank"
+            >Политики обработки персональных данных</a
+          >
         </span>
       </div>
     </div>

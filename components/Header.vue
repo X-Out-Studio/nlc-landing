@@ -1,5 +1,6 @@
 <script setup>
 import { ref } from 'vue';
+const route = useRoute();
 
 const activeHeader = ref(false);
 const activeMobileMenu = ref(false);
@@ -58,21 +59,26 @@ const activeMobileHeader = () => {
 </script>
 
 <template>
-  <header :class="!activeHeader ? 'header' : 'header header--active'">
+  <header
+    :class="[
+      !activeHeader ? 'header' : 'header header--active',
+      route.fullPath == '/policy' ? 'header header--active' : '',
+    ]"
+  >
     <div class="container">
-      <a href="#main" class="header__logo">
+      <NuxtLink to="/" class="header__logo">
         <img
-          v-if="!activeHeader"
+          v-if="!activeHeader && route.fullPath != '/policy'"
           activeHeader
           src="@/assets/img/header/logo.svg"
           alt=""
         />
         <img
-          v-if="activeHeader"
+          v-else
           src="../assets/img/header/logoActive.svg"
           alt=""
         />
-      </a>
+      </NuxtLink>
       <div class="header__menu">
         <ul class="header__nav">
           <li
