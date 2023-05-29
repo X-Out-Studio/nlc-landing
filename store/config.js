@@ -1,11 +1,11 @@
-import { defineStore } from "pinia";
+import { defineStore } from 'pinia';
 
-export const useConfigStore = defineStore("config", {
+export const useConfigStore = defineStore('config', {
   state: () => ({
-    handlBack: "http://localhost:3051/api/",
+    handlBack: 'https://nextlevelcar.ru/api/',
     endpoints: {
-      captcha: "check-captcha/",
-      telegramSend: "telegram-send/",
+      captcha: 'check-captcha/',
+      telegramSend: 'telegram-send/',
     },
   }),
 });

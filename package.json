@@ -25,7 +25,8 @@
     "nuxt-swiper": "^1.1.0",
     "pinia": "^2.0.36",
     "vue-final-modal": "^3.4.11",
-    "vue-recaptcha-v3": "^2.0.1"
+    "vue-recaptcha-v3": "^2.0.1",
+    "yandex-metrika-module-nuxt3": "^1.5.3"
   },
   "overrides": {
     "vue": "latest"
