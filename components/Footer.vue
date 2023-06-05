@@ -232,6 +232,7 @@ watch(store, (a) => {
         </div>
       </template>
     </div>
+
     <div class="footer__info">
       <div class="container">
         <div class="footer__contact">
@@ -253,25 +254,43 @@ watch(store, (a) => {
             >
           </a>
         </div>
-        <ul class="footer__menu">
-          <li class="footer__item">
-            <a href="#" class="footer__link">Главная</a>
-          </li>
-          <li class="footer__item">
-            <a href="#stagesWork" class="footer__link"
-              >Этапы&nbsp;работ</a
-            >
-          </li>
-          <li class="footer__item">
-            <a href="#about" class="footer__link">О&nbsp;нас</a>
-          </li>
-          <li class="footer__item">
-            <a href="#reviews" class="footer__link">Отзывы</a>
-          </li>
-          <li class="footer__item">
-            <a href="#footer" class="footer__link">Контакты</a>
-          </li>
-        </ul>
+        <div class="legal-container">
+          <div class="legal-info">
+            <div>
+              ИП <br />
+              Бояренко Анна Александровна<br />
+              ИНН: 611204578644
+            </div>
+            <div>
+              Офисы:<br />
+              г. Москва, Краснопресненская <br />наб., 2, (офис 7150,
+              этаж 7)
+            </div>
+            <div>
+              г. Ростов-на-Дону, ул.<br />
+              Красноармейская 153, 3 этаж.
+            </div>
+          </div>
+          <ul class="footer__menu">
+            <li class="footer__item">
+              <a href="#" class="footer__link">Главная</a>
+            </li>
+            <li class="footer__item">
+              <a href="#stagesWork" class="footer__link"
+                >Этапы&nbsp;работ</a
+              >
+            </li>
+            <li class="footer__item">
+              <a href="#about" class="footer__link">О&nbsp;нас</a>
+            </li>
+            <li class="footer__item">
+              <a href="#reviews" class="footer__link">Отзывы</a>
+            </li>
+            <li class="footer__item">
+              <a href="#footer" class="footer__link">Контакты</a>
+            </li>
+          </ul>
+        </div>
       </div>
     </div>
     <div class="footer__bottom">
@@ -298,6 +317,22 @@ watch(store, (a) => {
   background-color: var(--blackLight);
   padding-top: 77px;
   padding-bottom: 90px;
+  .legal-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    .legal-info {
+      display: flex;
+      justify-content: flex-end;
+      gap: 20px;
+      div {
+        align-self: flex-end;
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 155%;
+      }
+    }
+  }
 
   &__top {
     .container {
@@ -405,7 +440,7 @@ watch(store, (a) => {
     display: flex;
     flex-direction: row;
     align-items: center;
-    gap: 40px;
+    gap: 72px;
   }
 
   &__item {
@@ -587,6 +622,14 @@ watch(store, (a) => {
 
 @media (max-width: 1450px) {
   .footer {
+    .legal-container {
+      .legal-info {
+        div {
+          font-size: 10px;
+        }
+      }
+    }
+
     padding-bottom: 74px;
 
     &__top {
@@ -642,6 +685,9 @@ watch(store, (a) => {
 
 @media (max-width: 1350px) {
   .footer {
+    .legal-container {
+      margin: 20px 0 0 0;
+    }
     &__info {
       .container {
         flex-direction: column;
@@ -716,6 +762,12 @@ watch(store, (a) => {
 
 @media (max-width: 600px) {
   .footer {
+    .legal-container {
+      .legal-info {
+        align-items: flex-start;
+        flex-direction: column;
+      }
+    }
     padding-bottom: 44px;
     padding-top: 41px;
 
