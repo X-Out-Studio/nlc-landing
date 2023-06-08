@@ -84,80 +84,38 @@ watch(store, (a) => {
           </p>
           <ul class="footer__social-items">
             <li>
-              <a
-                href="https://t.me/nlc_auto"
-                target="_blank"
-                class="footer__social-link"
-              >
-                <svg
-                  class="telegram"
-                  width="52"
-                  height="42"
-                  viewBox="0 0 52 42"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
+              <a href="https://t.me/nlc_auto" target="_blank" class="footer__social-link">
+                <svg class="telegram" width="52" height="42" viewBox="0 0 52 42" fill="none"
+                  xmlns="http://www.w3.org/2000/svg">
                   <path
                     d="M48.4901 0.27616L2.42808 17.3825C-0.715464 18.5984 -0.697278 20.2873 1.85133 21.0404L13.6773 24.5933L41.0391 7.96736C42.3329 7.20925 43.515 7.61708 42.5433 8.44775L20.3749 27.7158L19.5591 39.4578C20.7542 39.4578 21.2815 38.9299 21.9518 38.3069L27.6959 32.9275L39.644 41.4269C41.8471 42.5953 43.4292 41.9948 43.9774 39.4628L51.8207 3.86406C52.6235 0.764054 50.5918 -0.639579 48.4901 0.27616Z"
-                    fill="white"
-                    stroke="white"
-                  />
+                    fill="white" stroke="white" />
                 </svg>
               </a>
             </li>
             <li>
-              <a
-                href="https://youtube.com/@NextLevelCar"
-                target="_blank"
-                class="footer__social-link"
-              >
-                <svg
-                  class="youtube"
-                  width="64"
-                  height="47"
-                  viewBox="0 0 64 47"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
+              <a href="https://youtube.com/@NextLevelCar" target="_blank" class="footer__social-link">
+                <svg class="youtube" width="64" height="47" viewBox="0 0 64 47" fill="none"
+                  xmlns="http://www.w3.org/2000/svg">
                   <path
                     d="M25.6 33.5714L42.208 23.5L25.6 13.4286V33.5714ZM62.592 7.285C63.008 8.86286 63.296 10.9779 63.488 13.6636C63.712 16.3493 63.808 18.6657 63.808 20.68L64 23.5C64 30.8521 63.488 36.2571 62.592 39.715C61.792 42.7364 59.936 44.6836 57.056 45.5229C55.552 45.9593 52.8 46.2614 48.576 46.4629C44.416 46.6979 40.608 46.7986 37.088 46.7986L32 47C18.592 47 10.24 46.4629 6.944 45.5229C4.064 44.6836 2.208 42.7364 1.408 39.715C0.992 38.1371 0.704 36.0221 0.512 33.3364C0.288 30.6507 0.192 28.3343 0.192 26.32L0 23.5C0 16.1479 0.512 10.7429 1.408 7.285C2.208 4.26357 4.064 2.31643 6.944 1.47714C8.448 1.04071 11.2 0.738571 15.424 0.537142C19.584 0.302142 23.392 0.201428 26.912 0.201428L32 0C45.408 0 53.76 0.537143 57.056 1.47714C59.936 2.31643 61.792 4.26357 62.592 7.285Z"
-                    fill="white"
-                  />
+                    fill="white" />
                 </svg>
               </a>
             </li>
             <li>
-              <a
-                href="https://instagram.com/_nextlevelcar_"
-                target="_blank"
-                class="footer__social-link footer__social-link--insta"
-              >
-                <svg
-                  width="51"
-                  height="49"
-                  viewBox="0 0 42 42"
-                  class="insta"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
+              <a href="https://instagram.com/_nextlevelcar_" target="_blank"
+                class="footer__social-link footer__social-link--insta">
+                <svg width="51" height="49" viewBox="0 0 42 42" class="insta" fill="none"
+                  xmlns="http://www.w3.org/2000/svg">
                   <path
                     d="M20.9944 13.997C17.1383 13.997 13.9915 17.1439 13.9915 21C13.9915 24.8561 17.1383 28.003 20.9944 28.003C24.8504 28.003 27.9972 24.8561 27.9972 21C27.9972 17.1439 24.8504 13.997 20.9944 13.997ZM41.9977 21C41.9977 18.1 42.0239 15.2263 41.8611 12.3316C41.6982 8.96937 40.9312 5.98536 38.4726 3.52669C36.0087 1.06278 33.03 0.301015 29.6678 0.138155C26.7679 -0.0247052 23.8943 0.00156264 20.9996 0.00156264C18.0997 0.00156264 15.2261 -0.0247052 12.3314 0.138155C8.9692 0.301015 5.98524 1.06803 3.52663 3.52669C1.06276 5.99061 0.301009 8.96937 0.138152 12.3316C-0.0247047 15.2316 0.00156261 18.1053 0.00156261 21C0.00156261 23.8947 -0.0247047 26.7737 0.138152 29.6684C0.301009 33.0306 1.06801 36.0146 3.52663 38.4733C5.9905 40.9372 8.9692 41.699 12.3314 41.8618C15.2313 42.0247 18.105 41.9984 20.9996 41.9984C23.8995 41.9984 26.7732 42.0247 29.6678 41.8618C33.03 41.699 36.014 40.932 38.4726 38.4733C40.9365 36.0094 41.6982 33.0306 41.8611 29.6684C42.0292 26.7737 41.9977 23.9 41.9977 21ZM20.9944 31.775C15.0317 31.775 10.2195 26.9628 10.2195 21C10.2195 15.0372 15.0317 10.225 20.9944 10.225C26.957 10.225 31.7692 15.0372 31.7692 21C31.7692 26.9628 26.957 31.775 20.9944 31.775ZM32.2105 12.3001C30.8183 12.3001 29.6941 11.1759 29.6941 9.78367C29.6941 8.39148 30.8183 7.26722 32.2105 7.26722C33.6026 7.26722 34.7269 8.39148 34.7269 9.78367C34.7273 10.1143 34.6625 10.4417 34.5362 10.7472C34.4099 11.0527 34.2245 11.3302 33.9908 11.564C33.757 11.7978 33.4794 11.9831 33.174 12.1094C32.8685 12.2357 32.541 12.3005 32.2105 12.3001Z"
-                    fill="url(#paint0_linear_925_590)"
-                  ></path>
+                    fill="url(#paint0_linear_925_590)"></path>
                   <defs>
-                    <linearGradient
-                      id="paint0_linear_925_590"
-                      x1="5"
-                      y1="-6"
-                      x2="46"
-                      y2="66"
-                      gradientUnits="userSpaceOnUse"
-                    >
+                    <linearGradient id="paint0_linear_925_590" x1="5" y1="-6" x2="46" y2="66"
+                      gradientUnits="userSpaceOnUse">
                       <stop stop-color="#F8D63D"></stop>
-                      <stop
-                        offset="0.484375"
-                        stop-color="#ED3279"
-                      ></stop>
+                      <stop offset="0.484375" stop-color="#ED3279"></stop>
                       <stop offset="1" stop-color="#172EF7"></stop>
                     </linearGradient>
                   </defs>
@@ -172,31 +130,16 @@ watch(store, (a) => {
       <template v-if="!finishForm">
         <div class="container">
           <div class="footer__data">
-            <input
-              class="footer__form-input"
-              :class="errorActive ? 'error' : ''"
-              placeholder="Ваше имя"
-              v-model="store.fio"
-            />
-            <input
-              class="footer__form-input footer__form-input-phone"
-              :class="[
-                errorActive ? 'error' : '',
-                errorPhone ? 'error-phone' : '',
-              ]"
-              placeholder="+7 (_ _ _) _ _ _ - _ _  -  _ _ "
-              v-model="store.phone"
-              v-maska
-              data-maska="+7 (# # #) # # # - # #  -  # #"
-            />
+            <input class="footer__form-input" :class="errorActive ? 'error' : ''" placeholder="Ваше имя"
+              v-model="store.fio" />
+            <input class="footer__form-input footer__form-input-phone" :class="[
+              errorActive ? 'error' : '',
+              errorPhone ? 'error-phone' : '',
+            ]" placeholder="+7 (_ _ _) _ _ _ - _ _  -  _ _ " v-model="store.phone" v-maska
+              data-maska="+7 (# # #) # # # - # #  -  # #" />
           </div>
-          <input
-            class="footer__form-input footer__form-input--question"
-            :class="errorActive ? 'error' : ''"
-            placeholder="Ваш вопрос"
-            required
-            v-model="store.question"
-          />
+          <input class="footer__form-input footer__form-input--question" :class="errorActive ? 'error' : ''"
+            placeholder="Ваш вопрос" required v-model="store.question" />
           <div class="footer__block">
             <div>
               <button class="footer__submit" @click="sendForm">
@@ -232,35 +175,43 @@ watch(store, (a) => {
         </div>
       </template>
     </div>
+
     <div class="footer__info">
       <div class="container">
         <div class="footer__contact">
           <div class="footer__contact-top">
-            <a class="footer__phone" href="tel:+79381332323"
-              >Телефон +7&nbsp;938&nbsp;133&nbsp;-23&nbsp;-23</a
-            >
+            <a class="footer__phone" href="tel:+79381332323">Телефон +7&nbsp;938&nbsp;133&nbsp;-23&nbsp;-23</a>
             <div class="footer__logo footer__logo-mobile">
               <img src="../assets/img/footer/logo.png" alt="" />
             </div>
           </div>
-          <a
-            class="footer__email"
-            style=""
-            href="mailto:nlc-auto@yandex.ru "
-            >Почта
+          <a class="footer__email" style="" href="mailto:nlc-auto@yandex.ru ">Почта
             <span style="white-space: nowrap">
-              nlc-auto@yandex.ru</span
-            >
+              nlc-auto@yandex.ru</span>
           </a>
         </div>
-        <ul class="footer__menu">
+        <div class="legal-info mobile">
+          <div>
+            ИП <br />
+            Бояренко Анна Александровна<br />
+            ИНН: 611204578644
+          </div>
+          <div>
+            Офисы:<br />
+            г. Москва, Краснопресненская наб., 2, (офис 7150,
+            этаж 7)
+          </div>
+          <div>
+            г. Ростов-на-Дону, ул.<br />
+            Красноармейская 153, 3 этаж.
+          </div>
+        </div>
+        <ul class="footer__menu mobile">
           <li class="footer__item">
             <a href="#" class="footer__link">Главная</a>
           </li>
           <li class="footer__item">
-            <a href="#stagesWork" class="footer__link"
-              >Этапы&nbsp;работ</a
-            >
+            <a href="#stagesWork" class="footer__link">Этапы&nbsp;работ</a>
           </li>
           <li class="footer__item">
             <a href="#about" class="footer__link">О&nbsp;нас</a>
@@ -272,6 +223,41 @@ watch(store, (a) => {
             <a href="#footer" class="footer__link">Контакты</a>
           </li>
         </ul>
+        <div class="legal-container desktop">
+          <div class="legal-info">
+            <div>
+              ИП <br />
+              Бояренко Анна Александровна<br />
+              ИНН: 611204578644
+            </div>
+            <div>
+              Офисы:<br />
+              г. Москва, Краснопресненская <br />наб., 2, (офис 7150,
+              этаж 7)
+            </div>
+            <div>
+              г. Ростов-на-Дону, ул.<br />
+              Красноармейская 153, 3 этаж.
+            </div>
+          </div>
+          <ul class="footer__menu">
+            <li class="footer__item">
+              <a href="#" class="footer__link">Главная</a>
+            </li>
+            <li class="footer__item">
+              <a href="#stagesWork" class="footer__link">Этапы&nbsp;работ</a>
+            </li>
+            <li class="footer__item">
+              <a href="#about" class="footer__link">О&nbsp;нас</a>
+            </li>
+            <li class="footer__item">
+              <a href="#reviews" class="footer__link">Отзывы</a>
+            </li>
+            <li class="footer__item">
+              <a href="#footer" class="footer__link">Контакты</a>
+            </li>
+          </ul>
+        </div>
       </div>
     </div>
     <div class="footer__bottom">
@@ -279,13 +265,11 @@ watch(store, (a) => {
         <div class="footer__rule">
           <p class="footer__regulation">
             Разработано в
-            <a href="#">
+            <a href="https://umax.agency" target="_blank">
               <img src="@/assets/img/footer/logoUmax.svg" alt="" />
             </a>
           </p>
-          <NuxtLink class="footer__policy" to="/policy"
-            >Политика конфиденциальности</NuxtLink
-          >
+          <NuxtLink class="footer__policy" to="/policy">Политика конфиденциальности</NuxtLink>
         </div>
         <p class="footer__year">2023</p>
       </div>
@@ -298,6 +282,29 @@ watch(store, (a) => {
   background-color: var(--blackLight);
   padding-top: 77px;
   padding-bottom: 90px;
+
+  .legal-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    .legal-info {
+      display: flex;
+      justify-content: flex-end;
+      gap: 20px;
+
+      div {
+        align-self: flex-end;
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 155%;
+      }
+    }
+  }
+
+  .mobile {
+    display: none;
+  }
 
   &__top {
     .container {
@@ -391,6 +398,7 @@ watch(store, (a) => {
           fill: #ffffff;
           transition: 0.3s;
         }
+
         &:hover {
           path {
             fill: url(#paint0_linear_925_590);
@@ -405,7 +413,7 @@ watch(store, (a) => {
     display: flex;
     flex-direction: row;
     align-items: center;
-    gap: 40px;
+    gap: 72px;
   }
 
   &__item {
@@ -587,6 +595,14 @@ watch(store, (a) => {
 
 @media (max-width: 1450px) {
   .footer {
+    .legal-container {
+      .legal-info {
+        div {
+          font-size: 10px;
+        }
+      }
+    }
+
     padding-bottom: 74px;
 
     &__top {
@@ -642,6 +658,10 @@ watch(store, (a) => {
 
 @media (max-width: 1350px) {
   .footer {
+    .legal-container {
+      margin: 20px 0 0 0;
+    }
+
     &__info {
       .container {
         flex-direction: column;
@@ -716,6 +736,27 @@ watch(store, (a) => {
 
 @media (max-width: 600px) {
   .footer {
+    .desktop {
+      display: none;
+    }
+
+    .mobile {
+      display: flex;
+    }
+
+    .legal-info {
+      align-items: flex-start;
+      flex-direction: column;
+      gap: 13px;
+      margin: 27px 0 0 0;
+      font-size: 10px;
+      line-height: 15.5px;
+
+      div {
+        align-self: flex-start;
+      }
+    }
+
     padding-bottom: 44px;
     padding-top: 41px;
 
