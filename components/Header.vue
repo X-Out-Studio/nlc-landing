@@ -300,12 +300,11 @@ const activeMobileHeader = () => {
   }
 
   &__number {
-    font-family: 'Druk Text Wide Cyr';
+    font-family: 'Evolventa';
     font-style: normal;
-    font-weight: 900;
-    font-size: 14px;
+    font-weight: 700;
+    font-size: 19px;
     line-height: 128.61%;
-    text-align: right;
     letter-spacing: 0.03em;
     color: currentColor;
   }

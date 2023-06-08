@@ -73,7 +73,7 @@ const onSlideChange = () => {
                 <img src="@/assets/img/reviews/arrowUp.svg" alt="" />
                 Скрыть
               </button>
-              <p class="reviews__name"><i>- Иван</i></p>
+              <p class="reviews__name"><i>- Виталий</i></p>
             </div>
           </div>
         </SwiperSlide>
@@ -148,7 +148,7 @@ const onSlideChange = () => {
                 <img src="@/assets/img/reviews/arrowUp.svg" alt="" />
                 Скрыть
               </button>
-              <p class="reviews__name"><i>- Руслан</i></p>
+              <p class="reviews__name"><i>- Сергей</i></p>
             </div>
           </div>
         </SwiperSlide>
