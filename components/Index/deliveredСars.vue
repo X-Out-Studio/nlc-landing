@@ -48,7 +48,7 @@ function scrollCard() {}
           <div class="deliveredCars__img">
             <img
               class="bottom"
-              src="@/assets/img/deliveredCars/car1.png"
+              src="@/assets/img/deliveredCars/car1.webp"
               alt=""
             />
           </div>
@@ -72,7 +72,7 @@ function scrollCard() {}
         </div>
         <div class="deliveredCars__item" data-aos="fade-up">
           <div class="deliveredCars__img">
-            <img src="@/assets/img/deliveredCars/car2.png" alt="" />
+            <img src="@/assets/img/deliveredCars/car2.webp" alt="" />
           </div>
           <div class="deliveredCars__content">
             <div class="deliveredCars__info">
@@ -100,7 +100,7 @@ function scrollCard() {}
           data-aos="fade-up"
         >
           <div class="deliveredCars__img">
-            <img src="@/assets/img/deliveredCars/car3.png" alt="" />
+            <img src="@/assets/img/deliveredCars/car3.webp" alt="" />
           </div>
           <div class="deliveredCars__content">
             <div class="deliveredCars__info">
@@ -126,7 +126,7 @@ function scrollCard() {}
           data-aos="fade-up"
         >
           <div class="deliveredCars__img">
-            <img src="@/assets/img/deliveredCars/car4.png" alt="" />
+            <img src="@/assets/img/deliveredCars/car4.webp" alt="" />
           </div>
           <div class="deliveredCars__content">
             <div class="deliveredCars__info">
@@ -154,7 +154,7 @@ function scrollCard() {}
           data-aos="fade-up"
         >
           <div class="deliveredCars__img">
-            <img src="@/assets/img/deliveredCars/car5.png" alt="" />
+            <img src="@/assets/img/deliveredCars/car5.webp" alt="" />
           </div>
           <div class="deliveredCars__content">
             <div class="deliveredCars__info">
@@ -182,7 +182,7 @@ function scrollCard() {}
           data-aos="fade-up"
         >
           <div class="deliveredCars__img">
-            <img src="@/assets/img/deliveredCars/car6.png" alt="" />
+            <img src="@/assets/img/deliveredCars/car6.webp" alt="" />
           </div>
           <div class="deliveredCars__content">
             <div class="deliveredCars__info">
@@ -208,7 +208,7 @@ function scrollCard() {}
           data-aos="fade-up"
         >
           <div class="deliveredCars__img">
-            <img src="@/assets/img/deliveredCars/car7.png" alt="" />
+            <img src="@/assets/img/deliveredCars/car7.webp" alt="" />
           </div>
           <div class="deliveredCars__content">
             <div class="deliveredCars__info">
@@ -234,7 +234,7 @@ function scrollCard() {}
           data-aos="fade-up"
         >
           <div class="deliveredCars__img">
-            <img src="@/assets/img/deliveredCars/car8.png" alt="" />
+            <img src="@/assets/img/deliveredCars/car8.webp" alt="" />
           </div>
           <div class="deliveredCars__content">
             <div class="deliveredCars__info">

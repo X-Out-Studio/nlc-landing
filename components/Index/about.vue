@@ -20,7 +20,7 @@
         </div>
       </div>
       <div class="about-card__right-container">
-        <img src="../../assets/img/about/jurii.png" alt="" />
+        <img src="../../assets/img/about/jurii.webp" alt="" />
       </div>
     </div>
   </div>

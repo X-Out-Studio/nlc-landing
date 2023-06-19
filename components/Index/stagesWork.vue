@@ -163,7 +163,7 @@ const store = useModalStepsStore();
       />
     </div>
     <div class="stagesWork__car">
-      <img src="@/assets/img/stagesWork/car.png" alt="" />
+      <img src="@/assets/img/stagesWork/car.webp" alt="" />
     </div>
   </section>
 </template>
@@ -226,27 +226,27 @@ const store = useModalStepsStore();
       background-size: 100% 100%;
 
       &--1 {
-        background-image: url('../../assets/img/stagesWork/step1.png');
+        background-image: url('../../assets/img/stagesWork/step1.webp');
       }
 
       &--2 {
-        background-image: url('../../assets/img/stagesWork/step2.png');
+        background-image: url('../../assets/img/stagesWork/step2.webp');
       }
 
       &--3 {
-        background-image: url('../../assets/img/stagesWork/step3.png');
+        background-image: url('../../assets/img/stagesWork/step3.webp');
       }
 
       &--4 {
-        background-image: url('../../assets/img/stagesWork/step4.png');
+        background-image: url('../../assets/img/stagesWork/step4.webp');
       }
 
       &--5 {
-        background-image: url('../../assets/img/stagesWork/step5.png');
+        background-image: url('../../assets/img/stagesWork/step5.webp');
       }
 
       &--6 {
-        background-image: url('../../assets/img/stagesWork/step6.png');
+        background-image: url('../../assets/img/stagesWork/step6.webp');
       }
     }
 
@@ -523,15 +523,15 @@ const store = useModalStepsStore();
     &__step {
       &--content {
         &--2 {
-          background-image: url('@/assets/img/stagesWork/step2Mobile.png');
+          background-image: url('@/assets/img/stagesWork/step2Mobile.webp');
         }
 
         &--4 {
-          background-image: url('@/assets/img/stagesWork/step4Mobile.png');
+          background-image: url('@/assets/img/stagesWork/step4Mobile.webp');
         }
 
         &--6 {
-          background-image: url('@/assets/img/stagesWork/step6Mobile.png');
+          background-image: url('@/assets/img/stagesWork/step6Mobile.webp');
         }
       }
 

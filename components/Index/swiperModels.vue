@@ -42,46 +42,46 @@ const navigateParams = {
       >
         <SwiperSlide>
           <div class="slide-content">
-            <img src="@/assets/img/car-models/merc.png" alt="" />
+            <img src="@/assets/img/car-models/merc.webp" alt="" />
           </div>
         </SwiperSlide>
         <SwiperSlide>
           <div class="slide-content">
-            <img src="@/assets/img/car-models/bmw.png" alt="" />
+            <img src="@/assets/img/car-models/bmw.webp" alt="" />
           </div>
         </SwiperSlide>
         <SwiperSlide>
           <div class="slide-content">
-            <img src="@/assets/img/car-models/tesla.png" alt="" />
+            <img src="@/assets/img/car-models/tesla.webp" alt="" />
           </div>
         </SwiperSlide>
         <SwiperSlide>
           <div class="slide-content">
-            <img src="@/assets/img/car-models/porsche.png" alt="" />
+            <img src="@/assets/img/car-models/porsche.webp" alt="" />
           </div>
         </SwiperSlide>
         <SwiperSlide>
           <div class="slide-content">
             <img
               class="audi"
-              src="@/assets/img/car-models/audi.png"
+              src="@/assets/img/car-models/audi.webp"
               alt=""
             />
           </div>
         </SwiperSlide>
         <SwiperSlide>
           <div class="slide-content">
-            <img src="@/assets/img/car-models/vw.png" alt="" />
+            <img src="@/assets/img/car-models/vw.webp" alt="" />
           </div>
         </SwiperSlide>
         <SwiperSlide>
           <div class="slide-content">
-            <img src="@/assets/img/car-models/toyota.png" alt="" />
+            <img src="@/assets/img/car-models/toyota.webp" alt="" />
           </div>
         </SwiperSlide>
         <SwiperSlide>
           <div class="slide-content">
-            <img src="@/assets/img/car-models/lexus.png" alt="" />
+            <img src="@/assets/img/car-models/lexus.webp" alt="" />
           </div>
         </SwiperSlide>
       </Swiper>

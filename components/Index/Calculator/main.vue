@@ -18,7 +18,7 @@ const openForm = () => {
           <Button :text="'Рассчитать'" @click="openForm" />
         </div>
         <div class="img-container">
-          <img src="@/assets/img/calculator/car.png" alt="" />
+          <img src="@/assets/img/calculator/car.webp" alt="" />
         </div>
       </div>
     </Transition>
@@ -69,7 +69,7 @@ const openForm = () => {
   height: 615px;
   width: 100%;
   position: relative;
-  background: url('@/assets/img/calculator/background.png') center
+  background: url('@/assets/img/calculator/background.webp') center
     center/cover no-repeat;
   position: relative;
 

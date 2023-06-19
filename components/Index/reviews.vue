@@ -33,7 +33,7 @@ const onSlideChange = () => {
             <div class="reviews__img">
               <img
                 class="reviews1"
-                src="@/assets/img/reviews/reviews1.png"
+                src="@/assets/img/reviews/reviews1.webp"
                 alt=""
               />
             </div>
@@ -80,7 +80,7 @@ const onSlideChange = () => {
         <SwiperSlide>
           <div class="reviews__card">
             <div class="reviews__img">
-              <img src="@/assets/img/reviews/reviews2.jpg" alt="" />
+              <img src="@/assets/img/reviews/reviews2.webp" alt="" />
             </div>
             <div class="reviews__content">
               <p
@@ -117,7 +117,7 @@ const onSlideChange = () => {
         <SwiperSlide>
           <div class="reviews__card">
             <div class="reviews__img">
-              <img src="@/assets/img/reviews/reviews3.jpg" alt="" />
+              <img src="@/assets/img/reviews/reviews3.webp" alt="" />
             </div>
             <div class="reviews__content">
               <p
@@ -155,7 +155,7 @@ const onSlideChange = () => {
         <SwiperSlide>
           <div class="reviews__card">
             <div class="reviews__img">
-              <img src="@/assets/img/reviews/reviews4.jpg" alt="" />
+              <img src="@/assets/img/reviews/reviews4.webp" alt="" />
             </div>
             <div class="reviews__content">
               <p
@@ -202,7 +202,7 @@ const onSlideChange = () => {
         <SwiperSlide>
           <div class="reviews__card">
             <div class="reviews__img">
-              <img src="@/assets/img/reviews/reviews5.jpg" alt="" />
+              <img src="@/assets/img/reviews/reviews5.webp" alt="" />
             </div>
             <div class="reviews__content">
               <p

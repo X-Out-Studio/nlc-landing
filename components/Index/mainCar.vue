@@ -57,7 +57,7 @@ const store = useModalStepsStore();
   display: flex;
   width: 100%;
   height: 967px;
-  background-image: url('@/assets/img/mainCar/img2.png');
+  background-image: url('@/assets/img/mainCar/img2.webp');
   background-repeat: no-repeat;
   background-size: cover;
   padding: 117px 150px 49px 150px;
@@ -222,7 +222,7 @@ const store = useModalStepsStore();
 @media (max-width: 800px) {
   .main-content {
     padding-top: 102px;
-    background-image: url('@/assets/img/mainCar/imgMobile.png');
+    background-image: url('@/assets/img/mainCar/imgMobile.webp');
     .content-container {
       .title {
         font-size: 20px;

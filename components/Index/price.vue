@@ -21,7 +21,7 @@ const navigateParams = {
         <div class="price__img">
           <img
             class="price__car"
-            src="@/assets/img/price/car2.png"
+            src="@/assets/img/price/car2.webp"
             alt=""
           />
         </div>
@@ -42,7 +42,7 @@ const navigateParams = {
         <div class="price__img">
           <img
             class="price__car right"
-            src="@/assets/img/price/car1.png"
+            src="@/assets/img/price/car1.webp"
             alt=""
           />
         </div>
@@ -71,7 +71,7 @@ const navigateParams = {
         <div class="price__img">
           <img
             class="price__car"
-            src="@/assets/img/price/car4.png"
+            src="@/assets/img/price/car4.webp"
             alt=""
           />
         </div>
@@ -92,7 +92,7 @@ const navigateParams = {
         <div class="price__img">
           <img
             class="price__car"
-            src="@/assets/img/price/car3.png"
+            src="@/assets/img/price/car3.webp"
             alt=""
           />
         </div>
